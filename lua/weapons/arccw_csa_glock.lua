@@ -1,7 +1,7 @@
-SWEP.Base			=	"arccw_base"
+SWEP.Base			=	"arccw_csabase"
 SWEP.Spawnable		=	true
 
-SWEP.Category		=	"ArcCW CS+ Anniversary"
+SWEP.Category		=	"ArcCW - CS+ Anniversary"
 SWEP.PrintName		=	"VI Sidearm"
 SWEP.Trivia_Class			= "Machine Pistol"
 SWEP.Trivia_Desc			= "9mm fully automatic police machine pistol. Low damage, but a sophisticated recoil control system allows for excellent automatic performance."
@@ -16,7 +16,7 @@ SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	65
-SWEP.ViewModel		=	"models/weapons/v_pist_glock18.mdl"
+SWEP.ViewModel		=	"models/weapons/cstrike/c_pist_glock18.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_glock18.mdl"
 
 SWEP.HoldtypeHolstered	= "normal"
@@ -48,7 +48,7 @@ SWEP.ShootSoundInfo = {
 
 SWEP.MuzzleEffectAttachment	=	1
 SWEP.CaseEffectAttachment	=	2
-SWEP.CamAttachment			=	3
+SWEP.CamAttachment			=	nil
 
 SWEP.Attachments = {}
 SWEP.AttachmentElements = {}
