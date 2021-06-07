@@ -83,7 +83,7 @@ function SWEP:SoundEngine( snde )
 			if !v.s then return end
 			self:EmitSound(v.s, v.l, (v.pmi and v.pma) and math.Rand(v.pmi, v.pma) or v.p, v.v, v.c)
 		else
-			if BO2SoundsInfo[v] and BO2SoundsInfo[v].killme == true then self:StopSound(v) end
+			if CSASoundsInfo[v] and CSASoundsInfo[v].killme == true then self:StopSound(v) end
 			self:EmitSound(v)
 		end
 	end
