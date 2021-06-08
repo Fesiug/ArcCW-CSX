@@ -16,8 +16,13 @@ SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	65
-SWEP.ViewModel		=	"models/weapons/cstrike/c_pist_glock18.mdl"
+SWEP.ViewModel		=	"models/weapons/arccw/fesiugmw2/c_glock17_1.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_glock18.mdl"
+
+SWEP.ShellModel = "models/shells/shell_9mm.mdl"
+SWEP.ShellScale = 1
+SWEP.ShellPitch = 100
+SWEP.ShellSounds = "autocheck"
 
 SWEP.HoldtypeHolstered	= "normal"
 SWEP.HoldtypeActive		= "pistol"
@@ -30,15 +35,20 @@ SWEP.MuzzleEffect		=	"muzzleflash_pistol"
 SWEP.NoFlash			=	true
 
 SWEP.ShootSoundInfo = {
-	[1] = {
-		"FBO2.HK416.Fire",
-		"FBO2.HK416.Dist",
-		"FBO2.HK416.LFE",
+	["fire"] = {
+		"CSA.Glock.Fire",
+		--"FBO2.HK416.Dist",
+		--"FBO2.HK416.LFE",
 	},
-	[2] = {
+	["fire_sil"] = {
 		"FBO2.HK416.Fire_Silenced",
 	},
-	[1001] = {
+	["fire_first"] = {
+		"CSA.Glock.FireFirst",
+		--"FBO2.HK416.Dist",
+		--"FBO2.HK416.LFE",
+	},
+	["dry"] = {
 		{
 			s = "fesiug_bo2/wep/m27/dry.wav",
 			c = CHAN_WEAPON
@@ -80,86 +90,55 @@ SWEP.NPCWeight		=	80
 
 SWEP.Animations = {
 	["idle"] = {
-		Source = "base.idle"
+		Source = "idle",--"base.idle"
 	},
 	["ready"] = {
-		Source = "base.pullout_first",
+		Source = "pullout",--"base.pullout_first",
 		SoundTable = {
-			{ s = "FBO2.HK416.R.Boltback", t = 22/30 },
-			{ rumble = "reload_small", t = 24/30 },
-			{ s = "FBO2.HK416.R.Boltrelease", t = 26/30 },
-			{ s = "FBO2.HK416.R.Boltback", t = 29/30 },
-			{ rumble = "reload_small", t = 33/30 },
-			{ s = "FBO2.HK416.R.Boltrelease", t = 35/30 },
-			{ rumble = "reload_medium", t = 38/30 },
-		}
-	},
-	["ready_dbal"] = {
-		Source = "base.pullout_first_dbal",
-		SoundTable = {
-			{ laser = false, t = 3/30 },
-			{ s = "FBO2.Laser", t = 20/30 },
-			{ rumble = "reload_small", t = 20/30 },
-			{ laser = true, t = 20/30 },
-		}
-	},
-	["ready_mms"] = {
-		Source = "base.pullout_first_mms",
-		SoundTable = {
-			{ s = "FBO2.MMS.FlipUp", t = 11/30 },
-			{ rumble = "reload_small", t = 25/30 },
+			{ s = "CSA.Glock.R.Boltback", t = 22/30 },
+			{ s = "CSA.Glock.R.Boltrelease", t = 26/30 },
+			{ s = "CSA.Glock.R.Boltback", t = 29/30 },
+			{ s = "CSA.Glock.R.Boltrelease", t = 35/30 },
 		}
 	},
 	["draw"] = {
-		Source = "base.pullout",
+		Source = "pullout",--"base.pullout",
 		SoundTable = {
-			{ rumble = "reload_medium", t = 17/30 },
-		}
-	},
-	["draw_quick"] = {
-		Source = "base.pullout_quick",
-		SoundTable = {
-			{ s = "FBO2.Melee.Regrip", t = 16/30 },
 		}
 	},
 	["holster"] = {
-		Source = "base.putaway",
+		Source = "putaway",--"base.putaway",
 		SoundTable = {
-			{ rumble = "reload_medium", t = 17/30 },
 		}
 	},
 	["fire"] = {
-		Source = "base.fire",
+		Source = "fire",--"base.fire",
 		ShellEjectAt = 0,
 	},
 	["fire_iron"] = {
-		Source = "base.fire_ads",
+		Source = "fire_ads",--"base.fire_ads",
 		ShellEjectAt = 0,
 	},
 	["reload"] = {
-		Source = "base.reload",
+		Source = "reload",--"base.reload",
 		MinProgress = 1.4,
 		SoundTable = {
-			{ s = "FBO2.Cloth.S", t = 1/30 },
-			{ s = "FBO2.HK416.R.Magout", rumble = "reload_large", t = 14/30 },
-			{ s = "FBO2.HK416.R.Futz", t = 39/30 },
-			{ s = "FBO2.HK416.R.Magin", t = 42/30 },
-			{ rumble = "reload_large", t = 43/30 },
+			{ s = "CSA.Cloth.S", t = 1/30 },
+			{ s = "CSA.Glock.R.Magout", t = 14/30 },
+			{ s = "CSA.Glock.R.Futz", t = 39/30 },
+			{ s = "CSA.Glock.R.Magin", t = 42/30 },
 		}
 	},
 	["reload_empty"] = {
-		Source = "base.reload_empty",
+		Source = "reload_empty",--"base.reload_empty",
 		MinProgress = 1.4,
 		SoundTable = {
-			{ s = "FBO2.Cloth.S", t = 1/30 },
-			{ s = "FBO2.HK416.R.Magout", rumble = "reload_large", t = 14/30 },
-			{ s = "FBO2.HK416.R.Futz", t = 39/30 },
-			{ s = "FBO2.HK416.R.Magin", t = 42/30 },
-			{ rumble = "reload_large", t = 43/30 },
-			{ s = "FBO2.HK416.R.Boltback", t = 60/30 },
-			{ rumble = "reload_small", t = 62/30 },
-			{ s = "FBO2.HK416.R.Boltrelease", t = 65/30 },
-			{ rumble = "reload_medium", t = 67/30 },
+			{ s = "CSA.Cloth.S", t = 1/30 },
+			{ s = "CSA.Glock.R.Magout", t = 14/30 },
+			{ s = "CSA.Glock.R.Futz", t = 39/30 },
+			{ s = "CSA.Glock.R.Magin", t = 42/30 },
+			{ s = "CSA.Glock.R.Boltback", t = 60/30 },
+			{ s = "CSA.Glock.R.Boltrelease", t = 65/30 },
 		}
 	},
 	["enter_sprint"] = {

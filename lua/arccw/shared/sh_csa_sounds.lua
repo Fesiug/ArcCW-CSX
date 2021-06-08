@@ -1,16 +1,25 @@
 
 local sounds_to_make = {
 	{
-		name = "CSA.HK416.Fire",
+		name = "CSA.Glock.FireFirst",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/m27/fire.wav",
+		sound = "arccw_csa/fire/pistol/glock-1.ogg",
 		killme = false
 	},
 	{
-		name = "CSA.HK416.Fire_Silenced",
+		name = "CSA.Glock.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {95, 105},
+		sound = "arccw_csa/fire/pistol/glock-2.ogg",
+		killme = true
+	},
+	{
+		name = "CSA.Glock.Fire_Silenced",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -19,7 +28,7 @@ local sounds_to_make = {
 		killme = false
 	},
 	{
-		name = "CSA.HK416.Dist",
+		name = "CSA.Glock.Dist",
 		channel = CHAN_STATIC,
 		volume = 0.1,
 		level = 100,
@@ -28,22 +37,13 @@ local sounds_to_make = {
 		killme = false
 	},
 	{
-		name = "CSA.HK416.LFE",
+		name = "CSA.Glock.LFE",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
 		sound = "fesiug_bo2/wep/mp7/fire_lfe.wav",
 		killme = false
-	},
-	{
-		name = "CSA.Laser",
-		channel = CHAN_ITEM,
-		volume = 1.0,
-		level = 65,
-		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/mp7/fire_lfe.wav",
-		killme = true
 	},
 	{
 		name = "CSA.Cloth.S",
@@ -63,25 +63,7 @@ local sounds_to_make = {
 		killme = true
 	},
 	{
-		name = "CSA.Laser",
-		channel = CHAN_ITEM,
-		volume = 1.0,
-		level = 65,
-		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/laser.wav",
-		killme = true
-	},
-	{
-		name = "CSA.MMS.FlipUp",
-		channel = CHAN_ITEM,
-		volume = 1.0,
-		level = 65,
-		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/_util/mms_flipup.wav",
-		killme = true
-	},
-	{
-		name = "CSA.HK416.R.Futz",
+		name = "CSA.Glock.R.Futz",
 		channel = CHAN_ITEM,
 		volume = 0.05,
 		level = 65,
@@ -90,40 +72,40 @@ local sounds_to_make = {
 		killme = true
 	},
 	{
-		name = "CSA.HK416.R.Magout",
-		channel = CHAN_ITEM,
+		name = "CSA.Glock.R.Magout",
+		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
 		sound = "fesiug_bo2/wep/_gen-assault/magout.wav",
-		killme = true
+		killme = false
 	},
 	{
-		name = "CSA.HK416.R.Magin",
-		channel = CHAN_ITEM,
+		name = "CSA.Glock.R.Magin",
+		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
 		sound = "fesiug_bo2/wep/_gen-assault/magin.wav",
-		killme = true
+		killme = false
 	},
 	{
-		name = "CSA.HK416.R.Boltback",
-		channel = CHAN_ITEM,
+		name = "CSA.Glock.R.Boltback",
+		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
 		sound = "fesiug_bo2/wep/_gen-assault/bb.wav",
-		killme = true
+		killme = false
 	},
 	{
-		name = "CSA.HK416.R.Boltforward",
-		channel = CHAN_ITEM,
+		name = "CSA.Glock.R.Boltforward",
+		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
 		sound = "fesiug_bo2/wep/_gen-assault/bf.wav",
-		killme = true
+		killme = false
 	},
 } 
 

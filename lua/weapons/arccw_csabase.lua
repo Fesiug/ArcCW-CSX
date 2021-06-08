@@ -69,11 +69,18 @@ SWEP.InBipodPos = Vector(-8, 0, -4)
 SWEP.InBipodMult = Vector(2, 1, 1)
 
 function SWEP:DoShootSound()
-	if self:GetBuff_Override("Silencer") then
-		self:SoundEngine(self.ShootSoundInfo[2])
-	else
-		self:SoundEngine(self.ShootSoundInfo[1])
+    local who = "fire"
+
+	if self.ShootSoundInfo[who .. "_sil"] and self:GetBuff_Override("Silencer") then
+        who = who .. "_sil"
 	end
+    
+    
+	if self.ShootSoundInfo[who .. "_first"] and self:GetBurstCount() == 1 then
+        who = who .. "_first"
+	end
+
+    self:SoundEngine(self.ShootSoundInfo[who])
 end
 
 -- not an engine, just like a
@@ -83,7 +90,7 @@ function SWEP:SoundEngine( snde )
 			if !v.s then return end
 			self:EmitSound(v.s, v.l, (v.pmi and v.pma) and math.Rand(v.pmi, v.pma) or v.p, v.v, v.c)
 		else
-			if CSASoundsInfo[v] and CSASoundsInfo[v].killme == true then self:StopSound(v) end
+			if ArcCW.CSA.SoundTab[v] and ArcCW.CSA.SoundTab[v].killme then self:StopSound(v) end
 			self:EmitSound(v)
 		end
 	end
