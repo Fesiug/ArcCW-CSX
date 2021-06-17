@@ -12,3 +12,5 @@
 ]]
 
 ArcCW.CSA = {}
+
+ArcCW.CSA.NoFlash = true

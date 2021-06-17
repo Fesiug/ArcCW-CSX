@@ -1,5 +1,25 @@
 
 local sounds_to_make = {
+    // -- USP
+	{
+		name = "CSA.USP.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {95, 105},
+		sound = "arccw_csa/fire/pistol/usp.wav",
+		killme = true
+	},
+	{
+		name = "CSA.USP.Dist",
+		channel = CHAN_STATIC,
+		volume = 0.1,
+		level = 100,
+		pitch = {95, 105},
+		sound = "fesiug_bo2/wep/_util/decay_ext.wav",
+		killme = false
+	},
+    // -- Glock
 	{
 		name = "CSA.Glock.FireFirst",
 		channel = CHAN_STATIC,
@@ -77,7 +97,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/_gen-assault/magout.wav",
+		sound = "fesiug_bo2/wep/_assault/magout.wav",
 		killme = false
 	},
 	{
@@ -86,7 +106,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/_gen-assault/magin.wav",
+		sound = "fesiug_bo2/wep/_assault/magin.wav",
 		killme = false
 	},
 	{
@@ -95,7 +115,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/_gen-assault/bb.wav",
+		sound = "fesiug_bo2/wep/_assault/bb.wav",
 		killme = false
 	},
 	{
@@ -104,7 +124,73 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/_gen-assault/bf.wav",
+		sound = "fesiug_bo2/wep/_assault/bf.wav",
+		killme = false
+	},
+    // -- MP5
+	{
+		name = "CSA.MP5.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {100, 110},
+		sound = "arccw_csa/fire/smg/mp5.wav",
+		killme = true
+	},
+	{
+		name = "CSA.MP5.Dist",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 100,
+		pitch = {95, 105},
+		sound = "arccw_csa/fire/smg/_falloff.wav",
+		killme = false
+	},
+    // -- UMP
+	{
+		name = "CSA.UMP.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {95, 110},
+		sound = "arccw_csa/fire/smg/ump45.wav",
+		killme = true
+	},
+	{
+		name = "CSA.UMP.Dist",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 100,
+		pitch = {95, 105},
+		sound = "arccw_csa/fire/smg/ump45_falloff.wav",
+		killme = false
+	},
+    // -- AK47
+	{
+		name = "CSA.AK47.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {90, 100},
+		sound = "arccw_csa/fire/rifle/ak47.wav",
+		killme = true
+	},
+	{
+		name = "CSA.AK47.Dist",
+		channel = CHAN_STATIC,
+		volume = 0.1,
+		level = 100,
+		pitch = {95, 105},
+		sound = "fesiug_bo2/wep/_util/decay_ext.wav",
+		killme = false
+	},
+	{
+		name = "CSA.AK47.LFE",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {95, 105},
+		sound = "fesiug_bo2/wep/mp7/fire_lfe.wav",
 		killme = false
 	},
 } 

@@ -2,11 +2,11 @@ SWEP.Base			=	"arccw_csabase"
 SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CS+ Anniversary"
-SWEP.PrintName		=	"VI Sidearm"
-SWEP.Trivia_Class			= "Machine Pistol"
-SWEP.Trivia_Desc			= "9x19mm fully automatic police machine pistol. Low damage, but a sophisticated recoil control system allows for excellent automatic performance."
+SWEP.PrintName		=	"Type 2"
+SWEP.Trivia_Class			= "Pistol"
+SWEP.Trivia_Desc			= ".40 S&W semi-automatic pistol. Commonly used among police and popular with civilians for its reliability. FBI loves this caliber, I hear! Zenith does not."
 SWEP.Trivia_Manufacturer	= "Auschen Waffenfabrik"
-SWEP.Trivia_Calibre			= "9x19mm"
+SWEP.Trivia_Calibre			= ".40 S&W"
 SWEP.Trivia_Mechanism		= "Short Recoil"
 SWEP.Trivia_Country			= "Austria"
 SWEP.Trivia_Year			= 1989
@@ -16,13 +16,14 @@ SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	65
-SWEP.ViewModel		=	"models/weapons/arccw/fesiugmw2/c_glock17_1.mdl"
-SWEP.WorldModel		=	"models/weapons/w_pist_glock18.mdl"
+SWEP.ViewModel      =   "models/weapons/arccw/fesiugmw2_2/c_ak47_1a.mdl"
+SWEP.WorldModel		=	"models/weapons/w_rif_ak47.mdl"
 SWEP.ActivePos = Vector(0.75, 3, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
+SWEP.DefaultBodygroups = "1"
 
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
-SWEP.ShellScale = 1
+SWEP.ShellModel = "models/shells/shell_556.mdl"
+SWEP.ShellScale = 1.334
 SWEP.ShellPitch = 100
 SWEP.ShellSounds = "autocheck"
 
@@ -31,24 +32,20 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.Primary.ClipSize	=	17
+SWEP.Primary.ClipSize	=	30
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_pistol"
 SWEP.NoFlash			=	ArcCW.CSA.NoFlash
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
-		"CSA.Glock.Fire",
-		--"FBO2.HK416.Dist",
-		--"FBO2.HK416.LFE",
+		"CSA.AK47.Fire",
+		"CSA.UMP.Dist",
+		"CSA.AK47.LFE",
+		"CSA.AK47.LFE",
 	},
 	["fire_sil"] = {
-		"FBO2.HK416.Fire_Silenced",
-	},
-	["fire_first"] = {
-		"CSA.Glock.FireFirst",
-		--"FBO2.HK416.Dist",
-		--"FBO2.HK416.LFE",
+		"CSA.AK47.Fire_Silenced",
 	},
 	["dry"] = {
 		{
@@ -74,7 +71,7 @@ SWEP.IronSightStruct = {
 	CrosshairInSights = false,
 }
 
-SWEP.Delay = 0.089
+SWEP.Delay = 0.1052
 SWEP.Firemodes = {
 	{
 		Mode = 2,

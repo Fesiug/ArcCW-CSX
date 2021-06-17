@@ -2,11 +2,11 @@ SWEP.Base			=	"arccw_csabase"
 SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CS+ Anniversary"
-SWEP.PrintName		=	"VI Sidearm"
-SWEP.Trivia_Class			= "Machine Pistol"
-SWEP.Trivia_Desc			= "9x19mm fully automatic police machine pistol. Low damage, but a sophisticated recoil control system allows for excellent automatic performance."
+SWEP.PrintName		=	"K&M SP40"
+SWEP.Trivia_Class			= "Pistol"
+SWEP.Trivia_Desc			= ".40 S&W semi-automatic pistol. Commonly used among police and popular with civilians for its reliability. FBI loves this caliber, I hear! Zenith does not."
 SWEP.Trivia_Manufacturer	= "Auschen Waffenfabrik"
-SWEP.Trivia_Calibre			= "9x19mm"
+SWEP.Trivia_Calibre			= ".40 S&W"
 SWEP.Trivia_Mechanism		= "Short Recoil"
 SWEP.Trivia_Country			= "Austria"
 SWEP.Trivia_Year			= 1989
@@ -16,13 +16,14 @@ SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	65
-SWEP.ViewModel		=	"models/weapons/arccw/fesiugmw2/c_glock17_1.mdl"
-SWEP.WorldModel		=	"models/weapons/w_pist_glock18.mdl"
+SWEP.ViewModel		=	"models/weapons/arccw/fesiugmw2/c_usp.mdl"
+SWEP.WorldModel		=	"models/weapons/w_pist_usp.mdl"
 SWEP.ActivePos = Vector(0.75, 3, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
+SWEP.DefaultBodygroups = "01"
 
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
-SWEP.ShellScale = 1
+SWEP.ShellScale = 1.334
 SWEP.ShellPitch = 100
 SWEP.ShellSounds = "autocheck"
 
@@ -31,24 +32,18 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.Primary.ClipSize	=	17
+SWEP.Primary.ClipSize	=	12
 SWEP.ChamberSize		=	1
-SWEP.MuzzleEffect		=	"muzzleflash_pistol"
+SWEP.MuzzleEffect		=	"muzzleflash_m14"
 SWEP.NoFlash			=	ArcCW.CSA.NoFlash
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
-		"CSA.Glock.Fire",
-		--"FBO2.HK416.Dist",
-		--"FBO2.HK416.LFE",
+		"CSA.USP.Fire",
+		"CSA.Glock.LFE",
 	},
 	["fire_sil"] = {
-		"FBO2.HK416.Fire_Silenced",
-	},
-	["fire_first"] = {
-		"CSA.Glock.FireFirst",
-		--"FBO2.HK416.Dist",
-		--"FBO2.HK416.LFE",
+		"CSA.USP.Fire_Silenced",
 	},
 	["dry"] = {
 		{
@@ -67,18 +62,15 @@ SWEP.AttachmentElements = {}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-	Pos = Vector(-2, 0, 1.55),
-	Ang = Angle(-0.75, 0, 0),
+	Pos = Vector(-2, 3, 1.6),
+	Ang = Angle(-1.2, 0, 0),
 	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
 
-SWEP.Delay = 0.089
+SWEP.Delay = 0.075
 SWEP.Firemodes = {
-	{
-		Mode = 2,
-	},
 	{
 		Mode = 1,
 	},
