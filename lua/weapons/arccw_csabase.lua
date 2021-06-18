@@ -105,7 +105,7 @@ function SWEP:SoundEngine( snde )
 			if !v.s then return end
 			self:EmitSound(v.s, v.l, (v.pmi and v.pma) and math.Rand(v.pmi, v.pma) or v.p, v.v, v.c)
 		else
-			if (!game.SinglePlayer() and IsFirstTimePredicted() or true) and ArcCW.CSA.SoundTab[v] and ArcCW.CSA.SoundTab[v].killme then self:StopSound(v) end
+			if ArcCW.CSA.SoundTab[v] and ArcCW.CSA.SoundTab[v].killme then self:StopSound(v) end
 			self:EmitSound(v)
 		end
 	end

@@ -41,7 +41,7 @@ SWEP.NoFlash			=	ArcCW.CSA.NoFlash
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
-		"CSA.Genbop",
+		"CSA.GenbopS",
 		"CSA.MP5.Fire",
 		"CSA.MP5.Dist",
 	},
