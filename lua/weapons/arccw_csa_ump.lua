@@ -3,12 +3,12 @@ SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CS+ Anniversary"
 SWEP.PrintName		=	"K&M MPS-45"
-SWEP.Trivia_Class			= "Pistol"
+SWEP.Trivia_Class			= "Submachine Gun"
 SWEP.Trivia_Desc			= "Ubiquitous sub-machine gun. Created as a response to the need for a faster-firing and more reliable submachine gun than existing options at the time. In .45, the heavy caliber allows it to pack a greater punch in short range while remaining controllable with a lower fire rate."
-SWEP.Trivia_Manufacturer	= "Auschen Waffenfabrik"
+SWEP.Trivia_Manufacturer	= "K&M"
 SWEP.Trivia_Calibre			= ".45 ACP"
-SWEP.Trivia_Mechanism		= "Short Recoil"
-SWEP.Trivia_Country			= "Austria"
+SWEP.Trivia_Mechanism		= "Straight Blowback" -- correct if wrong
+SWEP.Trivia_Country			= "Germany"
 SWEP.Trivia_Year			= 1989
 
 SWEP.Slot			=	2
@@ -31,6 +31,7 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
+SWEP.SightTime			=	0.3
 SWEP.Primary.ClipSize	=	25
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_mp5"
@@ -38,7 +39,9 @@ SWEP.NoFlash			=	ArcCW.CSA.NoFlash
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
+		"CSA.GenbopS",
 		"CSA.UMP.Fire",
+		"CSA.FAMAS.FireClack",
 		"CSA.UMP.Dist",
 		"CSA.Glock.LFE",
 	},
@@ -62,8 +65,8 @@ SWEP.AttachmentElements = {}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-	Pos = Vector(-2, 0, 1.55),
-	Ang = Angle(-0.75, 0, 0),
+    Pos = Vector(-2.29, -3.477, 1),
+    Ang = Angle(0.699, 0, 0),
 	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
@@ -76,8 +79,9 @@ SWEP.Firemodes = {
 	},
 	{
 		Mode = -2,
-        Mult_RPM = 1.2,
-        PostBurstDelay = 0.1,
+		Mult_RPM = 1.2,
+		PostBurstDelay = 0.15,
+		RunawayBurst = true,
 	},
 	{
 		Mode = 1,
@@ -87,8 +91,8 @@ SWEP.Firemodes = {
 	}
 }
 
-SWEP.NPCWeaponType	=	{"weapon_pistol"}
-SWEP.NPCWeight		=	80
+SWEP.NPCWeaponType	=	{"weapon_smg1"}
+SWEP.NPCWeight		=	100
 
 SWEP.Animations = {
 	["idle"] = {

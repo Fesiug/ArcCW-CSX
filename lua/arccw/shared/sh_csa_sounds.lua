@@ -1,6 +1,6 @@
 
 local sounds_to_make = {
-    // -- USP
+	// -- USP
 	{
 		name = "CSA.USP.Fire",
 		channel = CHAN_STATIC,
@@ -19,7 +19,7 @@ local sounds_to_make = {
 		sound = "fesiug_bo2/wep/_util/decay_ext.wav",
 		killme = false
 	},
-    // -- Glock
+	// -- Glock
 	{
 		name = "CSA.Glock.FireFirst",
 		channel = CHAN_STATIC,
@@ -127,7 +127,7 @@ local sounds_to_make = {
 		sound = "fesiug_bo2/wep/_assault/bf.wav",
 		killme = false
 	},
-    // -- MP5
+	// -- MP5
 	{
 		name = "CSA.MP5.Fire",
 		channel = CHAN_STATIC,
@@ -146,7 +146,7 @@ local sounds_to_make = {
 		sound = "arccw_csa/fire/smg/_falloff.wav",
 		killme = false
 	},
-    // -- UMP
+	// -- UMP
 	{
 		name = "CSA.UMP.Fire",
 		channel = CHAN_STATIC,
@@ -165,7 +165,7 @@ local sounds_to_make = {
 		sound = "arccw_csa/fire/smg/ump45_falloff.wav",
 		killme = false
 	},
-    // -- AK47
+	// -- AK47
 	{
 		name = "CSA.AK47.Fire",
 		channel = CHAN_STATIC,
@@ -192,6 +192,61 @@ local sounds_to_make = {
 		pitch = {95, 105},
 		sound = "fesiug_bo2/wep/mp7/fire_lfe.wav",
 		killme = false
+	},
+	// -- FAMAS
+	{
+		name = "CSA.FAMAS.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {95, 110},
+		sound = "arccw_csa/fire/rifle/famas.wav",
+		killme = true
+	},
+	{
+		name = "CSA.FAMAS.FireClack",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {95, 110},
+		sound = {"arccw_csa/fire/rifle/famas_clack1.wav","arccw_csa/fire/rifle/famas_clack2.wav"},
+		killme = false
+	},
+	{
+		name = "CSA.FAMAS.FireFirst",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {85, 100},
+		sound = "arccw_csa/fire/rifle/famas.wav",
+		killme = true
+	},
+	{
+		name = "CSA.Genbop",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {95, 105},
+		sound = "arccw_csa/fire/bop.wav",
+		killme = true
+	},
+	{
+		name = "CSA.GenbopR",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {80, 95},
+		sound = "arccw_csa/fire/bop.wav",
+		killme = true
+	},
+	{
+		name = "CSA.GenbopS",
+		channel = CHAN_STATIC,
+		volume = 0.3,
+		level = 65,
+		pitch = {80, 95},
+		sound = "arccw_csa/fire/bop.wav",
+		killme = true
 	},
 } 
 

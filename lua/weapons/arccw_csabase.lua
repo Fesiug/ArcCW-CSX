@@ -11,10 +11,24 @@ SWEP.ViewModelFOV	=	65
 SWEP.ViewModel		=	"models/weapons/c_smg1.mdl"
 SWEP.WorldModel		=	"models/weapons/w_smg1.mdl"
 
-SWEP.Attachments = {}
-SWEP.AttachmentElements = {}
+SWEP.Primary.Ammo	=	"pistol"
+
+SWEP.Attachments = {
+	{
+		PrintName = "enable sil",
+		Slot = "charm",
+        InstalledEles = {"crab"},
+	}
+}
+SWEP.AttachmentElements = {
+	["crab"] = {
+		Silencer = true
+	}
+}
 SWEP.Animations = {}
 
+SWEP.Delay = 0.1
+SWEP.Num = 1
 SWEP.Firemodes = {}
 
 SWEP.NPCWeaponType	=	nil
@@ -26,6 +40,7 @@ SWEP.HipDispersion = 0
 SWEP.MoveDispersion = 0
 SWEP.SightsDispersion = 0
 SWEP.JumpDispersion = 0
+SWEP.Override_ShellEffect = "arccw_shelleffect_csa"
 
 SWEP.Recoil = 0
 SWEP.RecoilSide = 0
@@ -49,8 +64,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.ReloadPos = nil
 SWEP.ReloadAng = nil
 
-SWEP.CrouchPos = Vector(0, 0, 0)
-SWEP.CrouchAng = Angle(0, 0, 0)
+SWEP.CrouchPos = Vector(0.2, 2, 0)
+SWEP.CrouchAng = Angle(0, 0, -2)
 
 SWEP.HolsterPos = Vector(0, -6, 0)
 SWEP.HolsterAng = Angle(-4, 36, 0)
@@ -143,4 +158,18 @@ function SWEP:GetFiremodeBars()
 	end
 	
 	return "-_-__-_-___"
+end
+
+function SWEP:CalcView(ply, pos, ang, fov)
+    if !CLIENT then return end
+
+    if GetConVar("arccw_vm_coolview"):GetBool() then
+        self:CoolView(ply, pos, ang, fov)
+    end
+
+    ang = ang + (AngleRand() * math.max(self:GetNextPrimaryFireSlowdown() - CurTime(), 0) * 0.02)
+
+    ang = ang + (self.ViewPunchAngle * 10)
+
+    return pos, ang, fov
 end

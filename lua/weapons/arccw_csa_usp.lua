@@ -11,7 +11,7 @@ SWEP.Trivia_Mechanism		= "Short Recoil"
 SWEP.Trivia_Country			= "Austria"
 SWEP.Trivia_Year			= 1989
 
-SWEP.Slot			=	2
+SWEP.Slot			=	1
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
@@ -39,8 +39,10 @@ SWEP.NoFlash			=	ArcCW.CSA.NoFlash
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
+		"CSA.Genbop",
 		"CSA.USP.Fire",
 		"CSA.Glock.LFE",
+		"CSA.Genbop",
 	},
 	["fire_sil"] = {
 		"CSA.USP.Fire_Silenced",
@@ -80,7 +82,7 @@ SWEP.Firemodes = {
 }
 
 SWEP.NPCWeaponType	=	{"weapon_pistol"}
-SWEP.NPCWeight		=	80
+SWEP.NPCWeight		=	100
 
 SWEP.Animations = {
 	["idle"] = {
