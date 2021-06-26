@@ -1,6 +1,6 @@
 
 --[[
-	ArcCW CS+ Anniversary
+	ArcCW CS×
 	CS+ recreated using high-resolution assets
 	
 	Credits
@@ -11,6 +11,6 @@
 		-	this nuts
 ]]
 
-ArcCW.CSA = {}
+ArcCW.CSX = {}
 
-ArcCW.CSA.NoFlash = true
+ArcCW.CSX.NoFlash = true

@@ -2,7 +2,7 @@ SWEP.Base			=	"arccw_base"
 SWEP.Spawnable		=	false
 
 SWEP.PrintName		=	".base"
-SWEP.Category		=	"ArcCW - CS+ Anniversary"
+SWEP.Category		=	"ArcCW - CSX"
 SWEP.Slot			=	0
 SWEP.SlotPos		=	0
 
@@ -47,7 +47,7 @@ SWEP.HipDispersion = 0
 SWEP.MoveDispersion = 0
 SWEP.SightsDispersion = 0
 SWEP.JumpDispersion = 0
-SWEP.Override_ShellEffect = "arccw_shelleffect_csa"
+SWEP.Override_ShellEffect = "arccw_shelleffect_csx"
 
 SWEP.Recoil = 0
 SWEP.RecoilSide = 0

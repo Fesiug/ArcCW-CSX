@@ -1,36 +1,28 @@
-SWEP.Base			=	"arccw_csabase"
+SWEP.Base			=	"arccw_csxbase"
 SWEP.Spawnable		=	true
 
-SWEP.Category		=	"ArcCW - CS+ Anniversary"
-SWEP.PrintName		=	"Type 2"
-SWEP.Trivia_Class			= "Assault Rifle"
-SWEP.Trivia_Desc			= "An early assault rifle pattern, copied and used all around the world. Designed by a Soviet tank mechanic in response to the need for a more versatile infantry weapon. Packs a serious punch at the cost of poor accuracy."
-SWEP.Trivia_Manufacturer    = nil--"Kremen Oruzhiye" jeez, who knows who made this one
-SWEP.Trivia_Calibre         = "7.62x39mm"
-SWEP.Trivia_Mechanism       = "Gas-Operated"
-SWEP.Trivia_Country         = "Soviet Union"
+SWEP.Category		=	"ArcCW - CSX"
+SWEP.PrintName		=	"VI Sidearm"
+SWEP.Trivia_Class			= "Machine Pistol"
+SWEP.Trivia_Desc			= "9x19mm fully automatic police machine pistol, developed at the request of the Austrian counter-terrorist unit EKO Cobra. Low damage, but a sophisticated recoil control system allows for excellent automatic performance."
+SWEP.Trivia_Manufacturer	= "Vienna Manufacturing"
+SWEP.Trivia_Calibre			= "9x19mm"
+SWEP.Trivia_Mechanism		= "Short Recoil"
+SWEP.Trivia_Country			= "Austria"
 SWEP.Trivia_Year			= 1989
 
-SWEP.Slot			=	2
+SWEP.Slot			=	1
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	65
-SWEP.ViewModel      =   "models/weapons/arccw/fesiugmw2_2/c_ak47_1a.mdl"
-SWEP.WorldModel		=	"models/weapons/w_rif_ak47.mdl"
-SWEP.ActivePos = Vector(0.75, 2, 0.75)
+SWEP.ViewModel		=	"models/weapons/arccw/fesiugmw2/c_glock17_1.mdl"
+SWEP.WorldModel		=	"models/weapons/w_pist_glock18.mdl"
+SWEP.ActivePos = Vector(0.75, 3, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
-SWEP.DefaultBodygroups = "1"
 
-SWEP.Damage				=	28
-SWEP.DamageMin			=	14
-SWEP.RangeMin			=	8
-SWEP.Range				=	50
-SWEP.Penetration		=	4
-SWEP.Primary.Ammo		=	"ar2"
-
-SWEP.ShellModel		=	"models/shells/shell_556.mdl"
-SWEP.ShellScale		=	1.334
+SWEP.ShellModel		=	"models/shells/shell_9mm.mdl"
+SWEP.ShellScale		=	1.2
 SWEP.ShellPitch		=	100
 SWEP.ShellSounds	=	"autocheck"
 
@@ -39,21 +31,27 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.SightTime			=	0.4
-SWEP.Primary.ClipSize	=	30
+SWEP.SightTime			=	0.2
+SWEP.Primary.ClipSize	=	17
 SWEP.ChamberSize		=	1
-SWEP.MuzzleEffect		=	"muzzleflash_ak47"
+SWEP.MuzzleEffect		=	"muzzleflash_pistol"
 SWEP.NoFlash			=	ArcCW.CSA.NoFlash
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
-		"CSA.GenbopR",
-		"CSA.AK47.Fire",
-		"CSA.UMP.Dist",
-		"CSA.AK47.LFE",
+		"CSA.GenbopS",
+		"CSA.Glock.Fire",
+		--"FBO2.HK416.Dist",
+		--"FBO2.HK416.LFE",
 	},
 	["fire_sil"] = {
-		"CSA.AK47.Fire_Silenced",
+		"FBO2.HK416.Fire_Silenced",
+	},
+	["fire_first"] = {
+		"CSA.Genbop",
+		"CSA.Glock.FireFirst",
+		--"FBO2.HK416.Dist",
+		--"FBO2.HK416.LFE",
 	},
 	["dry"] = {
 		{
@@ -72,14 +70,14 @@ SWEP.AttachmentElements = {}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-	Pos = Vector(-2.345, -2.012, 0.659),
-	Ang = Angle(0.3, 0, 0),
+	Pos = Vector(-2, 0, 1.55),
+	Ang = Angle(-0.75, 0, 0),
 	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
 
-SWEP.Delay = 0.1052
+SWEP.Delay = 0.089
 SWEP.Firemodes = {
 	{
 		Mode = 2,
@@ -92,7 +90,7 @@ SWEP.Firemodes = {
 	}
 }
 
-SWEP.NPCWeaponType	=	{"weapon_ar2"}
+SWEP.NPCWeaponType	=	{"weapon_pistol"}
 SWEP.NPCWeight		=	100
 
 SWEP.Animations = {

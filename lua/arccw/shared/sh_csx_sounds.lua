@@ -2,7 +2,7 @@
 local sounds_to_make = {
 	// -- USP
 	{
-		name = "CSA.USP.Fire",
+		name = "CSX.USP.Fire",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -11,7 +11,7 @@ local sounds_to_make = {
 		killme = true
 	},
 	{
-		name = "CSA.USP.Dist",
+		name = "CSX.USP.Dist",
 		channel = CHAN_STATIC,
 		volume = 0.1,
 		level = 100,
@@ -21,7 +21,7 @@ local sounds_to_make = {
 	},
 	// -- Glock
 	{
-		name = "CSA.Glock.FireFirst",
+		name = "CSX.Glock.FireFirst",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -30,7 +30,7 @@ local sounds_to_make = {
 		killme = false
 	},
 	{
-		name = "CSA.Glock.Fire",
+		name = "CSX.Glock.Fire",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -39,7 +39,7 @@ local sounds_to_make = {
 		killme = true
 	},
 	{
-		name = "CSA.Glock.Fire_Silenced",
+		name = "CSX.Glock.Fire_Silenced",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -48,7 +48,7 @@ local sounds_to_make = {
 		killme = false
 	},
 	{
-		name = "CSA.Glock.Dist",
+		name = "CSX.Glock.Dist",
 		channel = CHAN_STATIC,
 		volume = 0.1,
 		level = 100,
@@ -57,7 +57,7 @@ local sounds_to_make = {
 		killme = false
 	},
 	{
-		name = "CSA.Glock.LFE",
+		name = "CSX.Glock.LFE",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -66,7 +66,7 @@ local sounds_to_make = {
 		killme = false
 	},
 	{
-		name = "CSA.Cloth.S",
+		name = "CSX.Cloth.S",
 		channel = CHAN_ITEM,
 		volume = 0.2,
 		level = 65,
@@ -83,7 +83,7 @@ local sounds_to_make = {
 		killme = true
 	},
 	{
-		name = "CSA.Glock.R.Futz",
+		name = "CSX.Glock.R.Futz",
 		channel = CHAN_ITEM,
 		volume = 0.05,
 		level = 65,
@@ -92,7 +92,7 @@ local sounds_to_make = {
 		killme = true
 	},
 	{
-		name = "CSA.Glock.R.Magout",
+		name = "CSX.Glock.R.Magout",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -101,7 +101,7 @@ local sounds_to_make = {
 		killme = false
 	},
 	{
-		name = "CSA.Glock.R.Magin",
+		name = "CSX.Glock.R.Magin",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -110,7 +110,7 @@ local sounds_to_make = {
 		killme = false
 	},
 	{
-		name = "CSA.Glock.R.Boltback",
+		name = "CSX.Glock.R.Boltback",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -119,7 +119,7 @@ local sounds_to_make = {
 		killme = false
 	},
 	{
-		name = "CSA.Glock.R.Boltforward",
+		name = "CSX.Glock.R.Boltforward",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -129,7 +129,7 @@ local sounds_to_make = {
 	},
 	// -- MP5
 	{
-		name = "CSA.MP5.Fire",
+		name = "CSX.MP5.Fire",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -138,7 +138,7 @@ local sounds_to_make = {
 		killme = true
 	},
 	{
-		name = "CSA.MP5.Dist",
+		name = "CSX.MP5.Dist",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 100,
@@ -148,7 +148,7 @@ local sounds_to_make = {
 	},
 	// -- UMP
 	{
-		name = "CSA.UMP.Fire",
+		name = "CSX.UMP.Fire",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -157,7 +157,7 @@ local sounds_to_make = {
 		killme = true
 	},
 	{
-		name = "CSA.UMP.Dist",
+		name = "CSX.UMP.Dist",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 100,
@@ -167,7 +167,7 @@ local sounds_to_make = {
 	},
 	// -- AK47
 	{
-		name = "CSA.AK47.Fire",
+		name = "CSX.AK47.Fire",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -176,7 +176,7 @@ local sounds_to_make = {
 		killme = true
 	},
 	{
-		name = "CSA.AK47.Dist",
+		name = "CSX.AK47.Dist",
 		channel = CHAN_STATIC,
 		volume = 0.1,
 		level = 100,
@@ -185,7 +185,7 @@ local sounds_to_make = {
 		killme = false
 	},
 	{
-		name = "CSA.AK47.LFE",
+		name = "CSX.AK47.LFE",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -195,7 +195,7 @@ local sounds_to_make = {
 	},
 	// -- FAMAS
 	{
-		name = "CSA.FAMAS.Fire",
+		name = "CSX.FAMAS.Fire",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -204,7 +204,7 @@ local sounds_to_make = {
 		killme = true
 	},
 	{
-		name = "CSA.FAMAS.FireClack",
+		name = "CSX.FAMAS.FireClack",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -213,7 +213,7 @@ local sounds_to_make = {
 		killme = false
 	},
 	{
-		name = "CSA.FAMAS.FireFirst",
+		name = "CSX.FAMAS.FireFirst",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -222,7 +222,7 @@ local sounds_to_make = {
 		killme = true
 	},
 	{
-		name = "CSA.Genbop",
+		name = "CSX.Genbop",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -231,7 +231,7 @@ local sounds_to_make = {
 		killme = true
 	},
 	{
-		name = "CSA.GenbopR",
+		name = "CSX.GenbopR",
 		channel = CHAN_STATIC,
 		volume = 1.0,
 		level = 65,
@@ -240,7 +240,7 @@ local sounds_to_make = {
 		killme = true
 	},
 	{
-		name = "CSA.GenbopS",
+		name = "CSX.GenbopS",
 		channel = CHAN_STATIC,
 		volume = 0.3,
 		level = 65,
@@ -250,13 +250,13 @@ local sounds_to_make = {
 	},
 } 
 
-ArcCW.CSA.SoundTab = {}
+ArcCW.CSX.SoundTab = {}
 
 for i, v in ipairs(sounds_to_make) do
 	sound.Add(v)
-	ArcCW.CSA.SoundTab[v.name] = v
+	ArcCW.CSX.SoundTab[v.name] = v
 	if v.killme then
-		ArcCW.CSA.SoundTab[v.name].killme = v.killme
+		ArcCW.CSX.SoundTab[v.name].killme = v.killme
 	end
 end
 

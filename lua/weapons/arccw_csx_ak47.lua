@@ -1,13 +1,13 @@
-SWEP.Base			=	"arccw_csabase"
+SWEP.Base			=	"arccw_csxbase"
 SWEP.Spawnable		=	true
 
-SWEP.Category		=	"ArcCW - CS+ Anniversary"
-SWEP.PrintName		=	"CANIN C6"
+SWEP.Category		=	"ArcCW - CSX"
+SWEP.PrintName		=	"Type 2"
 SWEP.Trivia_Class			= "Assault Rifle"
-SWEP.Trivia_Desc			= "Bullpup 3-round burst assault rifle. Bullpup configuration allows for manuverability in close range, while remaining a well-rounded option for medium to long range battle."
+SWEP.Trivia_Desc			= "An early assault rifle pattern, copied and used all around the world. Designed by a Soviet tank mechanic in response to the need for a more versatile infantry weapon. Packs a serious punch at the cost of poor accuracy."
 SWEP.Trivia_Manufacturer    = nil--"Kremen Oruzhiye" jeez, who knows who made this one
-SWEP.Trivia_Calibre         = "5.56x45mm"
-SWEP.Trivia_Mechanism       = "Lever-Delayed Blowback"
+SWEP.Trivia_Calibre         = "7.62x39mm"
+SWEP.Trivia_Mechanism       = "Gas-Operated"
 SWEP.Trivia_Country         = "Soviet Union"
 SWEP.Trivia_Year			= 1989
 
@@ -16,14 +16,21 @@ SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	65
-SWEP.ViewModel      =   "models/weapons/arccw/fesiugmw2_2/c_famas_1.mdl"
+SWEP.ViewModel      =   "models/weapons/arccw/fesiugmw2_2/c_ak47_1a.mdl"
 SWEP.WorldModel		=	"models/weapons/w_rif_ak47.mdl"
-SWEP.ActivePos = Vector(0.5, 3, 1)
+SWEP.ActivePos = Vector(0.75, 2, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
-SWEP.DefaultBodygroups = ""
+SWEP.DefaultBodygroups = "1"
+
+SWEP.Damage				=	28
+SWEP.DamageMin			=	14
+SWEP.RangeMin			=	8
+SWEP.Range				=	50
+SWEP.Penetration		=	4
+SWEP.Primary.Ammo		=	"ar2"
 
 SWEP.ShellModel		=	"models/shells/shell_556.mdl"
-SWEP.ShellScale		=	1.1
+SWEP.ShellScale		=	1.334
 SWEP.ShellPitch		=	100
 SWEP.ShellSounds	=	"autocheck"
 
@@ -33,27 +40,20 @@ SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
 SWEP.SightTime			=	0.4
-SWEP.Primary.ClipSize	=	25
+SWEP.Primary.ClipSize	=	30
 SWEP.ChamberSize		=	1
-SWEP.MuzzleEffect		=	"muzzleflash_pistol"
-SWEP.NoFlash			=	ArcCW.CSA.NoFlash
+SWEP.MuzzleEffect		=	"muzzleflash_ak47"
+SWEP.NoFlash			=	ArcCW.CSX.NoFlash
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
-		"CSA.GenbopR",
-		"CSA.FAMAS.Fire",
-		"CSA.FAMAS.FireClack",
-		"CSA.UMP.Dist",
-		"CSA.AK47.LFE",
+		"CSX.GenbopR",
+		"CSX.AK47.Fire",
+		"CSX.UMP.Dist",
+		"CSX.AK47.LFE",
 	},
 	["fire_sil"] = {
-		"CSA.AK47.Fire_Silenced",
-	},
-	["fire_first"] = {
-		"CSA.GenbopR",
-		"CSA.FAMAS.FireFirst",
-		"CSA.UMP.Dist",
-		"CSA.AK47.LFE",
+		"CSX.AK47.Fire_Silenced",
 	},
 	["dry"] = {
 		{
@@ -72,19 +72,17 @@ SWEP.AttachmentElements = {}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.04, -4.512, -0.179),
-    Ang = Angle(0, 0, 0),
+	Pos = Vector(-2.345, -2.012, 0.659),
+	Ang = Angle(0.3, 0, 0),
 	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
 
-SWEP.Delay = 0.068
+SWEP.Delay = 0.1052
 SWEP.Firemodes = {
 	{
-		Mode = -3,
-        PostBurstDelay = 0.15,
-		RunawayBurst = true,
+		Mode = 2,
 	},
 	{
 		Mode = 1,
@@ -104,10 +102,10 @@ SWEP.Animations = {
 	["ready"] = {
 		Source = "pullout",--"base.pullout_first",
 		SoundTable = {
-			{ s = "CSA.Glock.R.Boltback", t = 22/30 },
-			{ s = "CSA.Glock.R.Boltrelease", t = 26/30 },
-			{ s = "CSA.Glock.R.Boltback", t = 29/30 },
-			{ s = "CSA.Glock.R.Boltrelease", t = 35/30 },
+			{ s = "CSX.Glock.R.Boltback", t = 22/30 },
+			{ s = "CSX.Glock.R.Boltrelease", t = 26/30 },
+			{ s = "CSX.Glock.R.Boltback", t = 29/30 },
+			{ s = "CSX.Glock.R.Boltrelease", t = 35/30 },
 		}
 	},
 	["draw"] = {
@@ -130,24 +128,24 @@ SWEP.Animations = {
 	},
 	["reload"] = {
 		Source = "reload",--"base.reload",
-		MinProgress = 2.4,
+		MinProgress = 1.4,
 		SoundTable = {
-			{ s = "CSA.Cloth.S", t = 1/30 },
-			{ s = "CSA.Glock.R.Magout", t = 14/30 },
-			{ s = "CSA.Glock.R.Futz", t = 39/30 },
-			{ s = "CSA.Glock.R.Magin", t = 42/30 },
+			{ s = "CSX.Cloth.S", t = 1/30 },
+			{ s = "CSX.Glock.R.Magout", t = 14/30 },
+			{ s = "CSX.Glock.R.Futz", t = 39/30 },
+			{ s = "CSX.Glock.R.Magin", t = 42/30 },
 		}
 	},
 	["reload_empty"] = {
 		Source = "reload_empty",--"base.reload_empty",
-		MinProgress = 2.4,
+		MinProgress = 1.4,
 		SoundTable = {
-			{ s = "CSA.Cloth.S", t = 1/30 },
-			{ s = "CSA.Glock.R.Magout", t = 14/30 },
-			{ s = "CSA.Glock.R.Futz", t = 39/30 },
-			{ s = "CSA.Glock.R.Magin", t = 42/30 },
-			{ s = "CSA.Glock.R.Boltback", t = 60/30 },
-			{ s = "CSA.Glock.R.Boltrelease", t = 65/30 },
+			{ s = "CSX.Cloth.S", t = 1/30 },
+			{ s = "CSX.Glock.R.Magout", t = 14/30 },
+			{ s = "CSX.Glock.R.Futz", t = 39/30 },
+			{ s = "CSX.Glock.R.Magin", t = 42/30 },
+			{ s = "CSX.Glock.R.Boltback", t = 60/30 },
+			{ s = "CSX.Glock.R.Boltrelease", t = 65/30 },
 		}
 	},
 	["enter_sprint"] = {

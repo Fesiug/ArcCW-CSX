@@ -1,7 +1,7 @@
-SWEP.Base			=	"arccw_csabase"
+SWEP.Base			=	"arccw_csxbase"
 SWEP.Spawnable		=	true
 
-SWEP.Category		=	"ArcCW - CS+ Anniversary"
+SWEP.Category		=	"ArcCW - CSX"
 SWEP.PrintName		=	"K&M MPS-45"
 SWEP.Trivia_Class			= "Submachine Gun"
 SWEP.Trivia_Desc			= "Ubiquitous sub-machine gun. Created as a response to the need for a faster-firing and more reliable submachine gun than existing options at the time. In .45, the heavy caliber allows it to pack a greater punch in short range while remaining controllable with a lower fire rate."
