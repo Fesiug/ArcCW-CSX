@@ -18,20 +18,21 @@ SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	65
 SWEP.ViewModel      =   "models/weapons/arccw/fesiugmw2_2/c_famas_1.mdl"
 SWEP.WorldModel		=	"models/weapons/w_rif_ak47.mdl"
-SWEP.ActivePos = Vector(0.75, 3, 0.5)
+SWEP.ActivePos = Vector(0.5, 3, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = ""
 
-SWEP.ShellModel = "models/shells/shell_556.mdl"
-SWEP.ShellScale = 1.1
-SWEP.ShellPitch = 100
-SWEP.ShellSounds = "autocheck"
+SWEP.ShellModel		=	"models/shells/shell_556.mdl"
+SWEP.ShellScale		=	1.1
+SWEP.ShellPitch		=	100
+SWEP.ShellSounds	=	"autocheck"
 
 SWEP.HoldtypeHolstered	= "normal"
 SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
+SWEP.SightTime			=	0.4
 SWEP.Primary.ClipSize	=	25
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_pistol"

@@ -18,13 +18,13 @@ SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	65
 SWEP.ViewModel		=	"models/weapons/arccw/fesiugmw2/c_ump45_1.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_usp.mdl"
-SWEP.ActivePos = Vector(0.75, 3, 0.5)
+SWEP.ActivePos = Vector(0.75, 2, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
-SWEP.ShellScale = 1.334
-SWEP.ShellPitch = 100
-SWEP.ShellSounds = "autocheck"
+SWEP.ShellModel		=	"models/shells/shell_9mm.mdl"
+SWEP.ShellScale		=	1.334
+SWEP.ShellPitch		=	100
+SWEP.ShellSounds	=	"autocheck"
 
 SWEP.HoldtypeHolstered	= "normal"
 SWEP.HoldtypeActive		= "pistol"

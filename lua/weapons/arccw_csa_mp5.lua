@@ -20,20 +20,21 @@ SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	65
 SWEP.ViewModel		=	"models/weapons/arccw/fesiugmw2/c_mp5k.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_usp.mdl"
-SWEP.ActivePos = Vector(0.75, 3, 0.5)
+SWEP.ActivePos = Vector(0.5, 2, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = ""
 
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
-SWEP.ShellScale = 1.334
-SWEP.ShellPitch = 100
-SWEP.ShellSounds = "autocheck"
+SWEP.ShellModel		=	"models/shells/shell_9mm.mdl"
+SWEP.ShellScale		=	1.2
+SWEP.ShellPitch		=	100
+SWEP.ShellSounds	=	"autocheck"
 
 SWEP.HoldtypeHolstered	= "normal"
 SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
+SWEP.SightTime			=	0.3
 SWEP.Primary.ClipSize	=	30
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_mp5"

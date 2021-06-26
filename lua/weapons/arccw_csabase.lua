@@ -11,7 +11,14 @@ SWEP.ViewModelFOV	=	65
 SWEP.ViewModel		=	"models/weapons/c_smg1.mdl"
 SWEP.WorldModel		=	"models/weapons/w_smg1.mdl"
 
-SWEP.Primary.Ammo	=	"pistol"
+SWEP.Damage				=	25
+SWEP.DamageMin			=	15
+SWEP.RangeMin			=	10
+SWEP.Range				=	60
+SWEP.Penetration		=	4
+SWEP.DamageType			=	DMG_BULLET
+SWEP.DamageTypeHandled	=	false
+SWEP.Primary.Ammo		=	"pistol"
 
 SWEP.Attachments = {
 	{

@@ -21,16 +21,17 @@ SWEP.WorldModel		=	"models/weapons/w_pist_glock18.mdl"
 SWEP.ActivePos = Vector(0.75, 3, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
-SWEP.ShellScale = 1
-SWEP.ShellPitch = 100
-SWEP.ShellSounds = "autocheck"
+SWEP.ShellModel		=	"models/shells/shell_9mm.mdl"
+SWEP.ShellScale		=	1.2
+SWEP.ShellPitch		=	100
+SWEP.ShellSounds	=	"autocheck"
 
 SWEP.HoldtypeHolstered	= "normal"
 SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
+SWEP.SightTime			=	0.2
 SWEP.Primary.ClipSize	=	17
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_pistol"
@@ -38,7 +39,7 @@ SWEP.NoFlash			=	ArcCW.CSA.NoFlash
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
-		"CSA.Genbop",
+		"CSA.GenbopS",
 		"CSA.Glock.Fire",
 		--"FBO2.HK416.Dist",
 		--"FBO2.HK416.LFE",

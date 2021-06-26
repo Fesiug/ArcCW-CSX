@@ -22,16 +22,17 @@ SWEP.ActivePos = Vector(0.75, 3, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "01"
 
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
-SWEP.ShellScale = 1.334
-SWEP.ShellPitch = 100
-SWEP.ShellSounds = "autocheck"
+SWEP.ShellModel		=	"models/shells/shell_9mm.mdl"
+SWEP.ShellScale		=	1.334
+SWEP.ShellPitch		=	100
+SWEP.ShellSounds	=	"autocheck"
 
 SWEP.HoldtypeHolstered	= "normal"
 SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
+SWEP.SightTime			=	0.2
 SWEP.Primary.ClipSize	=	12
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_m14"
