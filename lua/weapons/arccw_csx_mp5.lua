@@ -38,16 +38,16 @@ SWEP.SightTime			=	0.3
 SWEP.Primary.ClipSize	=	30
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_mp5"
-SWEP.NoFlash			=	ArcCW.CSA.NoFlash
+SWEP.NoFlash			=	ArcCW.CSX.NoFlash
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
-		"CSA.GenbopS",
-		"CSA.MP5.Fire",
-		"CSA.MP5.Dist",
+		"CSX.GenbopS",
+		"CSX.MP5.Fire",
+		"CSX.MP5.Dist",
 	},
 	["fire_sil"] = {
-		"CSA.MP5.Fire_Silenced",
+		"CSX.MP5.Fire_Silenced",
 	},
 	["dry"] = {
 		{
@@ -102,10 +102,10 @@ SWEP.Animations = {
 	["ready"] = {
 		Source = "pullout_first".."_nofg",--"base.pullout_first",
 		SoundTable = {
-			{ s = "CSA.Glock.R.Boltback", t = 22/30 },
-			{ s = "CSA.Glock.R.Boltrelease", t = 26/30 },
-			{ s = "CSA.Glock.R.Boltback", t = 29/30 },
-			{ s = "CSA.Glock.R.Boltrelease", t = 35/30 },
+			{ s = "CSX.Glock.R.Boltback", t = 22/30 },
+			{ s = "CSX.Glock.R.Boltrelease", t = 26/30 },
+			{ s = "CSX.Glock.R.Boltback", t = 29/30 },
+			{ s = "CSX.Glock.R.Boltrelease", t = 35/30 },
 		}
 	},
 	["draw"] = {
@@ -130,22 +130,22 @@ SWEP.Animations = {
 		Source = "reload".."_nofg",--"base.reload",
 		MinProgress = 1.4,
 		SoundTable = {
-			{ s = "CSA.Cloth.S", t = 1/30 },
-			{ s = "CSA.Glock.R.Magout", t = 14/30 },
-			{ s = "CSA.Glock.R.Futz", t = 39/30 },
-			{ s = "CSA.Glock.R.Magin", t = 42/30 },
+			{ s = "CSX.Cloth.S", t = 1/30 },
+			{ s = "CSX.Glock.R.Magout", t = 14/30 },
+			{ s = "CSX.Glock.R.Futz", t = 39/30 },
+			{ s = "CSX.Glock.R.Magin", t = 42/30 },
 		}
 	},
 	["reload_empty"] = {
 		Source = "reload_empty".."_nofg",--"base.reload_empty",
 		MinProgress = 1.4,
 		SoundTable = {
-			{ s = "CSA.Cloth.S", t = 1/30 },
-			{ s = "CSA.Glock.R.Magout", t = 14/30 },
-			{ s = "CSA.Glock.R.Futz", t = 39/30 },
-			{ s = "CSA.Glock.R.Magin", t = 42/30 },
-			{ s = "CSA.Glock.R.Boltback", t = 60/30 },
-			{ s = "CSA.Glock.R.Boltrelease", t = 65/30 },
+			{ s = "CSX.Cloth.S", t = 1/30 },
+			{ s = "CSX.Glock.R.Magout", t = 14/30 },
+			{ s = "CSX.Glock.R.Futz", t = 39/30 },
+			{ s = "CSX.Glock.R.Magin", t = 42/30 },
+			{ s = "CSX.Glock.R.Boltback", t = 60/30 },
+			{ s = "CSX.Glock.R.Boltrelease", t = 65/30 },
 		}
 	},
 	["enter_sprint"] = {

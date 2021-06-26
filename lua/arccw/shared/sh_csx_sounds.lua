@@ -7,7 +7,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
-		sound = "arccw_csa/fire/pistol/usp.wav",
+		sound = "arccw_csx/fire/pistol/usp.wav",
 		killme = true
 	},
 	{
@@ -26,7 +26,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
-		sound = "arccw_csa/fire/pistol/glock-1.ogg",
+		sound = "arccw_csx/fire/pistol/glock-1.ogg",
 		killme = false
 	},
 	{
@@ -35,7 +35,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
-		sound = "arccw_csa/fire/pistol/glock-2.ogg",
+		sound = "arccw_csx/fire/pistol/glock-2.ogg",
 		killme = true
 	},
 	{
@@ -134,7 +134,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {100, 110},
-		sound = "arccw_csa/fire/smg/mp5.wav",
+		sound = "arccw_csx/fire/smg/mp5.wav",
 		killme = true
 	},
 	{
@@ -143,7 +143,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 100,
 		pitch = {95, 105},
-		sound = "arccw_csa/fire/smg/_falloff.wav",
+		sound = "arccw_csx/fire/smg/_falloff.wav",
 		killme = false
 	},
 	// -- UMP
@@ -153,7 +153,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 110},
-		sound = "arccw_csa/fire/smg/ump45.wav",
+		sound = "arccw_csx/fire/smg/ump45.wav",
 		killme = true
 	},
 	{
@@ -162,7 +162,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 100,
 		pitch = {95, 105},
-		sound = "arccw_csa/fire/smg/ump45_falloff.wav",
+		sound = "arccw_csx/fire/smg/ump45_falloff.wav",
 		killme = false
 	},
 	// -- AK47
@@ -172,7 +172,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {90, 100},
-		sound = "arccw_csa/fire/rifle/ak47.wav",
+		sound = "arccw_csx/fire/rifle/ak47.wav",
 		killme = true
 	},
 	{
@@ -200,7 +200,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 110},
-		sound = "arccw_csa/fire/rifle/famas.wav",
+		sound = "arccw_csx/fire/rifle/famas.wav",
 		killme = true
 	},
 	{
@@ -209,7 +209,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 110},
-		sound = {"arccw_csa/fire/rifle/famas_clack1.wav","arccw_csa/fire/rifle/famas_clack2.wav"},
+		sound = {"arccw_csx/fire/rifle/famas_clack1.wav","arccw_csx/fire/rifle/famas_clack2.wav"},
 		killme = false
 	},
 	{
@@ -218,7 +218,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {85, 100},
-		sound = "arccw_csa/fire/rifle/famas.wav",
+		sound = "arccw_csx/fire/rifle/famas.wav",
 		killme = true
 	},
 	{
@@ -227,7 +227,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
-		sound = "arccw_csa/fire/bop.wav",
+		sound = "arccw_csx/fire/bop.wav",
 		killme = true
 	},
 	{
@@ -236,7 +236,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {80, 95},
-		sound = "arccw_csa/fire/bop.wav",
+		sound = "arccw_csx/fire/bop.wav",
 		killme = true
 	},
 	{
@@ -245,7 +245,7 @@ local sounds_to_make = {
 		volume = 0.3,
 		level = 65,
 		pitch = {80, 95},
-		sound = "arccw_csa/fire/bop.wav",
+		sound = "arccw_csx/fire/bop.wav",
 		killme = true
 	},
 } 
