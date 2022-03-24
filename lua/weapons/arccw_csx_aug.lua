@@ -107,12 +107,10 @@ SWEP.Animations = {
 		Source = "idle_fgrip",
 	},
 	["ready"] = {
-		Source = "pullout_fgrip",
+		Source = "pullout_first",
 		SoundTable = {
-			{ s = "CSX.Glock.R.Boltback", t = 22/30 },
-			{ s = "CSX.Glock.R.Boltrelease", t = 26/30 },
-			{ s = "CSX.Glock.R.Boltback", t = 29/30 },
-			{ s = "CSX.Glock.R.Boltrelease", t = 35/30 },
+			{ s = "weapons/aug/aug_boltslap.wav", t = 9/30 },
+			{ s = "arccw_csx/fance/ak47_clipin-2.wav", t = 12/30 },
 		}
 	},
 	["draw"] = {

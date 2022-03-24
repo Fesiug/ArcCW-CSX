@@ -113,10 +113,6 @@ SWEP.Animations = {
 	["ready"] = {
 		Source = "pullout",
 		SoundTable = {
-			{ s = "CSX.Glock.R.Boltback", t = 22/30 },
-			{ s = "CSX.Glock.R.Boltrelease", t = 26/30 },
-			{ s = "CSX.Glock.R.Boltback", t = 29/30 },
-			{ s = "CSX.Glock.R.Boltrelease", t = 35/30 },
 		}
 	},
 	["draw"] = {

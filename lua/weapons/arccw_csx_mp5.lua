@@ -111,10 +111,7 @@ SWEP.Animations = {
 	["ready"] = {
 		Source = "pullout_first".."_nofg",
 		SoundTable = {
-			{ s = "CSX.Glock.R.Boltback", t = 22/30 },
-			{ s = "CSX.Glock.R.Boltrelease", t = 26/30 },
-			{ s = "CSX.Glock.R.Boltback", t = 29/30 },
-			{ s = "CSX.Glock.R.Boltrelease", t = 35/30 },
+			{ s = "weapons/ump45/ump45_boltslap.wav", t = 13/30 },
 		}
 	},
 	["draw"] = {
