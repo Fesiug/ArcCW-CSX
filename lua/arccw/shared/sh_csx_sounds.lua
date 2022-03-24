@@ -16,7 +16,17 @@ local sounds_to_make = {
 		volume = 0.1,
 		level = 100,
 		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/_util/decay_ext.wav",
+		sound = "arccw_csx/wep/_util/decay_ext.wav",
+		killme = false
+	},
+	// -- Deagle
+	{
+		name = "CSX.Deagle.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {90, 95},
+		sound = "arccw_csx/weapons/deagle/fire.wav",
 		killme = false
 	},
 	// -- Glock
@@ -44,7 +54,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/m27/fire_sil.wav",
+		sound = "arccw_csx/wep/m27/fire_sil.wav",
 		killme = false
 	},
 	{
@@ -53,7 +63,7 @@ local sounds_to_make = {
 		volume = 0.1,
 		level = 100,
 		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/_util/decay_ext.wav",
+		sound = "arccw_csx/wep/_util/decay_ext.wav",
 		killme = false
 	},
 	{
@@ -62,23 +72,23 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/mp7/fire_lfe.wav",
+		sound = "arccw_csx/wep/mp7/fire_lfe.wav",
 		killme = false
 	},
 	{
 		name = "CSX.Cloth.S",
-		channel = CHAN_ITEM,
+		channel = CHAN_STATIC,
 		volume = 0.2,
 		level = 65,
 		pitch = {95, 105},
 		sound = {
-			"fesiug_bo2/fly/cloth/short/0.wav",
-			"fesiug_bo2/fly/cloth/short/1.wav",
-			"fesiug_bo2/fly/cloth/short/2.wav",
-			"fesiug_bo2/fly/cloth/short/3.wav",
-			"fesiug_bo2/fly/cloth/short/4.wav",
-			"fesiug_bo2/fly/cloth/short/5.wav",
-			"fesiug_bo2/fly/cloth/short/6.wav",
+			"arccw_csx/wep/fly/cloth/short/0.wav",
+			"arccw_csx/wep/fly/cloth/short/1.wav",
+			"arccw_csx/wep/fly/cloth/short/2.wav",
+			"arccw_csx/wep/fly/cloth/short/3.wav",
+			"arccw_csx/wep/fly/cloth/short/4.wav",
+			"arccw_csx/wep/fly/cloth/short/5.wav",
+			"arccw_csx/wep/fly/cloth/short/6.wav",
 		},
 		killme = true
 	},
@@ -88,7 +98,7 @@ local sounds_to_make = {
 		volume = 0.05,
 		level = 65,
 		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/ak47/futz.wav",
+		sound = "arccw_csx/wep/ak47/futz.wav",
 		killme = true
 	},
 	{
@@ -97,7 +107,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/_assault/magout.wav",
+		sound = "arccw_csx/wep/_assault/magout.wav",
 		killme = false
 	},
 	{
@@ -106,7 +116,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/_assault/magin.wav",
+		sound = "arccw_csx/wep/_assault/magin.wav",
 		killme = false
 	},
 	{
@@ -115,7 +125,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/_assault/bb.wav",
+		sound = "arccw_csx/wep/_assault/bb.wav",
 		killme = false
 	},
 	{
@@ -124,8 +134,99 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/_assault/bf.wav",
+		sound = "arccw_csx/wep/_assault/bf.wav",
 		killme = false
+	},
+	// -- P90
+	{
+		name = "CSX.P90.FireFirst",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {90, 95},
+		sound = "arccw_csx/weapons/p90/firefirst.wav",
+		killme = false
+	},
+	{
+		name = "CSX.P90.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {100, 105},
+		sound = "arccw_csx/weapons/p90/fire.wav",
+		killme = true
+	},
+	// -- DB
+	{
+		name = "CSX.DB.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {90, 95},
+		sound = "arccw_csx/weapons/db/fire.wav",
+		killme = true
+	},
+	// -- Super 90
+	{
+		name = "CSX.Super90.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {90, 100},
+		sound = "arccw_csx/weapons/super90/fire.wav",
+		killme = true
+	},
+	// -- M3
+	{
+		name = "CSX.M3.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {105, 110},
+		sound = "arccw_csx/weapons/m3/fire.wav",
+		killme = true
+	},
+	{
+		name = "CSX.M3.R.Boltback",
+		channel = CHAN_STATIC,
+		volume = 0.5,
+		level = 65,
+		pitch = {95, 105},
+		sound = "arccw_csx/weapons/m3/pumpback.wav",
+		killme = false
+	},
+	{
+		name = "CSX.M3.R.Boltforward",
+		channel = CHAN_ITEM,
+		volume = 0.5,
+		level = 65,
+		pitch = {95, 105},
+		sound = "arccw_csx/weapons/m3/pumpforward.wav",
+		killme = false
+	},
+	{
+		name = "CSX.M3.R.Shellinsert",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {95, 105},
+		sound = {
+			"arccw_csx/weapons/m3/rl_1.wav",
+			"arccw_csx/weapons/m3/rl_2.wav",
+			"arccw_csx/weapons/m3/rl_3.wav",
+			"arccw_csx/weapons/m3/rl_4.wav",
+		},
+		killme = false
+	},
+	// -- TMP
+	{
+		name = "CSX.TMP.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {90, 100},
+		sound = "arccw_csx/weapons/tmp/fire.wav",
+		killme = true
 	},
 	// -- MP5
 	{
@@ -134,7 +235,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {100, 110},
-		sound = "arccw_csx/fire/smg/mp5.wav",
+		sound = "arccw_csx/weapons/mp5/fire.wav",
 		killme = true
 	},
 	{
@@ -143,7 +244,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 100,
 		pitch = {95, 105},
-		sound = "arccw_csx/fire/smg/_falloff.wav",
+		sound = "arccw_csx/weapons/mp5/falloff.wav",
 		killme = false
 	},
 	// -- UMP
@@ -153,7 +254,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 110},
-		sound = "arccw_csx/fire/smg/ump45.wav",
+		sound = "arccw_csx/weapons/ump/fire.wav",
 		killme = true
 	},
 	{
@@ -162,8 +263,18 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 100,
 		pitch = {95, 105},
-		sound = "arccw_csx/fire/smg/ump45_falloff.wav",
+		sound = "arccw_csx/weapons/ump/falloff.wav",
 		killme = false
+	},
+	// -- AUG
+	{
+		name = "CSX.AUG.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {95, 105},
+		sound = "arccw_csx/weapons/aug/fire.wav",
+		killme = true
 	},
 	// -- AK47
 	{
@@ -181,7 +292,7 @@ local sounds_to_make = {
 		volume = 0.1,
 		level = 100,
 		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/_util/decay_ext.wav",
+		sound = "arccw_csx/wep/_util/decay_ext.wav",
 		killme = false
 	},
 	{
@@ -190,7 +301,7 @@ local sounds_to_make = {
 		volume = 1.0,
 		level = 65,
 		pitch = {95, 105},
-		sound = "fesiug_bo2/wep/mp7/fire_lfe.wav",
+		sound = "arccw_csx/wep/mp7/fire_lfe.wav",
 		killme = false
 	},
 	// -- FAMAS
@@ -224,7 +335,7 @@ local sounds_to_make = {
 	{
 		name = "CSX.Genbop",
 		channel = CHAN_STATIC,
-		volume = 1.0,
+		volume = 0.5,
 		level = 65,
 		pitch = {95, 105},
 		sound = "arccw_csx/fire/bop.wav",
@@ -233,7 +344,7 @@ local sounds_to_make = {
 	{
 		name = "CSX.GenbopR",
 		channel = CHAN_STATIC,
-		volume = 1.0,
+		volume = 0.5,
 		level = 65,
 		pitch = {80, 95},
 		sound = "arccw_csx/fire/bop.wav",
@@ -242,7 +353,7 @@ local sounds_to_make = {
 	{
 		name = "CSX.GenbopS",
 		channel = CHAN_STATIC,
-		volume = 0.3,
+		volume = 0.4,
 		level = 65,
 		pitch = {80, 95},
 		sound = "arccw_csx/fire/bop.wav",

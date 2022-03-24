@@ -2,9 +2,9 @@ SWEP.Base			=	"arccw_csxbase"
 SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CSX"
-SWEP.PrintName		=	"K&M NP5"
+SWEP.PrintName		=	"K&M NP5C"
 SWEP.Trivia_Class			= "Submachine Gun"
-SWEP.Trivia_Desc			= "Light 9mm SMG predating the MPS. One of the most widely used submachine guns in the world. Renowned for its use in the Iranian Embassy siege. Despite being more expensive, it still proves appealing to many over its cheaper brother, the MPS."
+SWEP.Trivia_Desc			= "Light 9x19mm SMG predating the MPS. One of the most widely used submachine guns in the world. Renowned for its use in the Iranian Embassy siege. Despite being more expensive, it still proves appealing to many over its cheaper brother, the MPS."
 --"Light 9mm SMG predating the MPS. It's obviously extremely iconic, and its crisp handling still proves appealing to many."
 -- HELP NEED TO WRITE GOOD DESCRIPTION A LITTLE HARD
 SWEP.Trivia_Manufacturer	= "K&M"
@@ -22,7 +22,14 @@ SWEP.ViewModel		=	"models/weapons/arccw/fesiugmw2/c_mp5k.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_usp.mdl"
 SWEP.ActivePos = Vector(0.5, 2, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
-SWEP.DefaultBodygroups = ""
+SWEP.DefaultBodygroups = "00000000"
+
+SWEP.Damage				=	30
+SWEP.DamageMin			=	20
+SWEP.RangeMin			=	10
+SWEP.Range				=	40
+SWEP.Penetration		=	6
+SWEP.Primary.Ammo		=	"pistol"
 
 SWEP.ShellModel		=	"models/shells/shell_9mm.mdl"
 SWEP.ShellScale		=	1.2
@@ -34,6 +41,7 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
+SWEP.AccuracyMOA		=	0
 SWEP.SightTime			=	0.3
 SWEP.Primary.ClipSize	=	30
 SWEP.ChamberSize		=	1
@@ -47,7 +55,8 @@ SWEP.ShootSoundInfo = {
 		"CSX.MP5.Dist",
 	},
 	["fire_sil"] = {
-		"CSX.MP5.Fire_Silenced",
+		"Weapon_TMP.Single",
+		"CSX.GenbopS",
 	},
 	["dry"] = {
 		{
@@ -73,7 +82,7 @@ SWEP.IronSightStruct = {
 	CrosshairInSights = false,
 }
 
-SWEP.Delay = 0.085
+SWEP.Delay = (60/756)
 SWEP.Firemodes = {
 	{
 		Mode = 2,
@@ -97,10 +106,10 @@ SWEP.NPCWeight		=	100
 
 SWEP.Animations = {
 	["idle"] = {
-		Source = "idle".."_nofg",--"base.idle"
+		Source = "idle".."_nofg",
 	},
 	["ready"] = {
-		Source = "pullout_first".."_nofg",--"base.pullout_first",
+		Source = "pullout_first".."_nofg",
 		SoundTable = {
 			{ s = "CSX.Glock.R.Boltback", t = 22/30 },
 			{ s = "CSX.Glock.R.Boltrelease", t = 26/30 },
@@ -109,52 +118,116 @@ SWEP.Animations = {
 		}
 	},
 	["draw"] = {
-		Source = "pullout".."_nofg",--"base.pullout",
+		Source = "pullout".."_nofg",
 		SoundTable = {
-		}
+		},
+		LHIK = true,
+		LHIKIn = 0,
+		LHIKOut = 0.5,
+		LHIKEaseIn = 0.3,
+		LHIKEaseOut = 0.3,
 	},
 	["holster"] = {
-		Source = "putaway".."_nofg",--"base.putaway",
+		Source = "putaway".."_nofg",
 		SoundTable = {
-		}
+		},
+		LHIK = true,
+		LHIKIn = 0.3,
+		LHIKOut = 0,
+		LHIKEaseIn = 0.3,
+		LHIKEaseOut = 0.3,
 	},
 	["fire"] = {
-		Source = "fire".."_nofg",--"base.fire",
+		Source = "fire".."_nofg",
 		ShellEjectAt = 0,
 	},
 	["fire_iron"] = {
-		Source = "fire_ads".."_nofg",--"base.fire_ads",
+		Source = "fire_ads".."_nofg",
 		ShellEjectAt = 0,
 	},
 	["reload"] = {
-		Source = "reload".."_nofg",--"base.reload",
+		Source = "reload".."_nofg",
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
-			{ s = "CSX.Glock.R.Magout", t = 14/30 },
-			{ s = "CSX.Glock.R.Futz", t = 39/30 },
-			{ s = "CSX.Glock.R.Magin", t = 42/30 },
-		}
+			{ s = "weapons/ump45/ump45_clipout.wav", t = 14/30 },
+			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 39/30 },
+			{ s = "weapons/ump45/ump45_clipin.wav", t = 42/30 },
+		},
+		LHIK = true,
+		LHIKIn = 0.4,
+		LHIKOut = 0.5,
+		LHIKEaseIn = 0.3,
+		LHIKEaseOut = 0.3,
 	},
 	["reload_empty"] = {
-		Source = "reload_empty".."_nofg",--"base.reload_empty",
+		Source = "reload_empty".."_nofg",
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
-			{ s = "CSX.Glock.R.Magout", t = 14/30 },
-			{ s = "CSX.Glock.R.Futz", t = 39/30 },
-			{ s = "CSX.Glock.R.Magin", t = 42/30 },
-			{ s = "CSX.Glock.R.Boltback", t = 60/30 },
-			{ s = "CSX.Glock.R.Boltrelease", t = 65/30 },
-		}
+			{ s = "weapons/ump45/ump45_clipout.wav", t = 14/30 },
+			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 39/30 },
+			{ s = "weapons/ump45/ump45_clipin.wav", t = 42/30 },
+			{ s = "weapons/ump45/ump45_boltslap.wav", t = 65/30 },
+		},
+		LHIK = true,
+		LHIKIn = 0.4,
+		LHIKOut = 0.55,
+		LHIKEaseIn = 0.3,
+		LHIKEaseOut = 0.25,
 	},
-	["enter_sprint"] = {
-		Source = "base.sprint_in"
+}
+
+SWEP.Attachments = {
+	{
+		PrintName = "Optic",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "optic",
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(3, 0, 3.9),
+			vang = Angle(0, 0, 0),
+		},
 	},
-	["idle_sprint"] = {
-		Source = "base.sprint_loop"
+	{
+		PrintName = "Muzzle",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "csx_muzzle_suppressor",
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(11, 0, 2),
+			vang = Angle(0, 0, 0),
+		},
 	},
-	["exit_sprint"] = {
-		Source = "base.sprint_out"
+	{
+		PrintName = "Underbarrel",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "foregrip",
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(7, 0, 1),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Firegroup",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "csx_fcg",
+	},
+	{
+		PrintName = "Ammotype",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "csx_ammotype",
+	},
+	{
+		PrintName = "Perk",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "csx_perk",
 	},
 }

@@ -20,13 +20,13 @@ SWEP.ViewModel      =   "models/weapons/arccw/fesiugmw2_2/c_ak47_1a.mdl"
 SWEP.WorldModel		=	"models/weapons/w_rif_ak47.mdl"
 SWEP.ActivePos = Vector(0.75, 2, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
-SWEP.DefaultBodygroups = "1"
+SWEP.DefaultBodygroups = "10000000"
 
-SWEP.Damage				=	28
-SWEP.DamageMin			=	14
-SWEP.RangeMin			=	8
-SWEP.Range				=	50
-SWEP.Penetration		=	4
+SWEP.Damage				=	35
+SWEP.DamageMin			=	25
+SWEP.RangeMin			=	18
+SWEP.Range				=	60
+SWEP.Penetration		=	12
 SWEP.Primary.Ammo		=	"ar2"
 
 SWEP.ShellModel		=	"models/shells/shell_556.mdl"
@@ -39,6 +39,7 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
+SWEP.AccuracyMOA		=	0
 SWEP.SightTime			=	0.4
 SWEP.Primary.ClipSize	=	30
 SWEP.ChamberSize		=	1
@@ -53,7 +54,8 @@ SWEP.ShootSoundInfo = {
 		"CSX.AK47.LFE",
 	},
 	["fire_sil"] = {
-		"CSX.AK47.Fire_Silenced",
+		"Weapon_M4A1.Silenced",
+		"CSX.GenbopR",
 	},
 	["dry"] = {
 		{
@@ -97,10 +99,10 @@ SWEP.NPCWeight		=	100
 
 SWEP.Animations = {
 	["idle"] = {
-		Source = "idle",--"base.idle"
+		Source = "idle",
 	},
 	["ready"] = {
-		Source = "pullout",--"base.pullout_first",
+		Source = "pullout_first",
 		SoundTable = {
 			{ s = "CSX.Glock.R.Boltback", t = 22/30 },
 			{ s = "CSX.Glock.R.Boltrelease", t = 26/30 },
@@ -109,52 +111,108 @@ SWEP.Animations = {
 		}
 	},
 	["draw"] = {
-		Source = "pullout",--"base.pullout",
+		Source = "pullout",
 		SoundTable = {
 		}
 	},
 	["holster"] = {
-		Source = "putaway",--"base.putaway",
+		Source = "putaway",
 		SoundTable = {
 		}
 	},
 	["fire"] = {
-		Source = "fire",--"base.fire",
+		Source = "fire",
 		ShellEjectAt = 0,
 	},
 	["fire_iron"] = {
-		Source = "fire_ads",--"base.fire_ads",
+		Source = "fire_ads",
 		ShellEjectAt = 0,
 	},
 	["reload"] = {
-		Source = "reload",--"base.reload",
+		Source = "reload",
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
-			{ s = "CSX.Glock.R.Magout", t = 14/30 },
-			{ s = "CSX.Glock.R.Futz", t = 39/30 },
-			{ s = "CSX.Glock.R.Magin", t = 42/30 },
-		}
+			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 12/30 },
+			{ s = "weapons/ak47/ak47_clipout.wav", t = 12/30 },
+			{ s = "arccw_csx/fance/ak47_clipin-2.wav", t = 47/30 },
+			{ s = "weapons/ak47/ak47_clipin.wav", t = 54/30 },
+		},
+		LHIK = true,
+		LHIKIn = 0.4,
+		LHIKOut = 0.6,
+		LHIKEaseIn = 0.3,
+		LHIKEaseOut = 0.2,
 	},
 	["reload_empty"] = {
-		Source = "reload_empty",--"base.reload_empty",
+		Source = "reload_empty",
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
-			{ s = "CSX.Glock.R.Magout", t = 14/30 },
-			{ s = "CSX.Glock.R.Futz", t = 39/30 },
-			{ s = "CSX.Glock.R.Magin", t = 42/30 },
-			{ s = "CSX.Glock.R.Boltback", t = 60/30 },
-			{ s = "CSX.Glock.R.Boltrelease", t = 65/30 },
-		}
+			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 12/30 },
+			{ s = "weapons/ak47/ak47_clipout.wav", t = 12/30 },
+			{ s = "arccw_csx/fance/ak47_clipin-2.wav", t = 47/30 },
+			{ s = "weapons/ak47/ak47_clipin.wav", t = 54/30 },
+			{ s = "weapons/ak47/ak47_boltpull.wav", t = 76/30 },
+		},
+		LHIK = true,
+		LHIKIn = 0.4,
+		LHIKOut = 1.4,
+		LHIKEaseIn = 0.3,
+		LHIKEaseOut = 0.2,
 	},
-	["enter_sprint"] = {
-		Source = "base.sprint_in"
+}
+
+SWEP.Attachments = {
+	{
+		PrintName = "Optic",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "optic",
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(3, 0, 2.6),
+			vang = Angle(0, 0, 0),
+		},
 	},
-	["idle_sprint"] = {
-		Source = "base.sprint_loop"
+	{
+		PrintName = "Muzzle",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "csx_muzzle_suppressor",
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(21.5, 0, 1.22),
+			vang = Angle(0, 0, 0),
+		},
 	},
-	["exit_sprint"] = {
-		Source = "base.sprint_out"
+	{
+		PrintName = "Underbarrel",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "foregrip",
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(10, 0, 0.5),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Firegroup",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "csx_fcg",
+	},
+	{
+		PrintName = "Ammotype",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "csx_ammotype",
+	},
+	{
+		PrintName = "Perk",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "csx_perk",
 	},
 }
