@@ -1,24 +1,25 @@
-att.PrintName = "Medium Suppressor"
-att.Icon = Material("entities/thisnuts.png", "mips smooth")
-att.Description = "Lightweight and compact weapon suppressor. Slightly impacts ballistic performance."
-att.Desc_Pros = {
+att.PrintName			=	"Tactical Suppressor"
+att.Icon				=	Material("entities/thisnuts.png", "mips smooth")
+att.Description			=	"Balanced sound suppressor. Moderately improves performance."
+att.Desc_Pros			=
+{
 }
-att.Desc_Cons = {
+att.Desc_Cons			=
+{
 }
-att.AutoStats = true
-att.Slot = "csx_muzzle_suppressor"
+att.AutoStats			=	true
+att.Slot				=	{ "csx_muzzle_device_pistol", "csx_muzzle_suppressor" }
+att.SortOrder			=	11
 
-att.SortOrder = 10
+att.Model				=	"models/weapons/arccw/atts/supp_medium.mdl"
 
-att.Model = "models/weapons/arccw/atts/supp_medium.mdl"
+att.Silencer			=	true
+att.Override_MuzzleEffect	=	"muzzleflash_suppressed"
+att.IsMuzzleDevice		=	true
 
-att.Silencer = true
-att.Override_MuzzleEffect = "muzzleflash_suppressed"
-att.IsMuzzleDevice = true
-
-att.Mult_ShootPitch = 1.1
-att.Mult_ShootVol = 0.67
-
-att.Mult_HipDispersion = 1.1
-
-att.Add_BarrelLength = 4
+att.Mult_ShootPitch		=	1.0
+att.Mult_ShootVol		=	0.85
+att.Mult_HipDispersion	=	1.15
+att.Mult_AccuracyMOA	=	0.9
+att.Mult_SightTime		=	1.15
+att.Add_BarrelLength	=	9

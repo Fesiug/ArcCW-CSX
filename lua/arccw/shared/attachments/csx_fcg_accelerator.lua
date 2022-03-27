@@ -1,41 +1,45 @@
-att.PrintName = "Accelerator"
-att.Icon = Material("entities/acwatt_csx_fcg_accelerator.png", "mips smooth")
-att.Description = "Firemode conversion that increases fire rate the longer you shoot, up to 10 shots."
-att.Desc_Pros = {
-    "Up to 25% faster fire rate"
+att.PrintName			=	"Accelerator"
+att.Icon				=	Material("entities/acwatt_csx_fcg_accelerator.png", "mips smooth")
+att.Description			=	"Firemode conversion that increases fire rate the longer you shoot, up to 10 shots."
+att.Desc_Pros			=
+{
+	"Up to 25% faster fire rate"
 }
-att.Desc_Cons = {
-    "Fire rate starts 50% slower"
+att.Desc_Cons			=
+{
+	"Fire rate starts 50% slower"
 }
-att.Slot = "csx_fcg"
-att.SortOrder = 6
+att.AutoStats			=	true
+att.Slot				=	"csx_fcg"
+att.SortOrder			=	6
 
-att.Override_Firemodes = {
-    {
-        Mode = 2,
+att.Override_Firemodes	=
+{
+	{
+		Mode = 2,
 		CustomBars = "-------"
-    },
-    {
-        Mode = 0
-    }
+	},
+	{
+		Mode = 0
+	}
 }
 
 att.Hook_ModifyRPM = function(wep, delay)
-    local max = math.min(10, wep:GetCapacity())
+	local max = math.min(10, wep:GetCapacity())
 
-    local delta = wep:GetBurstCount() / max
+	local delta = wep:GetBurstCount() / max
 
-    local mult = Lerp(delta, 0.5, 1.25)
+	local mult = Lerp(delta, 0.5, 1.25)
 
-    return delay / mult
+	return delay / mult
 end
 
 att.Hook_FiremodeName = function(wep, name)
-    local max = math.min(10, wep:GetCapacity())
+	local max = math.min(10, wep:GetCapacity())
 
-    local delta = wep:GetBurstCount() / max
+	local delta = wep:GetBurstCount() / max
 
-    local mult = Lerp(delta, 0.5, 1.25)
+	local mult = Lerp(delta, 0.5, 1.25)
 	
 	return "ACCEL-" .. math.Round(mult*100) .. "%"
 end
@@ -56,11 +60,11 @@ att.Hook_FiremodeBars = function(wep, cbars)
 		[10] = "!!!!!!!!!!",
 	}
 	
-    local max = math.min(10, wep:GetCapacity())
+	local max = math.min(10, wep:GetCapacity())
 
-    local delta = wep:GetBurstCount() / max
+	local delta = wep:GetBurstCount() / max
 
-    local mult = Lerp(delta, 0.5, 1.25)
+	local mult = Lerp(delta, 0.5, 1.25)
 	
 	local choice = math.Remap( mult, 0.5, 1.25, 0, 10 )
 	
