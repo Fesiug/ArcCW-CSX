@@ -29,6 +29,8 @@ SWEP.Range				=	60
 SWEP.Penetration		=	12
 SWEP.Primary.Ammo		=	"ar2"
 
+SWEP.CSX_Recoil_Moving	=	1.5
+
 SWEP.ShellModel		=	"models/shells/shell_556.mdl"
 SWEP.ShellScale		=	1.334
 SWEP.ShellPitch		=	100
@@ -45,6 +47,9 @@ SWEP.Primary.ClipSize	=	30
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_ak47"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+
+-- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
+SWEP.CSX_Recoil			=	{	1.1,	0.375,	0.2,	0.04,	6,	2,	5	}
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {

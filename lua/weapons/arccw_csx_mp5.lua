@@ -48,6 +48,9 @@ SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_mp5"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
 
+-- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
+SWEP.CSX_Recoil			=	{	0.6,	0.25,	0.2,	0.09,	6,	4,	3	}
+
 SWEP.ShootSoundInfo = {
 	["fire"] = {
 		"CSX.GenbopS",

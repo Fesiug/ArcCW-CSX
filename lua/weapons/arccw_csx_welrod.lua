@@ -46,6 +46,9 @@ SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_m14"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
 
+-- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
+SWEP.CSX_Recoil			=	{	2,	1,	0,	0.05,	4,	3,	1	}
+
 SWEP.ShootSoundInfo = {
 	["fire"] = {
 		"CSX.Genbop",
@@ -122,13 +125,16 @@ SWEP.Animations = {
 	["fire"] = {
 		Source = "fire",
 		ShellEjectAt = 0,
+		MinProgress = 0.2,
 	},
 	["fire_iron"] = {
 		Source = "fire_ads",
 		ShellEjectAt = 0,
+		MinProgress = 0.2,
 	},
 	["cycle"] = {
 		Source = "pullout_first",
+		Time = 0.8,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
 			{ s = "weapons/arccw/welrod/bolt1.wav", t = 6/30 },
@@ -152,7 +158,7 @@ SWEP.Animations = {
 			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 6/30 },
 			{ s = "weapons/arccw/welrod/clipout.wav", t = 12/30 },
 			{ s = "weapons/arccw/welrod/clipin.wav", t = 48/30 },
-			{ s = "weapons/arccw/welrod/bolt2.wav", t = 58/30 },
+			{ s = "weapons/arccw/welrod/bolt2.wav", t = 64/30 },
 			{ s = "weapons/arccw/welrod/bolt3.wav", t = 70/30 },
 		}
 	},
@@ -177,7 +183,7 @@ SWEP.Attachments = {
 		Slot = "csx_muzzle_suppressor",
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(3.9, 0, 0.9),
+			vpos = Vector(4.7, 0, 1.1),
 			vang = Angle(0, 0, 0),
 		},
 	},

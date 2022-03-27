@@ -1,5 +1,12 @@
+AddCSLuaFile("sh_firing.lua")
+AddCSLuaFile("cl_viewmodel.lua")
+
+if CLIENT then include("cl_viewmodel.lua") end
+include("sh_firing.lua")
+
 SWEP.Base			=	"arccw_base"
 SWEP.Spawnable		=	false
+SWEP.CSX			=	true
 
 SWEP.PrintName		=	".base"
 SWEP.Category		=	"ArcCW - CSX"
@@ -81,6 +88,82 @@ SWEP.CustomizeAng = Angle(12, 30, 0)
 
 SWEP.InBipodPos = Vector(-8, 0, -4)
 SWEP.InBipodMult = Vector(2, 1, 1)
+
+-- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
+--[[ Explanations:
+	up_base				-	Base vertical recoil.
+	lateral_base		-	Base horizontal recoil.
+	up_modifier			-	Modifier for vertical recoil based on current shots fired.
+	lateral_modifier	-	Ditto, but for horizontal.
+	up_max				-	Ceiling for vertical recoil.
+	lateral_max			-	Ceiling for horizontal, in both directions.
+	direction_change	-	How often the direction should flip. 1 is 50%, 2 is 33.3%, 3 is 25%, etc
+]]
+SWEP.CSX_Recoil			=	{	1.0,	0.2,	0.05,	0.025,	5,	3,	5	}
+
+DEFINE_BASECLASS( "arccw_base" )
+function SWEP:SetupDataTables()
+	BaseClass.SetupDataTables( self )
+
+	self:NetworkVar("Float", 30, "GunPunchPitch")
+	self:NetworkVar("Float", 31, "GunPunchYaw")
+
+	self:NetworkVar("Bool", 31, "GunPunchDir")
+end
+
+function SWEP:GetGunPunch()
+	return Angle( self:GetGunPunchPitch(), self:GetGunPunchYaw(), 0 )
+end
+
+function SWEP:SetGunPunch( p, y, r )
+	if isnumber(p) then
+		self:SetGunPunchPitch(p)
+		self:SetGunPunchYaw(y)
+		return true
+	elseif isangle(p) then
+		self:SetGunPunchPitch(p.p)
+		self:SetGunPunchYaw(p.y)
+		return true
+	else
+		return false
+	end
+end
+
+hook.Add( "Move", "ArcCWCSX_Move", function(ply, mv)
+	if IsValid(ply) and IsValid(ply:GetActiveWeapon()) and ply:GetActiveWeapon().ArcCW and ply:GetActiveWeapon().CSX then -- DropPunchAngle
+		local w = ply:GetActiveWeapon()
+		local punchangle = w:GetGunPunch()
+		local len = 0
+
+		if punchangle != angle_zero then
+			do -- normalize the vector this way
+				local v = punchangle
+				local length, ilength = 0, 0
+
+				length = math.sqrt( (v.x * v.x) + (v.y * v.y) + (v.z * v.z) )
+
+				if length != 0 then
+					ilength = 1 / length
+
+					v.x = v.x * ilength
+					v.y = v.y * ilength
+					v.z = v.z * ilength
+				end
+
+				len = length
+			end
+			len = len - (10 + len * 0.5) * FrameTime()
+			len = math.max(len, 0)
+			
+			punchangle.x = math.NormalizeAngle( punchangle.x * len )
+			punchangle.y = math.NormalizeAngle( punchangle.y * len )
+			punchangle.z = math.NormalizeAngle( punchangle.z * len )
+			--punchangle:Normalize()
+			
+		end
+		w:SetGunPunch( punchangle )
+	end
+end)
 
 function SWEP:DoShootSound()
 	local who = "fire"
@@ -171,6 +254,7 @@ function SWEP:CalcView(ply, pos, ang, fov)
 	ang = ang + ( Angle(math.sin(CurTime()*hrn), math.cos(CurTime()*hrn), math.sin(CurTime()*hrn) ) * thing * 100 )
 
 	ang = ang + (self.ViewPunchAngle * 10)
+	ang = ang + self:GetGunPunch()
 
 	pos = pos - ang:Forward()*thing*100
 	fov = fov - (thing*200)

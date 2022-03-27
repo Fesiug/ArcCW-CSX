@@ -2,32 +2,32 @@ SWEP.Base			=	"arccw_csxbase"
 SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CSX"
-SWEP.PrintName		=	"ES NXm"
-SWEP.Trivia_Class			= "Personal Defense Weapon"
-SWEP.Trivia_Desc			= "Personal defense weapon developed to arm rear-line soldiers in need of a more effective weapon to combat enemy paratroopers wearing body armor. Offers high fire rate with excellent damage characteristics retained at long range. 'NXM' stands for 'New eXperimental sub Machine gun'."
-SWEP.Trivia_Manufacturer	= "ES"
-SWEP.Trivia_Calibre			= "5.7x28mm"
-SWEP.Trivia_Mechanism		= "Straight Blowback"
-SWEP.Trivia_Country			= "Belgium"
-SWEP.Trivia_Year			= 1990
+SWEP.PrintName		=	"B92G"
+SWEP.Trivia_Class			= "Pistol"
+SWEP.Trivia_Desc			= "9x19mm self-loading pistol. Service sidearm of the United States before being replaced by the ROLAND 320 in 2017."
+SWEP.Trivia_Manufacturer	= "(need Beretta manufacturer replacement)"
+SWEP.Trivia_Calibre			= "9x19mm"
+SWEP.Trivia_Mechanism		= "Locking Block"
+SWEP.Trivia_Country			= "Italy"
+SWEP.Trivia_Year			= 1992
 
-SWEP.Slot			=	2
+SWEP.Slot			=	1
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	65
-SWEP.ViewModel		=	"models/weapons/arccw/fesiugmw2/c_p90.mdl"
-SWEP.WorldModel		=	"models/weapons/w_pist_usp.mdl"
-SWEP.ActivePos = Vector(0.5, 2, 0.75)
+SWEP.ViewModel		=	"models/weapons/arccw/fesiugmw2/c_glock17_1.mdl"
+SWEP.WorldModel		=	"models/weapons/w_pist_elite_single.mdl"
+SWEP.ActivePos = Vector(0.75, 3, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "00000000"
 
-SWEP.Damage				=	19
-SWEP.DamageMin			=	14
+SWEP.Damage				=	18
+SWEP.DamageMin			=	15
 SWEP.RangeMin			=	10
-SWEP.Range				=	40
+SWEP.Range				=	20
 SWEP.Penetration		=	4
-SWEP.Primary.Ammo		=	"smg1"
+SWEP.Primary.Ammo		=	"pistol"
 
 SWEP.ShellModel		=	"models/shells/shell_9mm.mdl"
 SWEP.ShellScale		=	1.2
@@ -40,32 +40,30 @@ SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
 SWEP.AccuracyMOA		=	0
-SWEP.SightTime			=	0.3
-SWEP.Primary.ClipSize	=	50
+SWEP.SightTime			=	0.2
+SWEP.Primary.ClipSize	=	17
 SWEP.ChamberSize		=	1
-SWEP.MuzzleEffect		=	"muzzleflash_mp5"
+SWEP.MuzzleEffect		=	"muzzleflash_pistol"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
 
-SWEP.Recoil = 1
-SWEP.RecoilSide = 1
-
 -- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	0.4,	0.1,	0.03,	0.05,	4,	3,	3	}
+SWEP.CSX_Recoil			=	{	2,	0.3,	0.06,	0.05,	8,	8,	2	}
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
-		--"CSX.GenbopS",
-		"CSX.P90.Fire",
-		"CSX.MP5.Dist",
-	},
-	["fire_first"] = {
-		--"CSX.GenbopS",
-		"CSX.P90.FireFirst",
-		"CSX.MP5.Dist",
+		"CSX.GenbopS",
+		"CSX.Glock.Fire",
+		--"FBO2.HK416.Dist",
+		--"FBO2.HK416.LFE",
 	},
 	["fire_sil"] = {
-		"Weapon_TMP.Single",
-		"CSX.GenbopS",
+		"Weapon_USP.SilencedShot",
+	},
+	["fire_first"] = {
+		"CSX.Genbop",
+		"CSX.Glock.FireFirst",
+		--"FBO2.HK416.Dist",
+		--"FBO2.HK416.LFE",
 	},
 	["dry"] = {
 		{
@@ -84,18 +82,15 @@ SWEP.AttachmentElements = {}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.91, -3.79, 0.95),
-    Ang = Angle(-0.278, 0.008, 0),
+	Pos = Vector(-2, 0, 1.55),
+	Ang = Angle(-0.75, 0, 0),
 	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
 
-SWEP.Delay = (60/1100)
+SWEP.Delay = (60/450)
 SWEP.Firemodes = {
-	{
-		Mode = 2,
-	},
 	{
 		Mode = 1,
 	},
@@ -104,7 +99,7 @@ SWEP.Firemodes = {
 	}
 }
 
-SWEP.NPCWeaponType	=	{"weapon_smg1"}
+SWEP.NPCWeaponType	=	{"weapon_pistol"}
 SWEP.NPCWeight		=	100
 
 SWEP.Animations = {
@@ -112,20 +107,19 @@ SWEP.Animations = {
 		Source = "idle",
 	},
 	["ready"] = {
-		Source = "pullout_first",
+		Source = "pullout",
 		SoundTable = {
-			{ s = "weapons/p90/p90_boltpull.wav", t = 11/30 },
-			{ s = "arccw_csx/fance/fl2.wav", t = 22/30 },
 		}
 	},
 	["draw"] = {
 		Source = "pullout",
+		Time = 0.5,
 		SoundTable = {
-			{ s = "weapons/arccw/p90/p90_draw.wav", t = 0 },
 		}
 	},
 	["holster"] = {
 		Source = "putaway",
+		Time = 0.5,
 		SoundTable = {
 		}
 	},
@@ -142,10 +136,9 @@ SWEP.Animations = {
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
-			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 8/30 },
-			{ s = "weapons/p90/p90_clipout.wav", t = 14/30 },
-			{ s = "arccw_csx/fance/ak47_clipin-2.wav", t = 39/30 },
-			{ s = "weapons/p90/p90_clipin.wav", t = 53/30 },
+			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 6/30 },
+			{ s = "weapons/glock/glock_clipout.wav", t = 12/30 },
+			{ s = "weapons/glock/glock_clipin.wav", t = 28/30 },
 		}
 	},
 	["reload_empty"] = {
@@ -153,27 +146,15 @@ SWEP.Animations = {
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
-			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 8/30 },
-			{ s = "weapons/p90/p90_clipout.wav", t = 14/30 },
-			{ s = "weapons/p90/p90_clipin.wav", t = 53/30 },
-			{ s = "weapons/p90/p90_boltpull.wav", t = 87/30 },
-			{ s = "arccw_csx/fance/fl2.wav", t = 100/30 },
+			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 6/30 },
+			{ s = "weapons/glock/glock_clipout.wav", t = 12/30 },
+			{ s = "weapons/glock/glock_clipin.wav", t = 28/30 },
+			{ s = "weapons/glock/glock_sliderelease.wav", t = 46/30 },
 		}
 	},
 }
 
 SWEP.Attachments = {
-	{
-		PrintName = "Optic",
-		DefaultAttName = ArcCW.CSX.Att_DefaultName,
-		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
-		Slot = "optic",
-		Bone = "tag_weapon",
-		Offset = {
-			vpos = Vector(4.8, 0, 3.6),
-			vang = Angle(0, 0, 0),
-		},
-	},
 	{
 		PrintName = "Muzzle",
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
@@ -181,7 +162,7 @@ SWEP.Attachments = {
 		Slot = "csx_muzzle_suppressor",
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(8.5, 0, 0.65),
+			vpos = Vector(3.7, 0, 0.9),
 			vang = Angle(0, 0, 0),
 		},
 	},

@@ -39,12 +39,15 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.AccuracyMOA		=	70
+SWEP.AccuracyMOA		=	50
 SWEP.SightTime			=	0.4
 SWEP.Primary.ClipSize	=	6
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_ak47"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+
+-- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
+SWEP.CSX_Recoil			=	{	4,	0.1,	0.05,	0.05,	10,	10,	2	}
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
