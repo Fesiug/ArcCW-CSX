@@ -17,6 +17,6 @@ att.IsMuzzleDevice		=	false
 
 att.Mult_ShootPitch		=	0.97
 att.Mult_SightTime		=	1.05
-att.Mult_Recoil			=	0.9
-att.Mult_RecoilSide		=	1.15
+att.Mult_Recoil			=	0.85
+att.Mult_RecoilSide		=	1.1
 att.Add_BarrelLength	=	4
