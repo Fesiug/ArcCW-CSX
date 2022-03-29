@@ -1,4 +1,4 @@
-att.PrintName			=	" Suppressor"
+att.PrintName			=	"Colossal Suppressor"
 att.Icon				=	Material("entities/thisnuts.png", "mips smooth")
 att.Description			=	"Lightweight and compact weapon suppressor. Slightly impacts ballistic performance."
 att.Desc_Pros			=

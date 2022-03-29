@@ -8,7 +8,7 @@ att.Desc_Cons			=
 {
 }
 att.AutoStats			=	true
-att.Slot				=	{ "csx_muzzle_device_pistol", "csx_muzzle_suppressor" }
+att.Slot				=	{ "csx_muzzle_suppressor_pistol", "csx_muzzle_suppressor" }
 att.SortOrder			=	10
 
 att.Model				=	"models/weapons/arccw/atts/supp_light.mdl"
