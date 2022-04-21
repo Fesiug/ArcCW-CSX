@@ -47,7 +47,7 @@ SWEP.MuzzleEffect		=	"muzzleflash_pistol_deagle"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
 
 -- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	2,	1,	1,	1,	8,	8,	1	}
+SWEP.CSX_Recoil			=	{	3,	2,	1,	1,	8,	8,	1	}
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {

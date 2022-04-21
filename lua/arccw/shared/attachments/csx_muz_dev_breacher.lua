@@ -17,6 +17,7 @@ att.ModelScale			=	Vector(1.2, 1, 1)
 att.IsMuzzleDevice		=	false
 
 att.Mult_SpeedMult		=	0.95
+att.Mult_SightedSpeedMult	=	0.95
 att.Mult_SightTime		=	1.1
 att.Mult_MeleeDamage	=	1.25
 att.Mult_MeleeTime		=	0.9

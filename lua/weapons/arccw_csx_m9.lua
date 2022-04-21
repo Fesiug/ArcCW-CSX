@@ -16,7 +16,7 @@ SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	65
-SWEP.ViewModel		=	"models/weapons/arccw/fesiugmw2/c_glock17_1.mdl"
+SWEP.ViewModel		=	"models/weapons/arccw/fesiugmw2/c_beretta_akimbo_test2.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_elite_single.mdl"
 SWEP.ActivePos = Vector(0.75, 3, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
@@ -41,7 +41,7 @@ SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
 SWEP.AccuracyMOA		=	0
 SWEP.SightTime			=	0.2
-SWEP.Primary.ClipSize	=	17
+SWEP.Primary.ClipSize	=	15
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_pistol"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
@@ -137,8 +137,8 @@ SWEP.Animations = {
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
 			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 6/30 },
-			{ s = "weapons/glock/glock_clipout.wav", t = 12/30 },
-			{ s = "weapons/glock/glock_clipin.wav", t = 28/30 },
+			{ s = "weapons/elite/elite_clipout.wav", t = 12/30 },
+			{ s = "weapons/elite/elite_rightclipin.wav", t = 28/30 },
 		}
 	},
 	["reload_empty"] = {
@@ -147,9 +147,9 @@ SWEP.Animations = {
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
 			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 6/30 },
-			{ s = "weapons/glock/glock_clipout.wav", t = 12/30 },
-			{ s = "weapons/glock/glock_clipin.wav", t = 28/30 },
-			{ s = "weapons/glock/glock_sliderelease.wav", t = 46/30 },
+			{ s = "weapons/elite/elite_clipout.wav", t = 12/30 },
+			{ s = "weapons/elite/elite_rightclipin.wav", t = 28/30 },
+			{ s = "weapons/elite/elite_sliderelease.wav", t = 46/30 },
 		}
 	},
 }

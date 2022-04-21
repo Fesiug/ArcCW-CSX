@@ -9,7 +9,7 @@ att.Desc_Cons			=
 }
 att.AutoStats			=	true
 att.Slot				=	{ "csx_muzzle_device_pistol", "csx_muzzle_device", "csx_muzzle_device_shotgun" }
-att.SortOrder			=	6
+att.SortOrder			=	5
 
 att.Model				=	"models/weapons/arccw/atts/muzz_flashhider.mdl"
 att.ModelScale			=	Vector(0.75, 0.9, 0.9)
@@ -21,6 +21,4 @@ att.FlashHider			=	true
 att.Mult_ShootPitch		=	1.02
 att.Mult_SightTime		=	1.05
 att.Mult_HipDispersion	=	0.75
-att.Mult_SpeedMult		=	0.95
-att.Mult_SightedSpeedMult	=	0.95
 att.Add_BarrelLength	=	4

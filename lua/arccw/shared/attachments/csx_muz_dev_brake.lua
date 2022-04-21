@@ -12,6 +12,7 @@ att.Slot				=	{ "csx_muzzle_device_pistol", "csx_muzzle_device", "csx_muzzle_dev
 att.SortOrder			=	7
 
 att.Model				=	"models/weapons/arccw/atts/muzz_brake.mdl"
+att.ModelScale			=	Vector(0.9, 0.9, 0.9)
 
 att.IsMuzzleDevice		=	false
 
