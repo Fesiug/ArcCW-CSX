@@ -55,7 +55,7 @@ SWEP.ShootSoundInfo = {
 		"CSX.UMP.Dist",
 	},
 	["fire_sil"] = {
-		"CSX.AK47.Fire_Silenced",
+		"CSX.M3.Silenced",
 	},
 	["dry"] = {
 		{
@@ -70,7 +70,11 @@ SWEP.CaseEffectAttachment	=	2
 SWEP.CamAttachment			=	nil
 
 SWEP.Attachments = {}
-SWEP.AttachmentElements = {}
+SWEP.AttachmentElements = {
+	["rail_optic"] = {
+		VMBodygroups = {{ind = 1, bg = 1}},
+	},
+}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
@@ -140,7 +144,10 @@ SWEP.Animations = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
 			{ s = "CSX.Glock.R.Futz", t = 19/30 },
 			{ s = "CSX.M3.R.Shellinsert", t = 22/30 },
-		}
+		},
+		LHIK = true,
+		LHIKIn = 0.5,
+		LHIKOut = 0,
 	},
 	["sgreload_insert"] = {
 		Source = "reg_reload_loop",
@@ -149,7 +156,12 @@ SWEP.Animations = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
 			{ s = "CSX.Glock.R.Futz", t = 2/30 },
 			{ s = "CSX.M3.R.Shellinsert", t = 7/30 },
-		}
+		},
+		LHIK = true,
+		LHIKIn = 0,
+		LHIKOut = 0,
+		LHIKEaseIn = 0,
+		LHIKEaseOut = 0,
 	},
 	["sgreload_finish"] = {
 		Source = "reg_reload_end",
@@ -159,6 +171,58 @@ SWEP.Animations = {
 			{ s = "CSX.M3.R.Boltback", t = 8/30 },
 			{ s = "CSX.M3.R.Boltforward", t = 14/30 },
 			{ s = "CSX.Glock.R.Futz", t = 20/30 },
-		}
+		},
+		LHIK = true,
+		LHIKIn = 0,
+		LHIKOut = 0.5,
+	},
+}
+
+SWEP.Attachments = {
+	{
+		PrintName = "Optic",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "optic",
+		Bone = "tag_weapon",
+		InstalledEles = {"rail_optic"},
+		Offset = {
+			vpos = Vector(7.5, 0, 4.6),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Muzzle",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = { "csx_muzzle_device", "csx_muzzle_suppressor" },
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(28.4, 0, 3.6),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Underbarrel",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "foregrip",
+		Bone = "j_pump",
+		Offset = {
+			vpos = Vector(-1, 0, 0),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Ammotype",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "csx_ammotype_shotgun",
+	},
+	{
+		PrintName = "Perk",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "csx_perk",
 	},
 }

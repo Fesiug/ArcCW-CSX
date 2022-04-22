@@ -24,7 +24,7 @@ $contents "solid"
 $illumposition -1.242 -6.422 -8.61
 
 $cdmaterials "models\weapons\arccw\csx\akm"
-$cdmaterials "models\weapons\arccw\csx\saiga"
+$cdmaterials "models\weapons\arccw\csx\saiga12"
 
 $attachment "1" "j_gun" 24.07 0.01 2.73 rotate 0 0 0
 $attachment "2" "j_gun" 7.08 -0.73 3.53 rotate -35 -90 0

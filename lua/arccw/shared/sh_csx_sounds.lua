@@ -215,6 +215,15 @@ local sounds_to_make = {
 		killme = true
 	},
 	{
+		name = "CSX.M3.Silenced",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {105, 110},
+		sound = "weapons/arccw/m590_suppressed_tp.wav",
+		killme = true
+	},
+	{
 		name = "CSX.M3.R.Boltback",
 		channel = CHAN_STATIC,
 		volume = 0.5,

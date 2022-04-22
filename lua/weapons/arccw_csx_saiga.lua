@@ -16,11 +16,11 @@ SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	75
-SWEP.ViewModel      =   "models/weapons/arccw_csx/vm/c_csx_akm.mdl"
+SWEP.ViewModel      =   "models/weapons/arccw_csx/vm/c_csx_saiga12.mdl"
 SWEP.WorldModel		=	"models/weapons/w_rif_ak47.mdl"
 SWEP.ActivePos = Vector(0.75, 2, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
-SWEP.DefaultBodygroups = "00011111"
+SWEP.DefaultBodygroups = "0110000"
 
 SWEP.Damage				=	14
 SWEP.DamageMin			=	6
@@ -56,7 +56,7 @@ SWEP.ShootSoundInfo = {
 		"CSX.UMP.Dist",
 	},
 	["fire_sil"] = {
-		"CSX.AK47.Fire_Silenced",
+		"CSX.M3.Silenced",
 		"CSX.GenbopR",
 	},
 	["dry"] = {
@@ -214,7 +214,7 @@ SWEP.Attachments = {
 		PrintName = "Ammotype",
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
-		Slot = "csx_ammotype",
+		Slot = "csx_ammotype_shotgun",
 	},
 	{
 		PrintName = "Perk",

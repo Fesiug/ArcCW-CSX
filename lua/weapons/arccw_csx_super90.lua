@@ -55,7 +55,7 @@ SWEP.ShootSoundInfo = {
 		"CSX.UMP.Dist",
 	},
 	["fire_sil"] = {
-		"CSX.AK47.Fire_Silenced",
+		"CSX.M3.Silenced",
 	},
 	["dry"] = {
 		{
@@ -154,5 +154,59 @@ SWEP.Animations = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
 			{ s = "CSX.Glock.R.Futz", t = 10/30 },
 		}
+	},
+}
+
+SWEP.Attachments = {
+	{
+		PrintName = "Optic",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "optic",
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(6, 0, 4.1),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Muzzle",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = { "csx_muzzle_device", "csx_muzzle_suppressor" },
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(24.7, 0, 3.2),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Underbarrel",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "foregrip",
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(12, 0, 1.4),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Firegroup",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "csx_fcg",
+	},
+	{
+		PrintName = "Ammotype",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "csx_ammotype_shotgun",
+	},
+	{
+		PrintName = "Perk",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "csx_perk",
 	},
 }

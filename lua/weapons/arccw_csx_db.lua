@@ -132,3 +132,40 @@ SWEP.Animations = {
 		}
 	},
 }
+
+SWEP.Attachments = {
+	{
+		PrintName = "Optic",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "optic",
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(4, 0, 4.32),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Underbarrel",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "foregrip",
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(12, 0, 1.7),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Ammotype",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "csx_ammotype_shotgun",
+	},
+	{
+		PrintName = "Perk",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "csx_perk",
+	},
+}
