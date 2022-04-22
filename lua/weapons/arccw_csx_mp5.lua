@@ -5,8 +5,6 @@ SWEP.Category		=	"ArcCW - CSX"
 SWEP.PrintName		=	"K&M NP5C"
 SWEP.Trivia_Class			= "Submachine Gun"
 SWEP.Trivia_Desc			= "Light 9x19mm SMG predating the MPS. One of the most widely used submachine guns in the world. Renowned for its use in the Iranian Embassy siege. Despite being more expensive, it still proves appealing to many over its cheaper brother, the MPS."
---"Light 9mm SMG predating the MPS. It's obviously extremely iconic, and its crisp handling still proves appealing to many."
--- HELP NEED TO WRITE GOOD DESCRIPTION A LITTLE HARD
 SWEP.Trivia_Manufacturer	= "K&M"
 SWEP.Trivia_Calibre			= "9x19mm"
 SWEP.Trivia_Mechanism		= "Roller-Delayed Blowback"
@@ -18,7 +16,7 @@ SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	65
-SWEP.ViewModel		=	"models/weapons/arccw/fesiugmw2/c_mp5k.mdl"
+SWEP.ViewModel		=	"models/weapons/ma85_mwr/weapons/mp5/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_usp.mdl"
 SWEP.ActivePos = Vector(0.5, 2, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
@@ -109,16 +107,16 @@ SWEP.NPCWeight		=	100
 
 SWEP.Animations = {
 	["idle"] = {
-		Source = "idle".."_nofg",
+		Source = "reg_idle",
 	},
 	["ready"] = {
-		Source = "pullout_first".."_nofg",
+		Source = "reg_draw_first",
 		SoundTable = {
 			{ s = "weapons/ump45/ump45_boltslap.wav", t = 13/30 },
 		}
 	},
 	["draw"] = {
-		Source = "pullout".."_nofg",
+		Source = "reg_draw",
 		SoundTable = {
 		},
 		LHIK = true,
@@ -128,7 +126,7 @@ SWEP.Animations = {
 		LHIKEaseOut = 0.3,
 	},
 	["holster"] = {
-		Source = "putaway".."_nofg",
+		Source = "reg_holster",
 		SoundTable = {
 		},
 		LHIK = true,
@@ -138,15 +136,15 @@ SWEP.Animations = {
 		LHIKEaseOut = 0.3,
 	},
 	["fire"] = {
-		Source = "fire".."_nofg",
+		Source = "reg_fire",
 		ShellEjectAt = 0,
 	},
 	["fire_iron"] = {
-		Source = "fire_ads".."_nofg",
+		Source = "reg_fire_ads",
 		ShellEjectAt = 0,
 	},
 	["reload"] = {
-		Source = "reload".."_nofg",
+		Source = "reg_reload",
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
@@ -161,7 +159,7 @@ SWEP.Animations = {
 		LHIKEaseOut = 0.3,
 	},
 	["reload_empty"] = {
-		Source = "reload_empty".."_nofg",
+		Source = "reg_reload_empty",
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },

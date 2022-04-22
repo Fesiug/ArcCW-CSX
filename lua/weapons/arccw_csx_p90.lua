@@ -16,7 +16,7 @@ SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	65
-SWEP.ViewModel		=	"models/weapons/arccw/fesiugmw2/c_p90.mdl"
+SWEP.ViewModel		=	"models/weapons/ma85_mwr/weapons/p90/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_usp.mdl"
 SWEP.ActivePos = Vector(0.5, 2, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
@@ -109,36 +109,36 @@ SWEP.NPCWeight		=	100
 
 SWEP.Animations = {
 	["idle"] = {
-		Source = "idle",
+		Source = "reg_idle",
 	},
 	["ready"] = {
-		Source = "pullout_first",
+		Source = "reg_draw_first",
 		SoundTable = {
 			{ s = "weapons/p90/p90_boltpull.wav", t = 11/30 },
 			{ s = "arccw_csx/fance/fl2.wav", t = 22/30 },
 		}
 	},
 	["draw"] = {
-		Source = "pullout",
+		Source = "reg_draw",
 		SoundTable = {
 			{ s = "weapons/arccw/p90/p90_draw.wav", t = 0 },
 		}
 	},
 	["holster"] = {
-		Source = "putaway",
+		Source = "reg_holster",
 		SoundTable = {
 		}
 	},
 	["fire"] = {
-		Source = "fire",
+		Source = "reg_fire",
 		ShellEjectAt = 0,
 	},
 	["fire_iron"] = {
-		Source = "fire_ads",
+		Source = "reg_fire_ads",
 		ShellEjectAt = 0,
 	},
 	["reload"] = {
-		Source = "reload",
+		Source = "reg_reload",
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
@@ -149,7 +149,7 @@ SWEP.Animations = {
 		}
 	},
 	["reload_empty"] = {
-		Source = "reload_empty",
+		Source = "reg_reload_empty",
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },

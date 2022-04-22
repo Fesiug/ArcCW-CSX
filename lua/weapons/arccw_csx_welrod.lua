@@ -16,9 +16,9 @@ SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	65
-SWEP.ViewModel		=	"models/weapons/arccw/fesiugmw2/c_glock.mdl"
+SWEP.ViewModel		=	"models/weapons/ma85_mwr/weapons/luger/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_usp.mdl"
-SWEP.ActivePos = Vector(0.75, 3, 0)
+SWEP.ActivePos = Vector(0.75, 3, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "01000000"
 
@@ -41,7 +41,7 @@ SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
 SWEP.AccuracyMOA		=	0
 SWEP.SightTime			=	0.2
-SWEP.Primary.ClipSize	=	12
+SWEP.Primary.ClipSize	=	7
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_m14"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
@@ -100,49 +100,56 @@ SWEP.NPCWeight		=	100
 SWEP.ManualAction = true
 SWEP.Animations = {
 	["idle"] = {
-		Source = "idle",
+		Source = "reg_idle",
+	},
+	["idle_empty"] = {
+		Source = "reg_idle_empty",
 	},
 	["ready"] = {
-		Source = "pullout_first",
+		Source = "reg_draw_first",
 		SoundTable = {
 			{ s = "weapons/arccw/welrod/bolt1.wav", t = 8/30 },
 			{ s = "weapons/arccw/welrod/bolt2.wav", t = 14/30 },
 		}
 	},
 	["draw"] = {
-		Source = "pullout_first",
+		Source = "reg_draw_first",
 		SoundTable = {
 			{ s = "weapons/arccw/welrod/bolt1.wav", t = 8/30 },
 			{ s = "weapons/arccw/welrod/bolt2.wav", t = 14/30 },
 		}
 	},
 	["holster"] = {
-		Source = "putaway",
+		Source = "reg_holster",
 		Time = 0.5,
 		SoundTable = {
 		}
 	},
 	["fire"] = {
-		Source = "fire",
-		ShellEjectAt = 0,
+		Source = "reg_fire",
+		Time = 1,
 		MinProgress = 0.2,
 	},
 	["fire_iron"] = {
-		Source = "fire_ads",
-		ShellEjectAt = 0,
+		Source = "reg_fire_ads",
+		Time = 1,
 		MinProgress = 0.2,
 	},
 	["cycle"] = {
-		Source = "pullout_first",
+		Source = "reg_draw_first",
 		Time = 0.8,
+		MinProgress = 0.5,
+		ShellEjectAt = 0.3,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
 			{ s = "weapons/arccw/welrod/bolt1.wav", t = 6/30 },
 			{ s = "weapons/arccw/welrod/bolt2.wav", t = 12/30 },
 		}
 	},
+	["cycle_empty"] = false,
 	["reload"] = {
-		Source = "reload",
+		Source = "reg_reload",
+		Time = 2.2,
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
@@ -151,7 +158,8 @@ SWEP.Animations = {
 		}
 	},
 	["reload_empty"] = {
-		Source = "reload_empty",
+		Source = "reg_reload_empty",
+		Time = 2.8,
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
@@ -183,7 +191,7 @@ SWEP.Attachments = {
 		Slot = { "csx_muzzle_device", "csx_muzzle_suppressor" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(4.7, 0, 1.1),
+			vpos = Vector(6.9, 0, 2.4),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -197,12 +205,6 @@ SWEP.Attachments = {
 			vpos = Vector(3, 0, 0.1),
 			vang = Angle(0, 0, 0),
 		},
-	},
-	{
-		PrintName = "Firegroup",
-		DefaultAttName = ArcCW.CSX.Att_DefaultName,
-		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
-		Slot = "csx_fcg",
 	},
 	{
 		PrintName = "Ammotype",

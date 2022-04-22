@@ -16,7 +16,7 @@ SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	65
-SWEP.ViewModel      =   "models/weapons/arccw/fesiugmw2/c_benelli_5.mdl"
+SWEP.ViewModel      =   "models/weapons/ma85_mwr/weapons/m1014/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_rif_ak47.mdl"
 SWEP.ActivePos = Vector(0.75, -1, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
@@ -102,33 +102,33 @@ SWEP.NPCWeight		=	100
 
 SWEP.Animations = {
 	["idle"] = {
-		Source = "idle",
+		Source = "reg_idle",
 	},
 	["ready"] = {
-		Source = "pullout",
+		Source = "reg_draw",
 		SoundTable = {
 		}
 	},
 	["draw"] = {
-		Source = "pullout",
+		Source = "reg_draw",
 		SoundTable = {
 		}
 	},
 	["holster"] = {
-		Source = "putaway",
+		Source = "reg_holster",
 		SoundTable = {
 		}
 	},
 	["fire"] = {
-		Source = "fire",
+		Source = "reg_fire",
 		MinProgress = 0.2,
 	},
 	["fire_iron"] = {
-		Source = "fire_ads",
+		Source = "reg_fire_ads",
 		MinProgress = 0.2,
 	},
 	["sgreload_start"] = {
-		Source = "reload_start",
+		Source = "reg_reload_start",
 		RestoreAmmo = 1,
 		MinProgress = 0.67,
 		SoundTable = {
@@ -138,7 +138,7 @@ SWEP.Animations = {
 		}
 	},
 	["sgreload_insert"] = {
-		Source = "reload_loop",
+		Source = "reg_reload_loop",
 		MinProgress = 0.67,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
@@ -147,7 +147,7 @@ SWEP.Animations = {
 		}
 	},
 	["sgreload_finish"] = {
-		Source = "reload_finish",
+		Source = "reg_reload_end",
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
 			{ s = "CSX.Glock.R.Futz", t = 10/30 },
