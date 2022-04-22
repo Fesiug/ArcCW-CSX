@@ -25,6 +25,7 @@ $bodygroup "grip"
 {
 	studio "grip_akm.smd"
 	studio "grip_tactical.smd"
+	studio "grip_sus.smd"
 }
 $bodygroup "stock"
 {
