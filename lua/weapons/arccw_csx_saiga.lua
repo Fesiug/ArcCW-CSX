@@ -15,12 +15,12 @@ SWEP.Slot			=	2
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
-SWEP.ViewModelFOV	=	65
-SWEP.ViewModel      =   "models/weapons/ma85_mwr/weapons/ak47/viewmodel.mdl"
+SWEP.ViewModelFOV	=	75
+SWEP.ViewModel      =   "models/weapons/arccw_csx/vm/c_csx_akm.mdl"
 SWEP.WorldModel		=	"models/weapons/w_rif_ak47.mdl"
 SWEP.ActivePos = Vector(0.75, 2, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
-SWEP.DefaultBodygroups = "10000000"
+SWEP.DefaultBodygroups = "00011111"
 
 SWEP.Damage				=	14
 SWEP.DamageMin			=	6
@@ -72,7 +72,11 @@ SWEP.CaseEffectAttachment	=	2
 SWEP.CamAttachment			=	nil
 
 SWEP.Attachments = {}
-SWEP.AttachmentElements = {}
+SWEP.AttachmentElements = {
+	["rail_optic"] = {
+		VMBodygroups = {{ind = 1, bg = 1}},
+	}
+}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
@@ -172,8 +176,9 @@ SWEP.Attachments = {
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
 		Slot = "optic",
 		Bone = "tag_weapon",
+		InstalledEles = {"rail_optic"},
 		Offset = {
-			vpos = Vector(3, 0, 4.1),
+			vpos = Vector(4, 0, 4.32),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -195,7 +200,7 @@ SWEP.Attachments = {
 		Slot = "foregrip",
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(12, 0, 2),
+			vpos = Vector(12, 0, 1.7),
 			vang = Angle(0, 0, 0),
 		},
 	},

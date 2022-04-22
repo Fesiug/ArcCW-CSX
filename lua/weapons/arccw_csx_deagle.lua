@@ -15,10 +15,10 @@ SWEP.Slot			=	1
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
-SWEP.ViewModelFOV	=	65
+SWEP.ViewModelFOV	=	75
 SWEP.ViewModel		=	"models/weapons/ma85_mwr/weapons/deagle/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_usp.mdl"
-SWEP.ActivePos = Vector(0.75, 3, 0.5)
+SWEP.ActivePos = Vector(0.75, 1, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "10000000"
 
@@ -55,7 +55,7 @@ SWEP.ShootSoundInfo = {
 		"CSX.Glock.LFE",
 	},
 	["fire_sil"] = {
-		"Weapon_M4A1.Silenced",
+		"CSX.AK47.Silenced",
 		"CSX.Genbop",
 	},
 	["dry"] = {

@@ -15,10 +15,10 @@ SWEP.Slot			=	2
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
-SWEP.ViewModelFOV	=	65
+SWEP.ViewModelFOV	=	75
 SWEP.ViewModel      =   "models/weapons/ma85_mwr/weapons/m1014/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_rif_ak47.mdl"
-SWEP.ActivePos = Vector(0.75, -1, 0.75)
+SWEP.ActivePos = Vector(0.25, 1, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "00000000"
 
@@ -122,10 +122,12 @@ SWEP.Animations = {
 	["fire"] = {
 		Source = "reg_fire",
 		MinProgress = 0.2,
+		ShellEjectAt = 0,
 	},
 	["fire_iron"] = {
 		Source = "reg_fire_ads",
 		MinProgress = 0.2,
+		ShellEjectAt = 0,
 	},
 	["sgreload_start"] = {
 		Source = "reg_reload_start",

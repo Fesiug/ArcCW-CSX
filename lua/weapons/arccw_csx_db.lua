@@ -15,10 +15,10 @@ SWEP.Slot			=	2
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
-SWEP.ViewModelFOV	=	65
+SWEP.ViewModelFOV	=	75
 SWEP.ViewModel		=	"models/weapons/ma85_mw2cr/ranger/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_usp.mdl"
-SWEP.ActivePos = Vector(0.5, 2, 0.75)
+SWEP.ActivePos = Vector(0.5, 0, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "00000000"
 

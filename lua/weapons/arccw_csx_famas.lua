@@ -15,10 +15,10 @@ SWEP.Slot			=	2
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
-SWEP.ViewModelFOV	=	65
+SWEP.ViewModelFOV	=	75
 SWEP.ViewModel      =   "models/weapons/ma85_mw2cr/famas/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_rif_ak47.mdl"
-SWEP.ActivePos = Vector(0.5, 2, 1.25)
+SWEP.ActivePos = Vector(0.75, 0, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "00000000"
 
@@ -30,7 +30,7 @@ SWEP.Penetration		=	8
 SWEP.Primary.Ammo		=	"smg1"
 
 SWEP.ShellModel		=	"models/shells/shell_556.mdl"
-SWEP.ShellScale		=	1.334
+SWEP.ShellScale		=	1
 SWEP.ShellPitch		=	100
 SWEP.ShellSounds	=	"autocheck"
 
@@ -58,7 +58,7 @@ SWEP.ShootSoundInfo = {
 		"CSX.AK47.LFE",
 	},
 	["fire_sil"] = {
-		"Weapon_M4A1.Silenced",
+		"CSX.AK47.Silenced",
 		"CSX.GenbopR",
 	},
 	["fire_first"] = {

@@ -15,10 +15,10 @@ SWEP.Slot			=	1
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
-SWEP.ViewModelFOV	=	65
+SWEP.ViewModelFOV	=	75
 SWEP.ViewModel		=	"models/weapons/ma85_mwr/weapons/m9/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_elite_single.mdl"
-SWEP.ActivePos = Vector(0.75, 3, 0.5)
+SWEP.ActivePos = Vector(0.75, 1, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "00000000"
 
@@ -52,18 +52,14 @@ SWEP.CSX_Recoil			=	{	2,	0.3,	0.06,	0.05,	8,	8,	2	}
 SWEP.ShootSoundInfo = {
 	["fire"] = {
 		"CSX.GenbopS",
-		"CSX.Glock.Fire",
-		--"FBO2.HK416.Dist",
-		--"FBO2.HK416.LFE",
+		"CSX.Elite.Fire",
 	},
 	["fire_sil"] = {
-		"Weapon_USP.SilencedShot",
+		"CSX.USP.Silenced",
 	},
 	["fire_first"] = {
 		"CSX.Genbop",
-		"CSX.Glock.FireFirst",
-		--"FBO2.HK416.Dist",
-		--"FBO2.HK416.LFE",
+		"CSX.Elite.FireFirst",
 	},
 	["dry"] = {
 		{

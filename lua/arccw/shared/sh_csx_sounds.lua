@@ -11,6 +11,15 @@ local sounds_to_make = {
 		killme = true
 	},
 	{
+		name = "CSX.USP.Silenced",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {95, 105},
+		sound = { "weapons/arccw/usp/usp_01.wav", "weapons/arccw/usp/usp_02.wav", "weapons/arccw/usp/usp_03.wav" },
+		killme = true
+	},
+	{
 		name = "CSX.USP.Dist",
 		channel = CHAN_STATIC,
 		volume = 0.1,
@@ -28,6 +37,25 @@ local sounds_to_make = {
 		pitch = {90, 95},
 		sound = "arccw_csx/weapons/deagle/fire.wav",
 		killme = false
+	},
+	// -- Elite
+	{
+		name = "CSX.Elite.FireFirst",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {95, 105},
+		sound = "weapons/arccw/elite/elites_01.wav",
+		killme = false
+	},
+	{
+		name = "CSX.Elite.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {95, 105},
+		sound = "weapons/arccw/elite/elites_02.wav",
+		killme = true
 	},
 	// -- Glock
 	{
@@ -239,6 +267,15 @@ local sounds_to_make = {
 		killme = true
 	},
 	{
+		name = "CSX.MP5.Silenced",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {100, 110},
+		sound = "weapons/arccw/mp5/mp5_01.wav",
+		killme = true
+	},
+	{
 		name = "CSX.MP5.Dist",
 		channel = CHAN_STATIC,
 		volume = 1.0,
@@ -276,6 +313,25 @@ local sounds_to_make = {
 		sound = "arccw_csx/weapons/aug/fire.wav",
 		killme = true
 	},
+	// -- Scout
+	{
+		name = "CSX.Scout.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {90, 100},
+		sound = "weapons/arccw/ssg08/ssg08_01.wav",
+		killme = true
+	},
+	{
+		name = "CSX.Scout.Dist",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 100,
+		pitch = {95, 105},
+		sound = "weapons/arccw/ssg08/ssg08-1-distant.wav",
+		killme = false
+	},
 	// -- AK47
 	{
 		name = "CSX.AK47.Fire",
@@ -284,6 +340,15 @@ local sounds_to_make = {
 		level = 65,
 		pitch = {90, 100},
 		sound = "arccw_csx/fire/rifle/ak47.wav",
+		killme = true
+	},
+	{
+		name = "CSX.AK47.Silenced",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {90, 100},
+		sound = "weapons/arccw/m4a1/m4a1_silencer_01.wav",
 		killme = true
 	},
 	{

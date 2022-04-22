@@ -15,10 +15,10 @@ SWEP.Slot			=	1
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
-SWEP.ViewModelFOV	=	65
+SWEP.ViewModelFOV	=	75
 SWEP.ViewModel		=	"models/weapons/ma85_mw2cr/glock/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_glock18.mdl"
-SWEP.ActivePos = Vector(0.75, 3, 0.5)
+SWEP.ActivePos = Vector(0.75, 0, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "00000000"
 
@@ -57,7 +57,7 @@ SWEP.ShootSoundInfo = {
 		--"FBO2.HK416.LFE",
 	},
 	["fire_sil"] = {
-		"Weapon_USP.SilencedShot",
+		"CSX.USP.Silenced",
 	},
 	["fire_first"] = {
 		"CSX.Genbop",
@@ -152,7 +152,7 @@ SWEP.Animations = {
 			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 6/30 },
 			{ s = "weapons/glock/glock_clipout.wav", t = 12/30 },
 			{ s = "weapons/glock/glock_clipin.wav", t = 28/30 },
-			{ s = "weapons/glock/glock_sliderelease.wav", t = 46/30 },
+			{ s = "weapons/glock/glock_sliderelease.wav", t = 72/30 },
 		}
 	},
 }

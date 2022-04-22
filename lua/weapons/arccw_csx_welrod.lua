@@ -15,10 +15,10 @@ SWEP.Slot			=	1
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
-SWEP.ViewModelFOV	=	65
+SWEP.ViewModelFOV	=	75
 SWEP.ViewModel		=	"models/weapons/ma85_mwr/weapons/luger/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_usp.mdl"
-SWEP.ActivePos = Vector(0.75, 3, 0.5)
+SWEP.ActivePos = Vector(0.75, 1, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "01000000"
 
@@ -57,7 +57,7 @@ SWEP.ShootSoundInfo = {
 		"CSX.Genbop",
 	},
 	["fire_sil"] = {
-		"Weapon_USP.SilencedShot",
+		"CSX.USP.Silenced",
 		"CSX.Genbop",
 	},
 	["dry"] = {
@@ -94,10 +94,12 @@ SWEP.Firemodes = {
 	}
 }
 
+SWEP.ManualAction = true
+SWEP.NoLastCycle = true
+
 SWEP.NPCWeaponType	=	{"weapon_pistol"}
 SWEP.NPCWeight		=	100
 
-SWEP.ManualAction = true
 SWEP.Animations = {
 	["idle"] = {
 		Source = "reg_idle",

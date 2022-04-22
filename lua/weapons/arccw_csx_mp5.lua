@@ -15,10 +15,10 @@ SWEP.Slot			=	2
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
-SWEP.ViewModelFOV	=	65
+SWEP.ViewModelFOV	=	75
 SWEP.ViewModel		=	"models/weapons/ma85_mwr/weapons/mp5/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_usp.mdl"
-SWEP.ActivePos = Vector(0.5, 2, 0.75)
+SWEP.ActivePos = Vector(0.5, 1, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "00000000"
 
@@ -56,7 +56,7 @@ SWEP.ShootSoundInfo = {
 		"CSX.MP5.Dist",
 	},
 	["fire_sil"] = {
-		"Weapon_TMP.Single",
+		"CSX.MP5.Silenced",
 		"CSX.GenbopS",
 	},
 	["dry"] = {
@@ -72,7 +72,14 @@ SWEP.CaseEffectAttachment	=	2
 SWEP.CamAttachment			=	nil
 
 SWEP.Attachments = {}
-SWEP.AttachmentElements = {}
+SWEP.AttachmentElements = {
+	["rail_optic"] = {
+		VMBodygroups = {{ind = 1, bg = 1}},
+	},
+	["csx_muz_sup_mp5"] = {
+		VMBodygroups = {{ind = 2, bg = 1}},
+	}
+}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
@@ -105,15 +112,15 @@ SWEP.Firemodes = {
 SWEP.NPCWeaponType	=	{"weapon_smg1"}
 SWEP.NPCWeight		=	100
 
+SWEP.Hook_TranslateSequence = function( wep, seq )
+	if wep:CheckFlags({}, { "csx_muz_sup_mp5" }) then
+		return "sd_" .. string.sub(seq, 5, #seq)
+	end
+end
+
 SWEP.Animations = {
 	["idle"] = {
 		Source = "reg_idle",
-	},
-	["ready"] = {
-		Source = "reg_draw_first",
-		SoundTable = {
-			{ s = "weapons/ump45/ump45_boltslap.wav", t = 13/30 },
-		}
 	},
 	["draw"] = {
 		Source = "reg_draw",
@@ -183,8 +190,9 @@ SWEP.Attachments = {
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
 		Slot = "optic",
 		Bone = "tag_weapon",
+		InstalledEles = {"rail_optic"},
 		Offset = {
-			vpos = Vector(4, 0, 5.6),
+			vpos = Vector(2.5, 0, 6.55),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -192,7 +200,7 @@ SWEP.Attachments = {
 		PrintName = "Muzzle",
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
-		Slot = { "csx_muzzle_device", "csx_muzzle_suppressor" },
+		Slot = { "csx_muzzle_device", "csx_muzzle_suppressor", "csx_muzzle_mp5" },
 		Bone = "tag_weapon",
 		Offset = {
 			vpos = Vector(15, 0, 4.05),

@@ -15,7 +15,7 @@ SWEP.Slot			=	2
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
-SWEP.ViewModelFOV	=	65
+SWEP.ViewModelFOV	=	75
 SWEP.ViewModel		=	"models/weapons/ma85_mwr/weapons/p90/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_usp.mdl"
 SWEP.ActivePos = Vector(0.5, 2, 0.75)
@@ -64,7 +64,7 @@ SWEP.ShootSoundInfo = {
 		"CSX.MP5.Dist",
 	},
 	["fire_sil"] = {
-		"Weapon_TMP.Single",
+		"CSX.MP5.Silenced",
 		"CSX.GenbopS",
 	},
 	["dry"] = {

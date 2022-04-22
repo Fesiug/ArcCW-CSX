@@ -2,35 +2,35 @@ SWEP.Base			=	"arccw_csxbase"
 SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CSX"
-SWEP.PrintName		=	"K&M MPS-45"
-SWEP.Trivia_Class			= "Submachine Gun"
-SWEP.Trivia_Desc			= "Ubiquitous sub-machine gun. Created as a response to the need for a faster-firing and more reliable submachine gun than existing options at the time. In .45, the heavy caliber allows it to pack a greater punch in short range while remaining controllable with a lower fire rate."
-SWEP.Trivia_Manufacturer	= "K&M"
-SWEP.Trivia_Calibre			= ".45 ACP"
-SWEP.Trivia_Mechanism		= "Straight Blowback"
-SWEP.Trivia_Country			= "Germany"
-SWEP.Trivia_Year			= 1989
+SWEP.PrintName		=	"ES M2000"
+SWEP.Trivia_Class			= "Assault Rifle"
+SWEP.Trivia_Desc			= "Missing string."
+SWEP.Trivia_Manufacturer    = "Cobra"
+SWEP.Trivia_Calibre         = "5.56x45mm"
+SWEP.Trivia_Mechanism       = "Missing"
+SWEP.Trivia_Country         = "Missing"
+SWEP.Trivia_Year			= 9999
 
 SWEP.Slot			=	2
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	75
-SWEP.ViewModel		=	"models/weapons/ma85_mw2cr/ump45/viewmodel.mdl"
-SWEP.WorldModel		=	"models/weapons/w_pist_usp.mdl"
-SWEP.ActivePos = Vector(0.75, 0, 0.75)
+SWEP.ViewModel      =   "models/weapons/ma85_mwr/weapons/m249/viewmodel.mdl"
+SWEP.WorldModel		=	"models/weapons/w_mach_m249para.mdl"
+SWEP.ActivePos = Vector(1, 1, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "00000000"
 
-SWEP.Damage				=	35
-SWEP.DamageMin			=	22
-SWEP.RangeMin			=	12
-SWEP.Range				=	40
-SWEP.Penetration		=	6
-SWEP.Primary.Ammo		=	"pistol"
+SWEP.Damage				=	30
+SWEP.DamageMin			=	20
+SWEP.RangeMin			=	20
+SWEP.Range				=	60
+SWEP.Penetration		=	8
+SWEP.Primary.Ammo		=	"smg1"
 
-SWEP.ShellModel		=	"models/shells/shell_9mm.mdl"
-SWEP.ShellScale		=	1.334
+SWEP.ShellModel		=	"models/shells/shell_556.mdl"
+SWEP.ShellScale		=	1
 SWEP.ShellPitch		=	100
 SWEP.ShellSounds	=	"autocheck"
 
@@ -40,23 +40,31 @@ SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
 SWEP.AccuracyMOA		=	0
-SWEP.SightTime			=	0.3
-SWEP.Primary.ClipSize	=	25
-SWEP.ChamberSize		=	1
-SWEP.MuzzleEffect		=	"muzzleflash_mp5"
+SWEP.SightTime			=	0.4
+SWEP.Primary.ClipSize	=	100
+SWEP.ChamberSize		=	0
+SWEP.MuzzleEffect		=	"muzzleflash_pistol"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
 
 -- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	0.4,	0.2,	0.18,	0.15,	5,	2,	4	}
+SWEP.CSX_Recoil			=	{	1.1,	0.5,	0.1,	0.05,	6,	5,	4	}
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
-		"CSX.UMP.Fire",
-		"CSX.FAMAS.FireClack",
+		"CSX.GenbopS",
+		"weapons/arccw/negev/negev-1.wav",
 		"CSX.UMP.Dist",
+		"CSX.AK47.LFE",
 	},
 	["fire_sil"] = {
-		"CSX.MP5.Silenced",
+		"CSX.AK47.Silenced",
+		"CSX.GenbopS",
+	},
+	["fire_first"] = {
+		"CSX.GenbopS",
+		"weapons/arccw/m249/m249-1.wav",
+		"CSX.UMP.Dist",
+		"CSX.AK47.LFE",
 	},
 	["dry"] = {
 		{
@@ -75,23 +83,17 @@ SWEP.AttachmentElements = {}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.29, -3.477, 1),
-    Ang = Angle(0.699, 0, 0),
+    Pos = Vector(-2.56, -4.512, -0.16),
+    Ang = Angle(0, 0, 0),
 	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
 
-SWEP.Delay = 0.107
+SWEP.Delay = (60/700)
 SWEP.Firemodes = {
 	{
 		Mode = 2,
-	},
-	{
-		Mode = -2,
-		Mult_RPM = 1.5,
-		PostBurstDelay = 0.12,
-		RunawayBurst = true,
 	},
 	{
 		Mode = 1,
@@ -143,28 +145,16 @@ SWEP.Animations = {
 	},
 	["reload"] = {
 		Source = "reg_reload",
+		Time = 2.1,
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
-			{ s = "weapons/ump45/ump45_clipout.wav", t = 14/30 },
-			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 32/30 },
-			{ s = "weapons/ump45/ump45_clipin.wav", t = 52/30 },
-		},
-		LHIK = true,
-		LHIKIn = 0.4,
-		LHIKOut = 0.5,
-		LHIKEaseIn = 0.3,
-		LHIKEaseOut = 0.3,
-	},
-	["reload_empty"] = {
-		Source = "reg_reload_empty",
-		MinProgress = 1.4,
-		SoundTable = {
-			{ s = "CSX.Cloth.S", t = 1/30 },
-			{ s = "weapons/ump45/ump45_clipout.wav", t = 14/30 },
-			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 32/30 },
-			{ s = "weapons/ump45/ump45_clipin.wav", t = 52/30 },
-			{ s = "weapons/ump45/ump45_boltslap.wav", t = 70/30 },
+			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 12/30 },
+			{ s = "weapons/famas/famas_clipout.wav", t = 14/30 },
+			{ s = "arccw_csx/fance/fl1.wav", t = 28/30 },
+			{ s = "arccw_csx/fance/fl2.wav", t = 31/30 },
+			{ s = "arccw_csx/fance/ak47_clipin.wav", t = 38/30 },
+			{ s = "weapons/famas/famas_clipin.wav", t = 42/30 },
 		},
 		LHIK = true,
 		LHIKIn = 0.4,
@@ -182,7 +172,7 @@ SWEP.Attachments = {
 		Slot = "optic",
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(3, 0, 2.1),
+			vpos = Vector(2, 0, 4),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -193,7 +183,7 @@ SWEP.Attachments = {
 		Slot = { "csx_muzzle_device", "csx_muzzle_suppressor" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(14.5, 0, 0.11),
+			vpos = Vector(11.5, 0, 1.32),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -204,7 +194,7 @@ SWEP.Attachments = {
 		Slot = "foregrip",
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(10, 0, -0.9),
+			vpos = Vector(5, 0, 0),
 			vang = Angle(0, 0, 0),
 		},
 	},

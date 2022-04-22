@@ -15,12 +15,12 @@ SWEP.Slot			=	2
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
-SWEP.ViewModelFOV	=	65
-SWEP.ViewModel      =   "models/weapons/ma85_mwr/weapons/ak47/viewmodel.mdl"
+SWEP.ViewModelFOV	=	75
+SWEP.ViewModel      =   "models/weapons/arccw_csx/vm/c_csx_akm.mdl"
 SWEP.WorldModel		=	"models/weapons/w_rif_ak47.mdl"
-SWEP.ActivePos = Vector(0.75, 2, 0.75)
+SWEP.ActivePos = Vector(0.75, 0, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
-SWEP.DefaultBodygroups = "10000000"
+SWEP.DefaultBodygroups = "00000000"
 
 SWEP.Damage				=	35
 SWEP.DamageMin			=	25
@@ -57,7 +57,7 @@ SWEP.ShootSoundInfo = {
 		"CSX.AK47.LFE",
 	},
 	["fire_sil"] = {
-		"Weapon_M4A1.Silenced",
+		"CSX.AK47.Silenced",
 		"CSX.GenbopR",
 	},
 	["dry"] = {
@@ -73,7 +73,14 @@ SWEP.CaseEffectAttachment	=	2
 SWEP.CamAttachment			=	nil
 
 SWEP.Attachments = {}
-SWEP.AttachmentElements = {}
+SWEP.AttachmentElements = {
+	["rail_optic"] = {
+		VMBodygroups = {{ind = 1, bg = 1}},
+	},
+	["rail_underbarrel"] = {
+		VMBodygroups = {{ind = 2, bg = 1}},
+	}
+}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
@@ -171,8 +178,9 @@ SWEP.Attachments = {
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
 		Slot = "optic",
 		Bone = "tag_weapon",
+		InstalledEles = {"rail_optic"},
 		Offset = {
-			vpos = Vector(3, 0, 4.1),
+			vpos = Vector(4, 0, 4.32),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -193,8 +201,9 @@ SWEP.Attachments = {
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
 		Slot = "foregrip",
 		Bone = "tag_weapon",
+		InstalledEles = {"rail_underbarrel"},
 		Offset = {
-			vpos = Vector(12, 0, 2),
+			vpos = Vector(12, 0, 1.7),
 			vang = Angle(0, 0, 0),
 		},
 	},

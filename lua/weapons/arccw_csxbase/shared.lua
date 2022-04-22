@@ -14,7 +14,7 @@ SWEP.Slot			=	0
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
-SWEP.ViewModelFOV	=	65
+SWEP.ViewModelFOV	=	75
 SWEP.ViewModel		=	"models/weapons/c_smg1.mdl"
 SWEP.WorldModel		=	"models/weapons/w_smg1.mdl"
 
