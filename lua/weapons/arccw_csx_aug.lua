@@ -20,7 +20,7 @@ SWEP.ViewModel      =   "models/weapons/ma85_mw2cr/aug/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_rif_ak47.mdl"
 SWEP.ActivePos = Vector(0.75, 2, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
-SWEP.DefaultBodygroups = "11000000"
+SWEP.DefaultBodygroups = "00000000"
 
 SWEP.Damage				=	30
 SWEP.DamageMin			=	20
@@ -75,8 +75,8 @@ SWEP.AttachmentElements = {}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-	Pos = Vector(-3.04, -6.026, 0.68),
-	Ang = Angle(0.203, 0, 0),
+	Pos = Vector(-2.52, -6.026, 0.4),
+	Ang = Angle(0, 0, 0),
 	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,

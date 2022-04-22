@@ -84,7 +84,7 @@ SWEP.AttachmentElements = {}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.04, -4.512, -0.179),
+    Pos = Vector(-2.54, -4.512, -0.43),
     Ang = Angle(0, 0, 0),
 	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
