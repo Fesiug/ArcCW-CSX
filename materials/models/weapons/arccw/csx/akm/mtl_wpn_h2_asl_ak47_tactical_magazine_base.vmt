@@ -1,0 +1,17 @@
+VertexlitGeneric
+{
+	$basetexture 						"models\weapons\arccw\csx\akm\wpn_h2_asl_ak47_tactical_magazine_base_col"
+	$bumpmap 							"models\weapons\arccw\csx\akm\wpn_h2_asl_ak47_tactical_magazine_base_nml"
+
+	$phong                      		1
+	$phongexponent                      "10"
+	$phongboost                         "2.5"
+	$phongfresnelranges         "[.01 2.5 2.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	$envmap                    		 env_cubemap
+	$envmaptint                 		"[.01 .01 .01]"
+	$normalmapalphaenvmapmask   	1
+
+}
