@@ -57,7 +57,7 @@ SWEP.ShootSoundInfo = {
 		"CSX.Genbop",
 	},
 	["fire_sil"] = {
-		"CSX.USP.Silenced",
+		"Weapon_USP.SilencedShot",
 		"CSX.Genbop",
 	},
 	["dry"] = {
@@ -128,13 +128,11 @@ SWEP.Animations = {
 		}
 	},
 	["fire"] = {
-		Source = "reg_fire",
-		Time = 1,
+		Source = "reg_fire_last",
 		MinProgress = 0.2,
 	},
 	["fire_iron"] = {
-		Source = "reg_fire_ads",
-		Time = 1,
+		Source = "reg_fire_ads_last",
 		MinProgress = 0.2,
 	},
 	["cycle"] = {
@@ -148,7 +146,6 @@ SWEP.Animations = {
 			{ s = "weapons/arccw/welrod/bolt2.wav", t = 12/30 },
 		}
 	},
-	["cycle_empty"] = false,
 	["reload"] = {
 		Source = "reg_reload",
 		Time = 2.2,
