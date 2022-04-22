@@ -155,7 +155,7 @@ SWEP.Attachments = {
 		Slot = { "csx_muzzle_device_pistol", "csx_muzzle_suppressor_pistol", "csx_muzzle_suppressor" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(6.7, 0, 1.1),
+			vpos = Vector(7.65, 0, 2.6),
 			vang = Angle(0, 0, 0),
 		},
 	},

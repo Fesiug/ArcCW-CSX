@@ -78,7 +78,7 @@ SWEP.AttachmentElements = {
 		VMBodygroups = {{ind = 1, bg = 1}},
 	},
 	["rail_underbarrel"] = {
-		VMBodygroups = {{ind = 2, bg = 1}},
+		VMBodygroups = {{ind = 4, bg = 2}},
 	}
 }
 SWEP.Animations = {}

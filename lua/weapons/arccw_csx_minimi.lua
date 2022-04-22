@@ -18,7 +18,7 @@ SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	75
 SWEP.ViewModel      =   "models/weapons/ma85_mwr/weapons/m249/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_mach_m249para.mdl"
-SWEP.ActivePos = Vector(1, 1, 0.5)
+SWEP.ActivePos = Vector(0.5, 0, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "00000000"
 
@@ -47,7 +47,7 @@ SWEP.MuzzleEffect		=	"muzzleflash_pistol"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
 
 -- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	1.1,	0.5,	0.1,	0.05,	6,	5,	4	}
+SWEP.CSX_Recoil			=	{	0.5,	0.3,	0.025,	0.025,	7,	6,	2	}
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -83,7 +83,7 @@ SWEP.AttachmentElements = {}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.56, -4.512, -0.16),
+    Pos = Vector(-2.86, -4, 1.42),
     Ang = Angle(0, 0, 0),
 	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
@@ -145,22 +145,24 @@ SWEP.Animations = {
 	},
 	["reload"] = {
 		Source = "reg_reload",
-		Time = 2.1,
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
-			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 12/30 },
-			{ s = "weapons/famas/famas_clipout.wav", t = 14/30 },
-			{ s = "arccw_csx/fance/fl1.wav", t = 28/30 },
-			{ s = "arccw_csx/fance/fl2.wav", t = 31/30 },
-			{ s = "arccw_csx/fance/ak47_clipin.wav", t = 38/30 },
-			{ s = "weapons/famas/famas_clipin.wav", t = 42/30 },
+			{ s = "weapons/m249/m249_coverup.wav", t = 0.3 },
+			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 0.5 },
+			{ s = "weapons/sg550/sg550_clipout.wav", t = 1.5 },
+			{ s = "weapons/m249/m249_boxin.wav", t = 3 },
+			{ s = "arccw_csx/fance/fl2.wav", t = 3.2 },
+			{ s = "weapons/m249/m249_chain.wav", t = 3.4 },
+			{ s = "arccw_csx/fance/ak47_clipin.wav", t = 4.2 },
+			{ s = "weapons/famas/famas_clipin.wav", t = 4.4 },
+			{ s = "weapons/famas/famas_forearm.wav", t = 5.4 },
 		},
 		LHIK = true,
 		LHIKIn = 0.4,
-		LHIKOut = 0.4,
+		LHIKOut = 2,
 		LHIKEaseIn = 0.3,
-		LHIKEaseOut = 0.3,
+		LHIKEaseOut = 2,
 	},
 }
 
@@ -194,7 +196,7 @@ SWEP.Attachments = {
 		Slot = "foregrip",
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(5, 0, 0),
+			vpos = Vector(12, 0, 1.2),
 			vang = Angle(0, 0, 0),
 		},
 	},

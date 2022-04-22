@@ -57,7 +57,7 @@ SWEP.ShootSoundInfo = {
 		--"FBO2.HK416.LFE",
 	},
 	["fire_sil"] = {
-		"CSX.USP.Silenced",
+		"Weapon_USP.SilencedShot",
 	},
 	["fire_first"] = {
 		"CSX.Genbop",

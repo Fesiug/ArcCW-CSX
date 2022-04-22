@@ -57,7 +57,7 @@ SWEP.ShootSoundInfo = {
 		"CSX.Genbop",
 	},
 	["fire_sil"] = {
-		"CSX.USP.Silenced",
+		"Weapon_USP.SilencedShot",
 		"CSX.Genbop",
 	},
 	["dry"] = {
@@ -77,7 +77,7 @@ SWEP.AttachmentElements = {}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-	Pos = Vector(-2, 3, 1.6),
+	Pos = Vector(-1.79, 3, 1.57),
 	Ang = Angle(-1.2, 0, 0),
 	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
@@ -156,7 +156,7 @@ SWEP.Attachments = {
 		Slot = "optic_lp",
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(-0.1, 0, 1.3),
+			vpos = Vector(-0.1, 0, 2),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -167,7 +167,7 @@ SWEP.Attachments = {
 		Slot = { "csx_muzzle_device_pistol", "csx_muzzle_suppressor_pistol", "csx_muzzle_suppressor" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(3.9, 0, 0.9),
+			vpos = Vector(5.3, 0, 2.35),
 			vang = Angle(0, 0, 0),
 		},
 	},

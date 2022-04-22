@@ -11,8 +11,10 @@ att.AutoStats			=	true
 att.Slot				=	"csx_muzzle_suppressor"
 att.SortOrder			=	12
 
-att.Model				=	"models/weapons/arccw/atts/supp_heavy.mdl"
-att.ModelScale			=	Vector(0.8, 0.9, 0.9)
+att.Model				=	"models/weapons/ma85_mwr/atts/silencer_556.mdl"
+att.ModelScale			=	Vector(1.2, 1.2, 1.2)--Vector(0.8, 0.9, 0.9)
+att.ModelOffset			=	Vector(0, -1.8, 0)
+att.OffsetAng			=	Angle(0, -90, 0)
 
 att.Silencer			=	true
 att.Override_MuzzleEffect	=	"muzzleflash_suppressed"

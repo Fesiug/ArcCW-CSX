@@ -47,7 +47,7 @@ SWEP.MuzzleEffect		=	"muzzleflash_ak47"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
 
 -- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	1.1,	0.375,	0.2,	0.04,	6,	2,	5	}
+SWEP.CSX_Recoil			=	{	5,	1,	0.2,	0.2,	6,	2,	1	}
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -77,10 +77,10 @@ SWEP.AttachmentElements = {}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-	Pos = Vector(-2.335, -2.012, 0.52),
+	Pos = Vector(-3.9, 0, 1.6),
 	Ang = Angle(0, 0, 0),
 	ViewModelFOV = 65 / (65/50),
-	Magnification = 65/50,
+	Magnification = 7,
 	CrosshairInSights = false,
 }
 
@@ -133,11 +133,23 @@ SWEP.Animations = {
 	},
 	["cycle"] = {
 		Source = "reg_rechamber",
-		ShellEjectAt = 0.3,
+		Time = 0.7,
+		ShellEjectAt = 0,
+		SoundTable = {
+			{ s = "CSX.Cloth.S", t = 1/30 },
+			{ s = "CSX.M3.R.Boltback", t = 1/30 },
+			{ s = "CSX.M3.R.Boltforward", t = 11/30 },
+		}
 	},
 	["cycle_iron"] = {
 		Source = "reg_rechamber_ads",
-		ShellEjectAt = 0.3,
+		Time = 0.7,
+		ShellEjectAt = 0,
+		SoundTable = {
+			{ s = "CSX.Cloth.S", t = 1/30 },
+			{ s = "CSX.M3.R.Boltback", t = 1/30 },
+			{ s = "CSX.M3.R.Boltforward", t = 11/30 },
+		}
 	},
 	["sgreload_start"] = {
 		Source = "reg_reload_start",
@@ -146,6 +158,7 @@ SWEP.Animations = {
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
 			{ s = "CSX.Glock.R.Futz", t = 7/30 },
+			{ s = "CSX.M3.R.Boltback", t = 9/30 },
 			{ s = "CSX.M3.R.Shellinsert", t = 22/30 },
 		}
 	},
@@ -162,7 +175,8 @@ SWEP.Animations = {
 		Source = "reg_reload_end",
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
-			{ s = "CSX.Glock.R.Futz", t = 10/30 },
+			{ s = "CSX.Glock.R.Futz", t = 5/30 },
+			{ s = "CSX.M3.R.Boltforward", t = 6/30 },
 		}
 	},
 }
@@ -186,7 +200,7 @@ SWEP.Attachments = {
 		Slot = { "csx_muzzle_device", "csx_muzzle_suppressor" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(22.9, 0, 2.7),
+			vpos = Vector(29.5, 0, 3.3),
 			vang = Angle(0, 0, 0),
 		},
 	},
