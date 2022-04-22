@@ -18,7 +18,7 @@ SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	75
 SWEP.ViewModel      =   "models/weapons/arccw_csx/vm/c_csx_akm.mdl"
 SWEP.WorldModel		=	"models/weapons/w_rif_ak47.mdl"
-SWEP.ActivePos = Vector(0.75, 0, 0.5)
+SWEP.ActivePos = Vector(0.75, 1, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "00000000"
 
