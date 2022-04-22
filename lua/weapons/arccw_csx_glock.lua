@@ -141,7 +141,7 @@ SWEP.Animations = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
 			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 6/30 },
 			{ s = "weapons/glock/glock_clipout.wav", t = 12/30 },
-			{ s = "weapons/glock/glock_clipin.wav", t = 28/30 },
+			{ s = "weapons/glock/glock_clipin.wav", t = 35/30 },
 		}
 	},
 	["reload_empty"] = {

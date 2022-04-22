@@ -2,14 +2,14 @@ SWEP.Base			=	"arccw_csxbase"
 SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CSX"
-SWEP.PrintName		=	"Type 2"
-SWEP.Trivia_Class			= "Assault Rifle"
-SWEP.Trivia_Desc			= "An early assault rifle pattern, copied and used all around the world. Designed by a Soviet tank mechanic in response to the need for a more versatile infantry weapon. Packs a serious punch at the cost of poor accuracy."
+SWEP.PrintName		=	"Type 8k"
+SWEP.Trivia_Class			= "Shotgun"
+SWEP.Trivia_Desc			= "Missing string."
 SWEP.Trivia_Manufacturer    = nil--"Kremen Oruzhiye" jeez, who knows who made this one
-SWEP.Trivia_Calibre         = "7.62x39mm"
-SWEP.Trivia_Mechanism       = "Gas-Operated"
-SWEP.Trivia_Country         = "Soviet Union"
-SWEP.Trivia_Year			= 1989
+SWEP.Trivia_Calibre         = "12 Gauge"
+SWEP.Trivia_Mechanism       = "Missing"
+SWEP.Trivia_Country         = "Missing"
+SWEP.Trivia_Year			= 9999
 
 SWEP.Slot			=	2
 SWEP.SlotPos		=	0
@@ -22,15 +22,15 @@ SWEP.ActivePos = Vector(0.75, 2, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "10000000"
 
-SWEP.Damage				=	35
-SWEP.DamageMin			=	25
-SWEP.RangeMin			=	18
-SWEP.Range				=	60
-SWEP.Penetration		=	12
-SWEP.Primary.Ammo		=	"ar2"
+SWEP.Damage				=	14
+SWEP.DamageMin			=	6
+SWEP.RangeMin			=	8
+SWEP.Range				=	35
+SWEP.Penetration		=	4
+SWEP.Primary.Ammo		=	"buckshot"
 
-SWEP.ShellModel		=	"models/shells/shell_556.mdl"
-SWEP.ShellScale		=	1.334
+SWEP.ShellModel		=	"models/shells/shell_12gauge.mdl"
+SWEP.ShellScale		=	1.5
 SWEP.ShellPitch		=	100
 SWEP.ShellSounds	=	"autocheck"
 
@@ -39,25 +39,24 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.AccuracyMOA		=	0
-SWEP.SightTime			=	0.4
-SWEP.Primary.ClipSize	=	30
+SWEP.AccuracyMOA		=	70
+SWEP.SightTime			=	0.5
+SWEP.Primary.ClipSize	=	8
 SWEP.ChamberSize		=	1
-SWEP.MuzzleEffect		=	"muzzleflash_ak47"
+SWEP.MuzzleEffect		=	"muzzleflash_shotgun"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
 
 -- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	1.1,	0.375,	0.2,	0.04,	6,	2,	5	}
+SWEP.CSX_Recoil			=	{	5,	3,	0.6,	0.05,	20,	10,	0	}
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
 		"CSX.GenbopR",
-		"CSX.AK47.Fire",
+		"CSX.Super90.Fire",
 		"CSX.UMP.Dist",
-		"CSX.AK47.LFE",
 	},
 	["fire_sil"] = {
-		"Weapon_M4A1.Silenced",
+		"CSX.AK47.Fire_Silenced",
 		"CSX.GenbopR",
 	},
 	["dry"] = {
@@ -84,11 +83,8 @@ SWEP.IronSightStruct = {
 	CrosshairInSights = false,
 }
 
-SWEP.Delay = 0.1052
+SWEP.Delay = 0.334
 SWEP.Firemodes = {
-	{
-		Mode = 2,
-	},
 	{
 		Mode = 1,
 	},
@@ -96,6 +92,11 @@ SWEP.Firemodes = {
 		Mode = 0
 	}
 }
+
+SWEP.ShotgunReload = false
+SWEP.ManualAction = false
+
+SWEP.Num = 8
 
 SWEP.NPCWeaponType	=	{"weapon_ar2"}
 SWEP.NPCWeight		=	100

@@ -2,7 +2,7 @@ SWEP.Base			=	"arccw_csxbase"
 SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CSX"
-SWEP.PrintName		=	"K&M NP5C"
+SWEP.PrintName		=	"K&M SF5"
 SWEP.Trivia_Class			= "Submachine Gun"
 SWEP.Trivia_Desc			= "Light 9x19mm SMG predating the MPS. One of the most widely used submachine guns in the world. Renowned for its use in the Iranian Embassy siege. Despite being more expensive, it still proves appealing to many over its cheaper brother, the MPS."
 SWEP.Trivia_Manufacturer	= "K&M"
@@ -76,8 +76,8 @@ SWEP.AttachmentElements = {}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.91, -3.79, 0.95),
-    Ang = Angle(-0.278, 0.008, 0),
+    Pos = Vector(-3.11, -3.79, 1),
+    Ang = Angle(0.5, 0, 0),
 	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
