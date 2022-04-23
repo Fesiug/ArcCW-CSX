@@ -159,15 +159,15 @@ SWEP.Animations = {
 	},
 	["reload_empty"] = {
 		Source = "reg_reload_empty",
-		Time = 2.8,
+		Time = 2.6,
 		MinProgress = 1.2,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
 			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 0.2 },
 			{ s = "weapons/arccw/welrod/clipout.wav", t = 0.4 },
-			{ s = "weapons/arccw/welrod/clipin.wav", t = 1.1 },
-			{ s = "weapons/arccw/welrod/bolt1.wav", t = 1.9 },
-			{ s = "weapons/arccw/welrod/bolt2.wav", t = 2.1 },
+			{ s = "weapons/arccw/welrod/clipin.wav", t = 1.0 },
+			{ s = "weapons/arccw/welrod/bolt1.wav", t = 1.7 },
+			{ s = "weapons/arccw/welrod/bolt2.wav", t = 1.9 },
 		}
 	},
 }

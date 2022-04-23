@@ -341,6 +341,16 @@ local sounds_to_make = {
 		sound = "weapons/arccw/ssg08/ssg08-1-distant.wav",
 		killme = false
 	},
+	// -- G3
+	{
+		name = "CSX.G3.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {90, 100},
+		sound = { "weapons/arccw/g3sg1/g3sg1_01.wav", "weapons/arccw/g3sg1/g3sg1_02.wav", "weapons/arccw/g3sg1/g3sg1_03.wav" },
+		killme = true
+	},
 	// -- AK47
 	{
 		name = "CSX.AK47.Fire",
