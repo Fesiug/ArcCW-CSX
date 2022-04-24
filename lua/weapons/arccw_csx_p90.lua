@@ -131,8 +131,6 @@ SWEP.Animations = {
 	},
 	["holster"] = {
 		Source = "reg_holster",
-		SoundTable = {
-		}
 	},
 	["fire"] = {
 		Source = "reg_fire",

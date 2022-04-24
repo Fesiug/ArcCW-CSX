@@ -106,22 +106,13 @@ SWEP.Animations = {
 	["idle"] = {
 		Source = "reg_idle",
 	},
-	["ready"] = {
-		Source = "reg_draw",
-		SoundTable = {
-		}
-	},
 	["draw"] = {
 		Source = "reg_draw",
 		Time = 0.5,
-		SoundTable = {
-		}
 	},
 	["holster"] = {
 		Source = "reg_holster",
 		Time = 0.5,
-		SoundTable = {
-		}
 	},
 	["fire"] = {
 		Source = "reg_fire",

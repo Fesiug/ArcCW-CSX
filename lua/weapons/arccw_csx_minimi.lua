@@ -121,15 +121,8 @@ SWEP.Animations = {
 	["idle"] = {
 		Source = "reg_idle",
 	},
-	["ready"] = {
-		Source = "reg_draw",
-		SoundTable = {
-		}
-	},
 	["draw"] = {
 		Source = "reg_draw",
-		SoundTable = {
-		},
 		LHIK = true,
 		LHIKIn = 0,
 		LHIKOut = 0.5,
@@ -138,8 +131,6 @@ SWEP.Animations = {
 	},
 	["holster"] = {
 		Source = "reg_holster",
-		SoundTable = {
-		},
 		LHIK = true,
 		LHIKIn = 0.4,
 		LHIKOut = 0,

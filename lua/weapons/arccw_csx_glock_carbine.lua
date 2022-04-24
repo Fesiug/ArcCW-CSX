@@ -120,8 +120,6 @@ SWEP.Animations = {
 	},
 	["ready"] = {
 		Source = "reg_draw_first",
-		SoundTable = {
-		}
 	},
 	["draw"] = {
 		Source = "reg_draw",

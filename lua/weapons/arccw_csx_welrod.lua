@@ -111,13 +111,6 @@ SWEP.Animations = {
 	["idle_empty"] = {
 		Source = "reg_idle_empty",
 	},
-	["ready"] = {
-		Source = "reg_draw_first",
-		SoundTable = {
-			{ s = "weapons/arccw/welrod/bolt1.wav", t = 8/30 },
-			{ s = "weapons/arccw/welrod/bolt2.wav", t = 14/30 },
-		}
-	},
 	["draw"] = {
 		Source = "reg_draw_first",
 		SoundTable = {
@@ -128,8 +121,6 @@ SWEP.Animations = {
 	["holster"] = {
 		Source = "reg_holster",
 		Time = 0.5,
-		SoundTable = {
-		}
 	},
 	["fire"] = {
 		Source = "reg_fire_last",

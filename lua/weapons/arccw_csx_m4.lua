@@ -122,14 +122,15 @@ SWEP.Animations = {
 		Source = "reg_idle",
 	},
 	["ready"] = {
-		Source = "reg_draw",
+		Source = "reg_draw_first",
 		SoundTable = {
-		}
+			{ s = "CSX.Cloth.S", t = 1/30 },
+			{ s = "weapons/famas/famas_forearm.wav", t = 8/30 },
+			{ s = "arccw_csx/fance/mp5_slideback-2.wav", t = 11/30 },
+		},
 	},
 	["draw"] = {
 		Source = "reg_draw",
-		SoundTable = {
-		},
 		LHIK = true,
 		LHIKIn = 0,
 		LHIKOut = 0.5,
@@ -138,8 +139,6 @@ SWEP.Animations = {
 	},
 	["holster"] = {
 		Source = "reg_holster",
-		SoundTable = {
-		},
 		LHIK = true,
 		LHIKIn = 0.4,
 		LHIKOut = 0,
