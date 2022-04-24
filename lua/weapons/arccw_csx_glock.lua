@@ -39,15 +39,20 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.AccuracyMOA		=	0
+SWEP.AccuracyMOA		=	20
 SWEP.SightTime			=	0.2
 SWEP.Primary.ClipSize	=	17
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_pistol"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	1.5,	0.3,	0.08,	0.05,	8,	8,	2	}
+SWEP.Recoil				=	0.7
+SWEP.RecoilSide			=	0.7
+
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["pistol"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["pistol"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["pistol"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -84,7 +89,6 @@ SWEP.Animations = {}
 SWEP.IronSightStruct = {
 	Pos = Vector(-2.8, 0, 0.8),
 	Ang = Angle(-0.4, 0, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
@@ -166,6 +170,17 @@ SWEP.Attachments = {
 		Bone = "tag_weapon",
 		Offset = {
 			vpos = Vector(6.3, 0, 2.8),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Tactical",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = { "csx_tactical" },
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(5.3, 0, 2.1),
 			vang = Angle(0, 0, 0),
 		},
 	},

@@ -4,12 +4,12 @@ SWEP.Spawnable		=	true
 SWEP.Category		=	"ArcCW - CSX"
 SWEP.PrintName		=	"Schmidt MinI"
 SWEP.Trivia_Class			= "Submachine Gun"
-SWEP.Trivia_Desc			= "Extremely concealable 9x19mm machine pistol. Ergonomic, compact, and made out of light polymers, it is a weapon favored by private security firms. A three-round burst mode keeps the ammo capacity in check."
+SWEP.Trivia_Desc			= "Concealable and controllable 9x19mm machine pistol. Ergonomic, compact, and made out of light polymers, it is a weapon favored by private security firms. A three-round burst mode keeps the ammo capacity in check."
 SWEP.Trivia_Manufacturer	= "Schmidt"
 SWEP.Trivia_Calibre			= "9x19mm"
 SWEP.Trivia_Mechanism		= "Short Recoil"
 SWEP.Trivia_Country			= "Austria"
-SWEP.Trivia_Year			= 2001
+SWEP.Trivia_Year			= 1989
 
 SWEP.Slot			=	2
 SWEP.SlotPos		=	0
@@ -39,15 +39,20 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.AccuracyMOA		=	0
+SWEP.AccuracyMOA		=	16
 SWEP.SightTime			=	0.2
 SWEP.Primary.ClipSize	=	20
 SWEP.ChamberSize		=	1
-SWEP.MuzzleEffect		=	"muzzleflash_mp5"
+SWEP.MuzzleEffect		=	"muzzleflash_smg"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	1.2,	0.5,	0.4,	0.05,	5,	5,	3	}
+SWEP.Recoil				=	0.6
+SWEP.RecoilSide			=	0.6
+
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["smg"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["smg"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["smg"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -78,7 +83,6 @@ SWEP.Animations = {}
 SWEP.IronSightStruct = {
     Pos = Vector(-2.2, 0, 0.7),
     Ang = Angle(0.25, 0, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
@@ -192,6 +196,17 @@ SWEP.Attachments = {
 		Offset = {
 			vpos = Vector(7, 0, 2.4),
 			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Tactical",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = { "csx_tactical" },
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(3, 0.9, 2.9),
+			vang = Angle(0, 0, -90),
 		},
 	},
 	{

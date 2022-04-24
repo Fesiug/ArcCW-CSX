@@ -45,9 +45,14 @@ SWEP.Primary.ClipSize	=	7
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_shotgun"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	6,	0.5,	0.2,	0.2,	10,	10,	2	}
+SWEP.Recoil				=	5.0
+SWEP.RecoilSide			=	3.0
+
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["shotgun"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["shotgun"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["shotgun"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -76,7 +81,6 @@ SWEP.Animations = {}
 SWEP.IronSightStruct = {
 	Pos = Vector(-2.82, -2.012, 1.31),
 	Ang = Angle(0.3, 0, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
@@ -184,7 +188,7 @@ SWEP.Attachments = {
 		PrintName = "Underbarrel",
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
-		Slot = "foregrip",
+		Slot = { "csx_underbarrel_foregrip" },
 		Bone = "tag_weapon",
 		Offset = {
 			vpos = Vector(12, 0, 1.4),

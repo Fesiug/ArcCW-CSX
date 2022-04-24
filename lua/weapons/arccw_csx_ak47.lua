@@ -2,14 +2,14 @@ SWEP.Base			=	"arccw_csxbase"
 SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CSX"
-SWEP.PrintName		=	"Type 2"
+SWEP.PrintName		=	"CV Type 2"
 SWEP.Trivia_Class			= "Assault Rifle"
 SWEP.Trivia_Desc			= "An early assault rifle pattern, copied and used all around the world. Designed by a Soviet tank mechanic in response to the need for a more versatile infantry weapon. Packs a serious punch at the cost of poor accuracy."
-SWEP.Trivia_Manufacturer    = nil--"Kremen Oruzhiye" jeez, who knows who made this one
+SWEP.Trivia_Manufacturer    = "CV Concern"
 SWEP.Trivia_Calibre         = "7.62x39mm"
 SWEP.Trivia_Mechanism       = "Gas-Operated"
-SWEP.Trivia_Country         = "Soviet Union"
-SWEP.Trivia_Year			= 1989
+SWEP.Trivia_Country         = "Russia"
+SWEP.Trivia_Year			= 1946
 
 SWEP.Slot			=	2
 SWEP.SlotPos		=	0
@@ -39,15 +39,20 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.AccuracyMOA		=	0
+SWEP.AccuracyMOA		=	10
 SWEP.SightTime			=	0.4
 SWEP.Primary.ClipSize	=	30
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_ak47"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	1.1,	0.375,	0.2,	0.04,	6,	2,	5	}
+SWEP.Recoil				=	1.1
+SWEP.RecoilSide			=	1.0
+
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["rifle_heavy"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["rifle_heavy"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["rifle_heavy"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -84,9 +89,8 @@ SWEP.AttachmentElements = {
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-	Pos = Vector(-2.335, -2.012, 0.52),
+	Pos = Vector(-2.335, -3, 0.52),
 	Ang = Angle(0, 0, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
@@ -120,13 +124,9 @@ SWEP.Animations = {
 	},
 	["draw"] = {
 		Source = "reg_draw",
-		SoundTable = {
-		}
 	},
 	["holster"] = {
 		Source = "reg_holster",
-		SoundTable = {
-		}
 	},
 	["fire"] = {
 		Source = "reg_fire",
@@ -199,12 +199,24 @@ SWEP.Attachments = {
 		PrintName = "Underbarrel",
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
-		Slot = "foregrip",
+		Slot = { "csx_underbarrel_foregrip" },
 		Bone = "tag_weapon",
 		InstalledEles = {"rail_underbarrel"},
 		Offset = {
-			vpos = Vector(12, 0, 1.7),
+			vpos = Vector(12, 0, 1.6),
 			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Tactical",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = { "csx_tactical" },
+		Bone = "tag_weapon",
+		InstalledEles = {"rail_underbarrel"},
+		Offset = {
+			vpos = Vector(13.7, 0.87, 2.6),
+			vang = Angle(0, 0, -90),
 		},
 	},
 	{

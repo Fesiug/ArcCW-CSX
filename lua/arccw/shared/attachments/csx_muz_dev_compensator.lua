@@ -11,10 +11,10 @@ att.AutoStats			=	true
 att.Slot				=	{ "csx_muzzle_device_pistol", "csx_muzzle_device", "csx_muzzle_device_shotgun" }
 att.SortOrder			=	6
 
-att.Model				=	"models/weapons/arccw/atts/muzz_compensator.mdl"
-att.ModelScale			=	Vector(0.9, 0.9, 0.9)
-
-att.IsMuzzleDevice		=	false
+att.Model				=	"models/csx/atts/muz_kriss.mdl"
+att.ModelScale			=	Vector(2.3, 1.6, 1.6)
+att.ModelOffset			=	Vector(-0.5, 0, 0)
+att.IsMuzzleDevice		=	true
 
 att.Mult_ShootPitch		=	1.02
 att.Mult_SightTime		=	1.05

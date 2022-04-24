@@ -4,11 +4,11 @@ SWEP.Spawnable		=	true
 SWEP.Category		=	"ArcCW - CSX"
 SWEP.PrintName		=	"K&M SP40"
 SWEP.Trivia_Class			= "Pistol"
-SWEP.Trivia_Desc			= ".40 S&W semi-automatic pistol. Commonly used among police and popular with civilians for its reliability. Zenith hates this."
-SWEP.Trivia_Manufacturer	= "Auschen Waffenfabrik"
+SWEP.Trivia_Desc			= ".40 S&W semi-automatic pistol. Commonly used among police and popular with civilians for its reliability and stopping power."
+SWEP.Trivia_Manufacturer	= "K&M"
 SWEP.Trivia_Calibre			= ".40 S&W"
 SWEP.Trivia_Mechanism		= "Short Recoil"
-SWEP.Trivia_Country			= "Austria"
+SWEP.Trivia_Country			= "Germany"
 SWEP.Trivia_Year			= 1989
 
 SWEP.Slot			=	1
@@ -23,10 +23,10 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "01000000"
 
 SWEP.Damage				=	40
-SWEP.DamageMin			=	28
+SWEP.DamageMin			=	20
 SWEP.RangeMin			=	10
-SWEP.Range				=	30
-SWEP.Penetration		=	4
+SWEP.Range				=	35
+SWEP.Penetration		=	6
 SWEP.Primary.Ammo		=	"pistol"
 
 SWEP.ShellModel		=	"models/shells/shell_9mm.mdl"
@@ -39,15 +39,20 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.AccuracyMOA		=	0
+SWEP.AccuracyMOA		=	5
 SWEP.SightTime			=	0.2
 SWEP.Primary.ClipSize	=	12
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_m14"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	2,	1,	1,	1,	8,	8,	1	}
+SWEP.Recoil				=	1.0
+SWEP.RecoilSide			=	1.0
+
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["pistol"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["pistol"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["pistol"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -79,7 +84,6 @@ SWEP.Animations = {}
 SWEP.IronSightStruct = {
 	Pos = Vector(-1.79, 3, 1.57),
 	Ang = Angle(-1.2, 0, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
@@ -131,9 +135,8 @@ SWEP.Animations = {
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
-			{ s = "CSX.Glock.R.Magout", t = 14/30 },
-			{ s = "CSX.Glock.R.Futz", t = 39/30 },
-			{ s = "CSX.Glock.R.Magin", t = 42/30 },
+			{ s = "weapons/usp/usp_clipout.wav", t = 12/30 },
+			{ s = "weapons/usp/usp_clipin.wav", t = 28/30 },
 		}
 	},
 	["reload_empty"] = {

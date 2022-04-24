@@ -1,0 +1,17 @@
+VertexlitGeneric
+{
+	$basetexture 						"models\csx\att\muz_kriss\wpn_h2_smg_kriss_reciever_base_col"
+	$bumpmap 							"models\csx\att\muz_kriss\wpn_h2_smg_kriss_reciever_base_nml"
+
+	$phong                      		1
+	$phongexponent                      "10"
+	$phongboost                         "1"
+	$phongfresnelranges         "[1 2.5 2.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	$envmap                    		 env_cubemap
+	$envmaptint                 		"[.01 .01 .01]"
+	$normalmapalphaenvmapmask   	1
+
+}

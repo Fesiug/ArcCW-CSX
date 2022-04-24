@@ -2,10 +2,10 @@ SWEP.Base			=	"arccw_csxbase"
 SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CSX"
-SWEP.PrintName		=	"Infilitrator"
+SWEP.PrintName		=	"LIN Infilitrator"
 SWEP.Trivia_Class			= "Pistol"
-SWEP.Trivia_Desc			= ".45 caliber pistol designed to be as silent as absolutely possible. A bolt action allows it to reduce its report by eliminating bolt carrier noise.."
-SWEP.Trivia_Manufacturer	= "Auschen Waffenfabrik"
+SWEP.Trivia_Desc			= ".45 ACP pistol designed to be as silent as absolutely possible. A bolt action allows it to reduce its report by eliminating bolt carrier noise."
+SWEP.Trivia_Manufacturer	= "LIN"
 SWEP.Trivia_Calibre			= ".45 ACP"
 SWEP.Trivia_Mechanism		= "Bolt-Action"
 SWEP.Trivia_Country			= "Great Britain"
@@ -39,15 +39,20 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.AccuracyMOA		=	0
+SWEP.AccuracyMOA		=	5
 SWEP.SightTime			=	0.2
 SWEP.Primary.ClipSize	=	7
 SWEP.ChamberSize		=	1
-SWEP.MuzzleEffect		=	"muzzleflash_m14"
+SWEP.MuzzleEffect		=	"muzzleflash_pistol"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	2,	1,	0,	0.05,	4,	3,	1	}
+SWEP.Recoil				=	1.1
+SWEP.RecoilSide			=	1.1
+
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["pistol"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["pistol"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["pistol"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -79,7 +84,6 @@ SWEP.Animations = {}
 SWEP.IronSightStruct = {
 	Pos = Vector(-1.76, 3, 1.17),
 	Ang = Angle(0, 0, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
@@ -129,16 +133,18 @@ SWEP.Animations = {
 	},
 	["fire"] = {
 		Source = "reg_fire_last",
+		Time = 0.8,
 		MinProgress = 0.2,
 	},
 	["fire_iron"] = {
 		Source = "reg_fire_ads_last",
+		Time = 0.8,
 		MinProgress = 0.2,
 	},
 	["cycle"] = {
 		Source = "reg_draw_first",
 		Time = 0.8,
-		MinProgress = 0.5,
+		MinProgress = 0.6,
 		ShellEjectAt = 0.3,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
@@ -174,24 +180,13 @@ SWEP.Animations = {
 
 SWEP.Attachments = {
 	{
-		PrintName = "Optic",
-		DefaultAttName = ArcCW.CSX.Att_DefaultName,
-		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
-		Slot = "optic_lp",
-		Bone = "tag_weapon",
-		Offset = {
-			vpos = Vector(-0.1, 0, 1.3),
-			vang = Angle(0, 0, 0),
-		},
-	},
-	{
 		PrintName = "Muzzle",
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
 		Slot = { "csx_muzzle_device", "csx_muzzle_suppressor" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(6.9, 0, 2.4),
+			vpos = Vector(6.85, 0, 2.45),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -199,10 +194,10 @@ SWEP.Attachments = {
 		PrintName = "Tactical",
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
-		Slot = "tac_pistol",
+		Slot = { "csx_tactical" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(3, 0, 0.1),
+			vpos = Vector(5.2, 0, 2.1),
 			vang = Angle(0, 0, 0),
 		},
 	},

@@ -13,7 +13,7 @@ att.AutoStats			=	true
 att.Slot				=	"csx_fcg"
 att.SortOrder			=	13
 
-att.Mult_RPM			=	1.1
+att.Mult_RPM			=	1.12
 
 att.Override_Firemodes	=
 {

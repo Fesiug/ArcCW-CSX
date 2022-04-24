@@ -11,10 +11,10 @@ att.AutoStats			=	true
 att.Slot				=	{ "csx_muzzle_device", "csx_muzzle_device_shotgun" }
 att.SortOrder			=	1
 
-att.Model				=	"models/weapons/arccw/atts/muzz_breacher.mdl"
-att.ModelScale			=	Vector(1.2, 1, 1)
+att.Model				=	"models/csx/atts/muz_ak47.mdl"
+att.ModelScale			=	Vector(1.4, 1.1, 1.1)
 
-att.IsMuzzleDevice		=	false
+att.IsMuzzleDevice		=	true
 
 att.Mult_SpeedMult		=	0.95
 att.Mult_SightedSpeedMult	=	0.95

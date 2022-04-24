@@ -265,6 +265,25 @@ local sounds_to_make = {
 		sound = "arccw_csx/weapons/tmp/fire.wav",
 		killme = true
 	},
+	// -- MAC-10
+	{
+		name = "CSX.MAC10.Fire",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {145, 155},
+		sound = "weapons/arccw/mac10/mac10_03.wav",
+		killme = true
+	},
+	{
+		name = "CSX.MAC10.FireFirst",
+		channel = CHAN_STATIC,
+		volume = 1.0,
+		level = 65,
+		pitch = {145, 155},
+		sound = "weapons/arccw/mac10/mac10_02.wav",
+		killme = true
+	},
 	// -- MP5
 	{
 		name = "CSX.MP5.Fire",

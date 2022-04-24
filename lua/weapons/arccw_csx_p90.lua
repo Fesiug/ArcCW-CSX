@@ -3,13 +3,13 @@ SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CSX"
 SWEP.PrintName		=	"ES NXm"
-SWEP.Trivia_Class			= "Personal Defense Weapon"
+SWEP.Trivia_Class			= "Submachine Gun"
 SWEP.Trivia_Desc			= "Personal defense weapon developed to arm rear-line soldiers in need of a more effective weapon to combat enemy paratroopers wearing body armor. Offers high fire rate with excellent damage characteristics retained at long range. 'NXM' stands for 'New eXperimental sub Machine gun'."
 SWEP.Trivia_Manufacturer	= "ES"
 SWEP.Trivia_Calibre			= "5.7x28mm"
 SWEP.Trivia_Mechanism		= "Straight Blowback"
 SWEP.Trivia_Country			= "Belgium"
-SWEP.Trivia_Year			= 1990
+SWEP.Trivia_Year			= 1989
 
 SWEP.Slot			=	2
 SWEP.SlotPos		=	0
@@ -18,7 +18,7 @@ SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	75
 SWEP.ViewModel		=	"models/weapons/ma85_mwr/weapons/p90/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_usp.mdl"
-SWEP.ActivePos = Vector(0.5, 2, 0.75)
+SWEP.ActivePos = Vector(0.5, 1, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "00000000"
 
@@ -39,18 +39,20 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.AccuracyMOA		=	0
+SWEP.AccuracyMOA		=	16
 SWEP.SightTime			=	0.3
 SWEP.Primary.ClipSize	=	50
 SWEP.ChamberSize		=	1
-SWEP.MuzzleEffect		=	"muzzleflash_mp5"
+SWEP.MuzzleEffect		=	"muzzleflash_smg"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
-SWEP.Recoil = 1
-SWEP.RecoilSide = 1
+SWEP.Recoil				=	0.7
+SWEP.RecoilSide			=	0.7
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	0.4,	0.1,	0.03,	0.05,	4,	3,	3	}
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["smg_heavy"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["smg_heavy"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["smg_heavy"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -80,13 +82,16 @@ SWEP.CaseEffectAttachment	=	2
 SWEP.CamAttachment			=	nil
 
 SWEP.Attachments = {}
-SWEP.AttachmentElements = {}
+SWEP.AttachmentElements = {
+	["rail_optic"] = {
+		VMBodygroups = {{ind = 1, bg = 1}},
+	},
+}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
     Pos = Vector(-3.18, -3.79, -0.5),
     Ang = Angle(2, 0, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
@@ -169,8 +174,9 @@ SWEP.Attachments = {
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
 		Slot = "optic",
 		Bone = "tag_weapon",
+		InstalledEles = {"rail_optic"},
 		Offset = {
-			vpos = Vector(4.8, 0, 3.6),
+			vpos = Vector(3, 0, 5.3),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -181,7 +187,7 @@ SWEP.Attachments = {
 		Slot = { "csx_muzzle_device", "csx_muzzle_suppressor" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(8.5, 0, 0.65),
+			vpos = Vector(6.55, -0.05, 2.4),
 			vang = Angle(0, 0, 0),
 		},
 	},

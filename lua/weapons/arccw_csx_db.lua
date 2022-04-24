@@ -2,10 +2,10 @@ SWEP.Base			=	"arccw_csxbase"
 SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CSX"
-SWEP.PrintName		=	"Partner"
+SWEP.PrintName		=	"Rinceller Partner"
 SWEP.Trivia_Class			= "Shotgun"
 SWEP.Trivia_Desc			= "Double-barrel shotgun manufactured as an entry-level hunting weapon. The sawn-off barrel allows for hip fire characteristics, at the cost of increased spread and hampered range."
-SWEP.Trivia_Manufacturer	= "Gryphon Arms"
+SWEP.Trivia_Manufacturer	= "Rinceller Weapons Company"
 SWEP.Trivia_Calibre			= "12 Gauge"
 SWEP.Trivia_Mechanism		= "Break-Action"
 SWEP.Trivia_Country			= "USA"
@@ -45,9 +45,14 @@ SWEP.Primary.ClipSize	=	2
 SWEP.ChamberSize		=	0
 SWEP.MuzzleEffect		=	"muzzleflash_shotgun"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	6,	3,	0.1,	0.05,	10,	5,	0	}
+SWEP.Recoil				=	5.0
+SWEP.RecoilSide			=	3.0
+
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["shotgun"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["shotgun"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["shotgun"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -76,12 +81,11 @@ SWEP.Animations = {}
 SWEP.IronSightStruct = {
     Pos = Vector(-2.91, -3.79, 0.95),
     Ang = Angle(-0.278, 0.008, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
 
-SWEP.Delay = (60/1200)
+SWEP.Delay = (60/450)
 SWEP.Firemodes = {
 	{
 		Mode = 1,
@@ -129,7 +133,12 @@ SWEP.Animations = {
 			{ s = "CSX.M3.R.Shellinsert", t = 34/30 },
 			{ s = "CSX.M3.R.Shellinsert", t = 42/30 },
 			{ s = "weapons/deagle/de_clipin.wav", t = 52/30 },
-		}
+		},
+		LHIK = true,
+		LHIKIn = 0.2,
+		LHIKOut = 0.5,
+		LHIKEaseIn = 0.3,
+		LHIKEaseOut = 0.3,
 	},
 }
 
@@ -139,9 +148,20 @@ SWEP.Attachments = {
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
 		Slot = "optic",
-		Bone = "tag_weapon",
+		Bone = "j_reload",
 		Offset = {
-			vpos = Vector(4, 0, 4.32),
+			vpos = Vector(-1, 0, 1.95),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Muzzle",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = { "csx_muzzle_barrel" },
+		Bone = "j_reload",
+		Offset = {
+			vpos = Vector(8.6, 0, 1.3),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -149,10 +169,10 @@ SWEP.Attachments = {
 		PrintName = "Underbarrel",
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
-		Slot = "foregrip",
-		Bone = "tag_weapon",
+		Slot = { "csx_underbarrel_foregrip" },
+		Bone = "j_reload",
 		Offset = {
-			vpos = Vector(12, 0, 1.7),
+			vpos = Vector(2, 0, -0.6),
 			vang = Angle(0, 0, 0),
 		},
 	},

@@ -39,15 +39,20 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.AccuracyMOA		=	0
+SWEP.AccuracyMOA		=	4
 SWEP.SightTime			=	0.4
 SWEP.Primary.ClipSize	=	30
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_ak47"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	1.0,	0.3,	0.03,	0.05,	5,	2,	7	}
+SWEP.Recoil				=	0.6
+SWEP.RecoilSide			=	0.6
+
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["rifle"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["rifle"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["rifle"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -71,13 +76,16 @@ SWEP.CaseEffectAttachment	=	2
 SWEP.CamAttachment			=	nil
 
 SWEP.Attachments = {}
-SWEP.AttachmentElements = {}
+SWEP.AttachmentElements = {
+	["rail_optic"] = {
+		VMBodygroups = {{ind = 1, bg = 1}},
+	},
+}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
 	Pos = Vector(-2.52, -6.026, 0.4),
 	Ang = Angle(0, 0, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
@@ -168,8 +176,9 @@ SWEP.Attachments = {
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
 		Slot = "optic",
 		Bone = "tag_weapon",
+		InstalledEles = {"rail_optic"},
 		Offset = {
-			vpos = Vector(1, 0, 3.4),
+			vpos = Vector(2.6, 0, 5.0),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -180,8 +189,19 @@ SWEP.Attachments = {
 		Slot = { "csx_muzzle_device", "csx_muzzle_suppressor" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(14, 0, 1.72),
+			vpos = Vector(16.3, 0, 3.2),
 			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Tactical",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = { "csx_tactical" },
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(3.8, 1, 3.25),
+			vang = Angle(0, 0, -150),
 		},
 	},
 	{

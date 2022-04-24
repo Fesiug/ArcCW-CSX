@@ -4,7 +4,7 @@ SWEP.Spawnable		=	true
 SWEP.Category		=	"ArcCW - CSX"
 SWEP.PrintName		=	"K&M MPS-45"
 SWEP.Trivia_Class			= "Submachine Gun"
-SWEP.Trivia_Desc			= "Ubiquitous sub-machine gun. Created as a response to the need for a faster-firing and more reliable submachine gun than existing options at the time. In .45, the heavy caliber allows it to pack a greater punch in short range while remaining controllable with a lower fire rate."
+SWEP.Trivia_Desc			= "Ubiquitous sub-machine gun. Created as a response to the need for a faster-firing and more reliable submachine gun than existing options at the time. In .45 ACP, the heavy caliber allows it to pack a greater punch in short range while remaining controllable with a lower fire rate."
 SWEP.Trivia_Manufacturer	= "K&M"
 SWEP.Trivia_Calibre			= ".45 ACP"
 SWEP.Trivia_Mechanism		= "Straight Blowback"
@@ -39,15 +39,20 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.AccuracyMOA		=	0
+SWEP.AccuracyMOA		=	10
 SWEP.SightTime			=	0.3
 SWEP.Primary.ClipSize	=	25
 SWEP.ChamberSize		=	1
-SWEP.MuzzleEffect		=	"muzzleflash_mp5"
+SWEP.MuzzleEffect		=	"muzzleflash_smg"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	0.4,	0.2,	0.18,	0.15,	5,	2,	4	}
+SWEP.Recoil				=	1.0
+SWEP.RecoilSide			=	1.0
+
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["smg"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["smg"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["smg"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -77,7 +82,6 @@ SWEP.Animations = {}
 SWEP.IronSightStruct = {
     Pos = Vector(-2.29, -3.477, 1),
     Ang = Angle(0.699, 0, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
@@ -182,7 +186,7 @@ SWEP.Attachments = {
 		Slot = "optic",
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(3, 0, 2.1),
+			vpos = Vector(3, 0, 5.63),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -193,7 +197,7 @@ SWEP.Attachments = {
 		Slot = { "csx_muzzle_device", "csx_muzzle_suppressor" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(14.5, 0, 0.11),
+			vpos = Vector(13.7, 0, 3.4),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -201,11 +205,22 @@ SWEP.Attachments = {
 		PrintName = "Underbarrel",
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
-		Slot = "foregrip",
+		Slot = { "csx_underbarrel_foregrip" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(10, 0, -0.9),
+			vpos = Vector(11, 0, 2.27),
 			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Tactical",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = { "csx_tactical" },
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(11, 0.95, 3.3),
+			vang = Angle(0, 0, -90),
 		},
 	},
 	{

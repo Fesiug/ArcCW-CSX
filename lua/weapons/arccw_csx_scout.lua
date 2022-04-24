@@ -3,13 +3,13 @@ SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CSX"
 SWEP.PrintName		=	"Schmidt PSRS"
-SWEP.Trivia_Class			= "Assault Rifle"
-SWEP.Trivia_Desc			= "An early assault rifle pattern, copied and used all around the world. Designed by a Soviet tank mechanic in response to the need for a more versatile infantry weapon. Packs a serious punch at the cost of poor accuracy."
-SWEP.Trivia_Manufacturer    = nil--"Kremen Oruzhiye" jeez, who knows who made this one
-SWEP.Trivia_Calibre         = "7.62x39mm"
-SWEP.Trivia_Mechanism       = "Gas-Operated"
-SWEP.Trivia_Country         = "Soviet Union"
-SWEP.Trivia_Year			= 1989
+SWEP.Trivia_Class			= "Sniper Rifle"
+SWEP.Trivia_Desc			= "The Precision Sharpshooter Rifle System is a high-spec bolt-action rifle, tailored to the needs of police snipers. It is also marketed to civilian competition shooters."
+SWEP.Trivia_Manufacturer    = "Schmidt"
+SWEP.Trivia_Calibre         = "7.62x51mm"
+SWEP.Trivia_Mechanism       = "Bolt-Action"
+SWEP.Trivia_Country         = "Austria"
+SWEP.Trivia_Year			= 1991
 
 SWEP.Slot			=	2
 SWEP.SlotPos		=	0
@@ -39,15 +39,20 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.AccuracyMOA		=	0
+SWEP.AccuracyMOA		=	0.25
 SWEP.SightTime			=	0.4
 SWEP.Primary.ClipSize	=	10
 SWEP.ChamberSize		=	1
-SWEP.MuzzleEffect		=	"muzzleflash_ak47"
+SWEP.MuzzleEffect		=	"muzzleflash_5"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	5,	1,	0.2,	0.2,	6,	2,	1	}
+SWEP.Recoil				=	1.5
+SWEP.RecoilSide			=	1.3
+
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["rifle_heavy"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["rifle_heavy"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["rifle_heavy"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -79,7 +84,6 @@ SWEP.Animations = {}
 SWEP.IronSightStruct = {
 	Pos = Vector(-3.9, 0, 1.6),
 	Ang = Angle(0, 0, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 7,
 	CrosshairInSights = false,
 }
@@ -208,7 +212,7 @@ SWEP.Attachments = {
 		PrintName = "Underbarrel",
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
-		Slot = "foregrip",
+		Slot = { "csx_underbarrel_foregrip" },
 		Bone = "tag_weapon",
 		Offset = {
 			vpos = Vector(12, 0, 2),

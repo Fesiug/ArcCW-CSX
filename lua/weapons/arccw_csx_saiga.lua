@@ -2,14 +2,14 @@ SWEP.Base			=	"arccw_csxbase"
 SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CSX"
-SWEP.PrintName		=	"Type 8k"
+SWEP.PrintName		=	"CV Type 8k"
 SWEP.Trivia_Class			= "Shotgun"
-SWEP.Trivia_Desc			= "Missing string."
-SWEP.Trivia_Manufacturer    = nil--"Kremen Oruzhiye" jeez, who knows who made this one
+SWEP.Trivia_Desc			= "A magazine fed 12 gauge shotgun. Designed for hunting use as well as for police forces."
+SWEP.Trivia_Manufacturer    = "CV Concern"
 SWEP.Trivia_Calibre         = "12 Gauge"
-SWEP.Trivia_Mechanism       = "Missing"
-SWEP.Trivia_Country         = "Missing"
-SWEP.Trivia_Year			= 9999
+SWEP.Trivia_Mechanism       = "Gas-Operated"
+SWEP.Trivia_Country         = "Russia"
+SWEP.Trivia_Year			= 1997
 
 SWEP.Slot			=	2
 SWEP.SlotPos		=	0
@@ -45,9 +45,14 @@ SWEP.Primary.ClipSize	=	8
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_shotgun"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	5,	3,	0.6,	0.05,	20,	10,	0	}
+SWEP.Recoil				=	5.0
+SWEP.RecoilSide			=	3.0
+
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["shotgun"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["shotgun"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["shotgun"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -82,7 +87,6 @@ SWEP.Animations = {}
 SWEP.IronSightStruct = {
 	Pos = Vector(-2.335, -2.012, 0.55),
 	Ang = Angle(-0.5, 0, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
@@ -197,11 +201,22 @@ SWEP.Attachments = {
 		PrintName = "Underbarrel",
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
-		Slot = "foregrip",
+		Slot = { "csx_underbarrel_foregrip" },
 		Bone = "tag_weapon",
 		Offset = {
 			vpos = Vector(12, 0, 1.7),
 			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Tactical",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = { "csx_tactical" },
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(13.7, 0.87, 2.6),
+			vang = Angle(0, 0, -90),
 		},
 	},
 	{

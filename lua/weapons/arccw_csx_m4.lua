@@ -4,12 +4,12 @@ SWEP.Spawnable		=	true
 SWEP.Category		=	"ArcCW - CSX"
 SWEP.PrintName		=	"Cobra Mk. 4"
 SWEP.Trivia_Class			= "Assault Rifle"
-SWEP.Trivia_Desc			= "Missing string."
+SWEP.Trivia_Desc			= "America's pride and joy. Shortened carbine-length version of the Mk. 16 rifle, designed for use in situations where a shorter or lighter weapon is required. After the turn of the millennium, many armies began adopting carbines as their main infantry weapons."
 SWEP.Trivia_Manufacturer    = "Cobra"
 SWEP.Trivia_Calibre         = "5.56x45mm"
-SWEP.Trivia_Mechanism       = "Missing"
-SWEP.Trivia_Country         = "Missing"
-SWEP.Trivia_Year			= 9999
+SWEP.Trivia_Mechanism       = "Gas-Operated"
+SWEP.Trivia_Country         = "USA"
+SWEP.Trivia_Year			= 1994
 
 SWEP.Slot			=	2
 SWEP.SlotPos		=	0
@@ -39,15 +39,20 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.AccuracyMOA		=	0
+SWEP.AccuracyMOA		=	5
 SWEP.SightTime			=	0.4
 SWEP.Primary.ClipSize	=	30
 SWEP.ChamberSize		=	1
-SWEP.MuzzleEffect		=	"muzzleflash_pistol"
+SWEP.MuzzleEffect		=	"muzzleflash_m14"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	1.1,	0.5,	0.1,	0.05,	6,	5,	4	}
+SWEP.Recoil				=	0.8
+SWEP.RecoilSide			=	0.9
+
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["rifle"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["rifle"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["rifle"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -79,13 +84,19 @@ SWEP.CaseEffectAttachment	=	2
 SWEP.CamAttachment			=	nil
 
 SWEP.Attachments = {}
-SWEP.AttachmentElements = {}
+SWEP.AttachmentElements = {
+	["rail_optic"] = {
+		VMBodygroups = {{ind = 1, bg = 2}},
+	},
+	["rail_underbarrel"] = {
+		VMBodygroups = {{ind = 2, bg = 2}},
+	}
+}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.56, -4.512, -0.16),
+    Pos = Vector(-2.56, 0, -0.16),
     Ang = Angle(0, 0, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
@@ -192,8 +203,9 @@ SWEP.Attachments = {
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
 		Slot = "optic",
 		Bone = "tag_weapon",
+		InstalledEles = {"rail_optic"},
 		Offset = {
-			vpos = Vector(2, 0, 4),
+			vpos = Vector(3, 0, 4.25),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -204,7 +216,7 @@ SWEP.Attachments = {
 		Slot = { "csx_muzzle_device", "csx_muzzle_suppressor" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(11.5, 0, 1.32),
+			vpos = Vector(18.9, 0, 3.2),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -212,11 +224,23 @@ SWEP.Attachments = {
 		PrintName = "Underbarrel",
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
-		Slot = "foregrip",
+		Slot = { "csx_underbarrel_foregrip" },
+		Bone = "tag_weapon",
+		InstalledEles = {"rail_underbarrel"},
+		Offset = {
+			vpos = Vector(9, 0, 2.2),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Tactical",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = { "csx_tactical" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(5, 0, 0),
-			vang = Angle(0, 0, 0),
+			vpos = Vector(10, 0.95, 3.15),
+			vang = Angle(0, 0, -90),
 		},
 	},
 	{

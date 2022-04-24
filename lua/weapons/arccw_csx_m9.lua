@@ -2,14 +2,14 @@ SWEP.Base			=	"arccw_csxbase"
 SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CSX"
-SWEP.PrintName		=	"B92G"
+SWEP.PrintName		=	"ELITE B92G"
 SWEP.Trivia_Class			= "Pistol"
 SWEP.Trivia_Desc			= "9x19mm self-loading pistol. Service sidearm of the United States before being replaced by the ROLAND 320 in 2017."
-SWEP.Trivia_Manufacturer	= "(need Beretta manufacturer replacement)"
+SWEP.Trivia_Manufacturer	= "ELITE"
 SWEP.Trivia_Calibre			= "9x19mm"
 SWEP.Trivia_Mechanism		= "Locking Block"
 SWEP.Trivia_Country			= "Italy"
-SWEP.Trivia_Year			= 1992
+SWEP.Trivia_Year			= 1975
 
 SWEP.Slot			=	1
 SWEP.SlotPos		=	0
@@ -19,13 +19,13 @@ SWEP.ViewModelFOV	=	75
 SWEP.ViewModel		=	"models/weapons/ma85_mwr/weapons/m9/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_pist_elite_single.mdl"
 SWEP.ActivePos = Vector(0.75, 1, 0.75)
-SWEP.ActiveAng = Angle(0, 0, 0)
+SWEP.ActiveAng = Angle(-1.5, 0, 0)
 SWEP.DefaultBodygroups = "00000000"
 
-SWEP.Damage				=	18
+SWEP.Damage				=	20
 SWEP.DamageMin			=	15
 SWEP.RangeMin			=	10
-SWEP.Range				=	20
+SWEP.Range				=	30
 SWEP.Penetration		=	4
 SWEP.Primary.Ammo		=	"pistol"
 
@@ -39,15 +39,20 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.AccuracyMOA		=	0
+SWEP.AccuracyMOA		=	10
 SWEP.SightTime			=	0.2
 SWEP.Primary.ClipSize	=	15
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_pistol"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	2,	0.3,	0.06,	0.05,	8,	8,	2	}
+SWEP.Recoil				=	0.7
+SWEP.RecoilSide			=	0.7
+
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["pistol"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["pistol"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["pistol"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -80,7 +85,6 @@ SWEP.Animations = {}
 SWEP.IronSightStruct = {
 	Pos = Vector(-2, 0, 1.6),
 	Ang = Angle(-1.4, 0, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
@@ -158,7 +162,18 @@ SWEP.Attachments = {
 		Slot = { "csx_muzzle_device_pistol", "csx_muzzle_suppressor_pistol", "csx_muzzle_suppressor" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(3.7, 0, 0.9),
+			vpos = Vector(6.5, 0, 2.69),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Tactical",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = { "csx_tactical" },
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(4.95, 0, 1.6),
 			vang = Angle(0, 0, 0),
 		},
 	},

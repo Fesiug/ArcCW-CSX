@@ -13,6 +13,8 @@ att.AutoStats			=	true
 att.Slot				=	"csx_fcg"
 att.SortOrder			=	6
 
+att.Mult_ShootSpeedMult	=	0.8
+
 att.Override_Firemodes	=
 {
 	{

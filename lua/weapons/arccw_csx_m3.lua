@@ -7,7 +7,7 @@ SWEP.Trivia_Class			= "Shotgun"
 SWEP.Trivia_Desc			= "12 gauge pistol grip pump-action shotgun."
 SWEP.Trivia_Manufacturer    = "Leone"
 SWEP.Trivia_Calibre         = "12 Gauge"
-SWEP.Trivia_Mechanism       = "Describe"
+SWEP.Trivia_Mechanism       = "Pump-Action"
 SWEP.Trivia_Country         = "Italy"
 SWEP.Trivia_Year			= 1989
 
@@ -43,11 +43,16 @@ SWEP.AccuracyMOA		=	50
 SWEP.SightTime			=	0.4
 SWEP.Primary.ClipSize	=	6
 SWEP.ChamberSize		=	1
-SWEP.MuzzleEffect		=	"muzzleflash_ak47"
+SWEP.MuzzleEffect		=	"muzzleflash_shotgun"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	4,	0.1,	0.05,	0.05,	10,	10,	2	}
+SWEP.Recoil				=	5.0
+SWEP.RecoilSide			=	3.0
+
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["shotgun"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["shotgun"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["shotgun"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -80,7 +85,6 @@ SWEP.Animations = {}
 SWEP.IronSightStruct = {
 	Pos = Vector(-2.83, -2.012, 0.95),
 	Ang = Angle(0.4, 0, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
@@ -206,7 +210,7 @@ SWEP.Attachments = {
 		PrintName = "Underbarrel",
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
-		Slot = "foregrip",
+		Slot = { "csx_underbarrel_foregrip" },
 		Bone = "j_pump",
 		Offset = {
 			vpos = Vector(-1, 0, 0),

@@ -5,10 +5,10 @@ SWEP.Category		=	"ArcCW - CSX"
 SWEP.PrintName		=	"Gavel .50AE"
 SWEP.Trivia_Class			= "Pistol"
 SWEP.Trivia_Desc			= "Monster pistol designed for self-defense against large wild animals such as grizzly bears. A rotating-bolt gas-operated design makes it able to handle the huge round, resembling an assault rifle more than a handgun."
-SWEP.Trivia_Manufacturer	= "Gryphon Arms"
+SWEP.Trivia_Manufacturer	= "Gavel MI"
 SWEP.Trivia_Calibre			= ".50 Action Express"
-SWEP.Trivia_Mechanism		= "Gas Operated"
-SWEP.Trivia_Country			= "USA/Isarel"
+SWEP.Trivia_Mechanism		= "Gas-Operated"
+SWEP.Trivia_Country			= "USA/Israel"
 SWEP.Trivia_Year			= 1991
 
 SWEP.Slot			=	1
@@ -39,15 +39,20 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.AccuracyMOA		=	0
+SWEP.AccuracyMOA		=	10
 SWEP.SightTime			=	0.3
 SWEP.Primary.ClipSize	=	7
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_pistol_deagle"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	3,	2,	1,	1,	8,	8,	1	}
+SWEP.Recoil				=	3.0
+SWEP.RecoilSide			=	1.0
+
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["pistol_heavy"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["pistol_heavy"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["pistol_heavy"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -75,9 +80,8 @@ SWEP.AttachmentElements = {}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-	Pos = Vector(-1.57, 3, 1.1),
+	Pos = Vector(-1.57, 2, 1.1),
 	Ang = Angle(0, 0, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
@@ -149,13 +153,35 @@ SWEP.Animations = {
 
 SWEP.Attachments = {
 	{
+		PrintName = "Optic",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = { "optic", "optic_pistol" },
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(5, 0, 3.1),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
 		PrintName = "Muzzle",
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
 		Slot = { "csx_muzzle_device_pistol", "csx_muzzle_suppressor_pistol", "csx_muzzle_suppressor" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(7.65, 0, 2.6),
+			vpos = Vector(7.6, 0, 2.6),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Tactical",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = { "csx_tactical" },
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(4.95, 0, 1.6),
 			vang = Angle(0, 0, 0),
 		},
 	},

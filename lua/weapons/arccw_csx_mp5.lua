@@ -9,7 +9,7 @@ SWEP.Trivia_Manufacturer	= "K&M"
 SWEP.Trivia_Calibre			= "9x19mm"
 SWEP.Trivia_Mechanism		= "Roller-Delayed Blowback"
 SWEP.Trivia_Country			= "Germany"
-SWEP.Trivia_Year			= 1989
+SWEP.Trivia_Year			= 1956
 
 SWEP.Slot			=	2
 SWEP.SlotPos		=	0
@@ -39,15 +39,20 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.AccuracyMOA		=	0
+SWEP.AccuracyMOA		=	16
 SWEP.SightTime			=	0.3
 SWEP.Primary.ClipSize	=	30
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_mp5"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
+SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
--- up_base, lateral_base, up_modifier, lateral_modifier, up_max, lateral_max, direction_change
-SWEP.CSX_Recoil			=	{	0.6,	0.25,	0.2,	0.09,	6,	4,	3	}
+SWEP.Recoil				=	0.7
+SWEP.RecoilSide			=	0.7
+
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["smg"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["smg"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["smg"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
@@ -85,7 +90,6 @@ SWEP.Animations = {}
 SWEP.IronSightStruct = {
     Pos = Vector(-3.11, -3.79, 1),
     Ang = Angle(0.5, 0, 0),
-	ViewModelFOV = 65 / (65/50),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
@@ -211,7 +215,7 @@ SWEP.Attachments = {
 		PrintName = "Underbarrel",
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
-		Slot = "foregrip",
+		Slot = { "csx_underbarrel_foregrip" },
 		Bone = "tag_weapon",
 		Offset = {
 			vpos = Vector(9, 0, 3),
