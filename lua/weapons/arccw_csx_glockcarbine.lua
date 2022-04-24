@@ -87,8 +87,8 @@ SWEP.AttachmentElements = {}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-	Pos = Vector(-2.8, 0, 0.8),
-	Ang = Angle(-0.4, 0, 0),
+	Pos = Vector(-2.75, 0, 0.7),
+	Ang = Angle(0, 0, 0),
 	Magnification = 65/50,
 	CrosshairInSights = false,
 }
@@ -155,23 +155,25 @@ SWEP.Animations = {
 	},
 	["reload"] = {
 		Source = "reg_reload",
+		Time = 2.09*1.3,
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
-			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 6/30 },
-			{ s = "weapons/glock/glock_clipout.wav", t = 12/30 },
-			{ s = "weapons/glock/glock_clipin.wav", t = 35/30 },
+			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 0.1 },
+			{ s = "weapons/glock/glock_clipout.wav", t = 0.5 },
+			{ s = "weapons/glock/glock_clipin.wav", t = 1.3 },
 		}
 	},
 	["reload_empty"] = {
 		Source = "reg_reload_empty",
+		Time = 2.7*1.3,
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
-			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 6/30 },
-			{ s = "weapons/glock/glock_clipout.wav", t = 12/30 },
-			{ s = "weapons/glock/glock_clipin.wav", t = 28/30 },
-			{ s = "weapons/glock/glock_sliderelease.wav", t = 72/30 },
+			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 0.1 },
+			{ s = "weapons/glock/glock_clipout.wav", t = 0.5 },
+			{ s = "weapons/glock/glock_clipin.wav", t = 1.3 },
+			{ s = "weapons/usp/usp_sliderelease.wav", t = 2.5 },
 		}
 	},
 }

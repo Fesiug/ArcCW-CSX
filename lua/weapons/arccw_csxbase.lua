@@ -112,7 +112,7 @@ function SWEP:SoundEngine( snde )
 			self:EmitSound(v.s, v.l, (v.pmi and v.pma) and math.Rand(v.pmi, v.pma) or v.p, v.v, v.c)
 		else
 			if ArcCW.CSX.SoundTab[v] and ArcCW.CSX.SoundTab[v].killme then self:StopSound(v) end
-			self:EmitSound(v)
+			self:EmitSound(v, nil, nil, nil, CHAN_STATIC)
 		end
 	end
 end

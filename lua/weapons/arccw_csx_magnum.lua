@@ -41,7 +41,7 @@ SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
 SWEP.AccuracyMOA		=	10
 SWEP.SightTime			=	0.3
-SWEP.Primary.ClipSize	=	7
+SWEP.Primary.ClipSize	=	6
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_pistol_deagle"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
@@ -56,8 +56,8 @@ SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["pistol_heavy"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
-		"CSX.Deagle.Fire",
-		"CSX.Glock.LFE",
+		"weapons/arccw/revolver/revolver-1_01.wav",
+		"weapons/arccw/revolver/revolver_siderelease.wav",
 	},
 	["fire_sil"] = {
 		"CSX.AK47.Silenced",
@@ -86,7 +86,7 @@ SWEP.IronSightStruct = {
 	CrosshairInSights = false,
 }
 
-SWEP.Delay = (60/120)
+SWEP.Delay = (60/210)
 SWEP.Firemodes = {
 	{
 		Mode = 1,

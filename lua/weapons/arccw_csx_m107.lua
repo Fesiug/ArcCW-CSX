@@ -2,21 +2,21 @@ SWEP.Base			=	"arccw_csxbase"
 SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CSX"
-SWEP.PrintName		=	"Schmidt PSRS"
+SWEP.PrintName		=	"Avenger BFG"
 SWEP.Trivia_Class			= "Sniper Rifle"
-SWEP.Trivia_Desc			= "The Precision Sharpshooter Rifle System is a high-spec bolt-action rifle, tailored to the needs of police snipers. It is also marketed to civilian competition shooters."
-SWEP.Trivia_Manufacturer    = "Schmidt"
-SWEP.Trivia_Calibre         = "7.62x51mm"
-SWEP.Trivia_Mechanism       = "Bolt-Action"
-SWEP.Trivia_Country         = "Austria"
-SWEP.Trivia_Year			= 1991
+SWEP.Trivia_Desc			= "High caliber semi-automatic rifle designed to take out light armored vehicles and military equipment. BFG stands for 'Big Fucking Gun'. Deals great damage at all ranges. Extremely heavy and cumbersome."
+SWEP.Trivia_Manufacturer    = "Avenger Ordnance"
+SWEP.Trivia_Calibre         = ".50 BMG"
+SWEP.Trivia_Mechanism       = "Recoil-Operated"
+SWEP.Trivia_Country         = "USA"
+SWEP.Trivia_Year			= 1989
 
 SWEP.Slot			=	2
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	75
-SWEP.ViewModel      =   "models/weapons/ma85_mwr/weapons/m40a3/viewmodel.mdl"
+SWEP.ViewModel      =   "models/weapons/ma85_mwr/weapons/barrett/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_snip_scout.mdl"
 SWEP.ActivePos = Vector(0.25, 1, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)

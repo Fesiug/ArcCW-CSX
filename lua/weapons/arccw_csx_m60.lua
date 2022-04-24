@@ -58,7 +58,7 @@ SWEP.ShootSoundInfo = {
 	["fire"] = {
 		"CSX.GenbopS",
 		"weapons/arccw/negev/negev_03.wav",
-		--"weapons/arccw/negev/negev-1.wav",
+		"weapons/arccw/negev/negev-1.wav",
 		"CSX.UMP.Dist",
 	},
 	["fire_sil"] = {
@@ -68,7 +68,7 @@ SWEP.ShootSoundInfo = {
 	["fire_first"] = {
 		"CSX.GenbopR",
 		"weapons/arccw/negev/negev_03.wav",
-		--"weapons/arccw/negev/negev-1.wav",
+		"weapons/arccw/negev/negev-1.wav",
 		"CSX.UMP.Dist",
 	},
 	["dry"] = {
