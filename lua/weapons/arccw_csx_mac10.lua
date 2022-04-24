@@ -20,7 +20,7 @@ SWEP.ViewModel      =   "models/weapons/ma85_mwr/weapons/mac10/viewmodel.mdl"
 SWEP.WorldModel		=	"models/weapons/w_smg_tmp.mdl"
 SWEP.ActivePos = Vector(0.5, -1, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
-SWEP.DefaultBodygroups = "01000000"
+SWEP.DefaultBodygroups = "00000000"
 
 SWEP.Damage				=	35
 SWEP.DamageMin			=	22
@@ -82,7 +82,11 @@ SWEP.CaseEffectAttachment	=	2
 SWEP.CamAttachment			=	nil
 
 SWEP.Attachments = {}
-SWEP.AttachmentElements = {}
+SWEP.AttachmentElements = {
+	["rail_optic"] = {
+		VMBodygroups = {{ind = 1, bg = 1}},
+	},
+}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
@@ -95,9 +99,7 @@ SWEP.IronSightStruct = {
 SWEP.Delay = (60/930)
 SWEP.Firemodes = {
 	{
-		Mode = -3,
-		PostBurstDelay = 0.07,
-		RunawayBurst = true,
+		Mode = 2,
 	},
 	{
 		Mode = 1,
@@ -178,6 +180,7 @@ SWEP.Attachments = {
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
 		Slot = "optic",
 		Bone = "tag_weapon",
+		InstalledEles = {"rail_optic"},
 		Offset = {
 			vpos = Vector(1, 0, 3.75),
 			vang = Angle(0, 0, 0),

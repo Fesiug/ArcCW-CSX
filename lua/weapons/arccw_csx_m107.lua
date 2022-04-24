@@ -2,35 +2,35 @@ SWEP.Base			=	"arccw_csxbase"
 SWEP.Spawnable		=	true
 
 SWEP.Category		=	"ArcCW - CSX"
-SWEP.PrintName		=	"Avenger MG-06"
-SWEP.Trivia_Class			= "Machine Gun"
-SWEP.Trivia_Desc			= "General purpose machine gun firing full length cartridges. Nicknamed \"The Pig\" for its bulky shape, it is nevertheless a capable beast, and a favorite among action heroes."
-SWEP.Trivia_Manufacturer    = "Avenger Ordnance"
+SWEP.PrintName		=	"Schmidt PSRS"
+SWEP.Trivia_Class			= "Sniper Rifle"
+SWEP.Trivia_Desc			= "The Precision Sharpshooter Rifle System is a high-spec bolt-action rifle, tailored to the needs of police snipers. It is also marketed to civilian competition shooters."
+SWEP.Trivia_Manufacturer    = "Schmidt"
 SWEP.Trivia_Calibre         = "7.62x51mm"
-SWEP.Trivia_Mechanism       = "Gas-Actuated Open Bolt"
-SWEP.Trivia_Country         = "USA"
-SWEP.Trivia_Year			= 1957
+SWEP.Trivia_Mechanism       = "Bolt-Action"
+SWEP.Trivia_Country         = "Austria"
+SWEP.Trivia_Year			= 1991
 
 SWEP.Slot			=	2
 SWEP.SlotPos		=	0
 
 SWEP.UseHands		=	true
 SWEP.ViewModelFOV	=	75
-SWEP.ViewModel      =   "models/weapons/ma85_mwr/weapons/m60/viewmodel.mdl"
-SWEP.WorldModel		=	"models/weapons/w_mach_m249para.mdl"
-SWEP.ActivePos = Vector(0.5, 0, 0.75)
+SWEP.ViewModel      =   "models/weapons/ma85_mwr/weapons/m40a3/viewmodel.mdl"
+SWEP.WorldModel		=	"models/weapons/w_snip_scout.mdl"
+SWEP.ActivePos = Vector(0.25, 1, 0.75)
 SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.DefaultBodygroups = "00000000"
 
-SWEP.Damage				=	40
-SWEP.DamageMin			=	30
-SWEP.RangeMin			=	20
-SWEP.Range				=	60
-SWEP.Penetration		=	8
+SWEP.Damage				=	70
+SWEP.DamageMin			=	115
+SWEP.RangeMin			=	10
+SWEP.Range				=	50
+SWEP.Penetration		=	12
 SWEP.Primary.Ammo		=	"ar2"
 
 SWEP.ShellModel		=	"models/shells/shell_556.mdl"
-SWEP.ShellScale		=	1.5
+SWEP.ShellScale		=	1.334
 SWEP.ShellPitch		=	100
 SWEP.ShellSounds	=	"autocheck"
 
@@ -39,37 +39,31 @@ SWEP.HoldtypeActive		= "pistol"
 SWEP.HoldtypeSights		= "revolver"
 SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
-SWEP.AccuracyMOA		=	16
+SWEP.AccuracyMOA		=	0.25
 SWEP.SightTime			=	0.4
-SWEP.Primary.ClipSize	=	100
-SWEP.ChamberSize		=	0
+SWEP.Primary.ClipSize	=	10
+SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_5"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
 SWEP.BodyDamageMults	=	ArcCW.CSX.DamageMults
 
-SWEP.Recoil				=	1.4
-SWEP.RecoilSide			=	0.7
+SWEP.Recoil				=	1.5
+SWEP.RecoilSide			=	1.3
 
-SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["shotgun"].SpeedMult
-SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["shotgun"].SightedSpeedMult
-SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["shotgun"].ShootSpeedMult
+SWEP.SpeedMult			=	ArcCW.CSX.MoveSpeeds["rifle_heavy"].SpeedMult
+SWEP.SightedSpeedMult	=	ArcCW.CSX.MoveSpeeds["rifle_heavy"].SightedSpeedMult
+SWEP.ShootSpeedMult		=	ArcCW.CSX.MoveSpeeds["rifle_heavy"].ShootSpeedMult
 
 SWEP.ShootSoundInfo = {
 	["fire"] = {
-		"CSX.GenbopS",
-		"weapons/arccw/negev/negev_03.wav",
-		--"weapons/arccw/negev/negev-1.wav",
-		"CSX.UMP.Dist",
+		"CSX.GenbopR",
+		"CSX.Scout.Fire",
+		"CSX.Scout.Dist",
+		"CSX.AK47.LFE",
 	},
 	["fire_sil"] = {
-		"CSX.GenbopS",
 		"CSX.AK47.Silenced",
-	},
-	["fire_first"] = {
 		"CSX.GenbopR",
-		"weapons/arccw/negev/negev_03.wav",
-		--"weapons/arccw/negev/negev-1.wav",
-		"CSX.UMP.Dist",
 	},
 	["dry"] = {
 		{
@@ -84,37 +78,34 @@ SWEP.CaseEffectAttachment	=	2
 SWEP.CamAttachment			=	nil
 
 SWEP.Attachments = {}
-SWEP.AttachmentElements = {
-	["rail_optic"] = {
-		VMBodygroups = {{ind = 1, bg = 1}},
-	},
-	["rail_underbarrel"] = {
-		VMBodygroups = {{ind = 2, bg = 1}},
-	}
-}
+SWEP.AttachmentElements = {}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.86, -2, 1.42),
-    Ang = Angle(0, 0, 0),
-	Magnification = 65/50,
+	Pos = Vector(-3.9, 0, 1.6),
+	Ang = Angle(0, 0, 0),
+	Magnification = 7,
 	CrosshairInSights = false,
 }
 
-SWEP.Delay = (60/500)
+SWEP.Delay = 0.1
 SWEP.Firemodes = {
 	{
-		Mode = 2,
-	},
-	{
 		Mode = 1,
+		PrintName = "BOLT"
 	},
 	{
 		Mode = 0
 	}
 }
 
-SWEP.NPCWeaponType	=	{"weapon_smg1"}
+SWEP.ShotgunReload = true
+SWEP.ManualAction = true
+SWEP.NoLastCycle = true
+
+SWEP.Num = 1
+
+SWEP.NPCWeaponType	=	{"weapon_ar2"}
 SWEP.NPCWeight		=	100
 
 SWEP.Animations = {
@@ -123,48 +114,65 @@ SWEP.Animations = {
 	},
 	["draw"] = {
 		Source = "reg_draw",
-		LHIK = true,
-		LHIKIn = 0,
-		LHIKOut = 0.5,
-		LHIKEaseIn = 0.3,
-		LHIKEaseOut = 0.3,
 	},
 	["holster"] = {
 		Source = "reg_holster",
-		LHIK = true,
-		LHIKIn = 0.4,
-		LHIKOut = 0,
-		LHIKEaseIn = 0.3,
-		LHIKEaseOut = 0.3,
 	},
 	["fire"] = {
 		Source = "reg_fire",
-		ShellEjectAt = 0,
+		MinProgress = 0.2,
 	},
 	["fire_iron"] = {
 		Source = "reg_fire_ads",
-		ShellEjectAt = 0,
+		MinProgress = 0.2,
 	},
-	["reload"] = {
-		Source = "reg_reload",
-		MinProgress = 1.4,
+	["cycle"] = {
+		Source = "reg_rechamber",
+		Time = 0.7,
+		ShellEjectAt = 0,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
-			{ s = "weapons/m249/m249_coverup.wav", t = 0.3 },
-			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 0.5 },
-			{ s = "weapons/sg550/sg550_clipout.wav", t = 1.5 },
-			{ s = "weapons/m249/m249_boxin.wav", t = 3 },
-			{ s = "arccw_csx/fance/fl2.wav", t = 3.2 },
-			{ s = "weapons/m249/m249_chain.wav", t = 3.4 },
-			{ s = "arccw_csx/fance/ak47_clipin.wav", t = 4.2 },
-			{ s = "weapons/famas/famas_clipin.wav", t = 4.4 },
-			{ s = "weapons/famas/famas_forearm.wav", t = 5.4 },
-		},
-		LHIK = true,
-		LHIKIn = 0.4,
-		LHIKOut = 2,
-		LHIKEaseIn = 0.3,
-		LHIKEaseOut = 2,
+			{ s = "CSX.M3.R.Boltback", t = 1/30 },
+			{ s = "CSX.M3.R.Boltforward", t = 11/30 },
+		}
+	},
+	["cycle_iron"] = {
+		Source = "reg_rechamber_ads",
+		Time = 0.7,
+		ShellEjectAt = 0,
+		SoundTable = {
+			{ s = "CSX.Cloth.S", t = 1/30 },
+			{ s = "CSX.M3.R.Boltback", t = 1/30 },
+			{ s = "CSX.M3.R.Boltforward", t = 11/30 },
+		}
+	},
+	["sgreload_start"] = {
+		Source = "reg_reload_start",
+		RestoreAmmo = 1,
+		MinProgress = 0.67,
+		SoundTable = {
+			{ s = "CSX.Cloth.S", t = 1/30 },
+			{ s = "CSX.Glock.R.Futz", t = 7/30 },
+			{ s = "CSX.M3.R.Boltback", t = 9/30 },
+			{ s = "CSX.M3.R.Shellinsert", t = 22/30 },
+		}
+	},
+	["sgreload_insert"] = {
+		Source = "reg_reload_loop",
+		MinProgress = 0.67,
+		SoundTable = {
+			{ s = "CSX.Cloth.S", t = 1/30 },
+			{ s = "CSX.Glock.R.Futz", t = 2/30 },
+			{ s = "CSX.M3.R.Shellinsert", t = 7/30 },
+		}
+	},
+	["sgreload_finish"] = {
+		Source = "reg_reload_end",
+		SoundTable = {
+			{ s = "CSX.Cloth.S", t = 1/30 },
+			{ s = "CSX.Glock.R.Futz", t = 5/30 },
+			{ s = "CSX.M3.R.Boltforward", t = 6/30 },
+		}
 	},
 }
 
@@ -175,9 +183,8 @@ SWEP.Attachments = {
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
 		Slot = "optic",
 		Bone = "tag_weapon",
-		InstalledEles = {"rail_optic"},
 		Offset = {
-			vpos = Vector(0.7, 0, 5.3),
+			vpos = Vector(6, 0, 4.2),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -188,7 +195,7 @@ SWEP.Attachments = {
 		Slot = { "csx_muzzle_device", "csx_muzzle_suppressor" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(22.8, 0, 3.84),
+			vpos = Vector(29.5, 0, 3.3),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -198,9 +205,8 @@ SWEP.Attachments = {
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
 		Slot = { "csx_underbarrel_foregrip" },
 		Bone = "tag_weapon",
-		InstalledEles = {"rail_underbarrel"},
 		Offset = {
-			vpos = Vector(10.5, 0, 0.87),
+			vpos = Vector(12, 0, 2),
 			vang = Angle(0, 0, 0),
 		},
 	},

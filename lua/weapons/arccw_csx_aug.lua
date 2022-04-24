@@ -126,7 +126,6 @@ SWEP.Animations = {
 	},
 	["draw"] = {
 		Source = "reg_draw",
-		}
 	},
 	["holster"] = {
 		Source = "reg_holster",

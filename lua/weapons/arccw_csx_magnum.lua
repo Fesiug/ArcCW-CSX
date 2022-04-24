@@ -22,11 +22,11 @@ SWEP.ActivePos = Vector(0.75, 1, 0.75)
 SWEP.ActiveAng = Angle(-1.5, 0, 0)
 SWEP.DefaultBodygroups = "00000000"
 
-SWEP.Damage				=	45
-SWEP.DamageMin			=	27
-SWEP.RangeMin			=	12
-SWEP.Range				=	32
-SWEP.Penetration		=	4
+SWEP.Damage				=	57
+SWEP.DamageMin			=	42
+SWEP.RangeMin			=	15
+SWEP.Range				=	40
+SWEP.Penetration		=	6
 SWEP.Primary.Ammo		=	"357"
 
 SWEP.ShellModel		=	"models/shells/shell_9mm.mdl"
