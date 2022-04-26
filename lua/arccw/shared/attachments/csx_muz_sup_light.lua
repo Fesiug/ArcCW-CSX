@@ -12,6 +12,7 @@ att.Slot				=	{ "csx_muzzle_suppressor_pistol", "csx_muzzle_suppressor" }
 att.SortOrder			=	10
 
 att.Model				=	"models/weapons/ma85_mwr/atts/silencer_pistol.mdl"
+att.ModelOffset			=	Vector(0, -0.1, 0)
 att.ModelScale			=	Vector(0.9, 0.9, 0.9)--Vector(0.8, 0.9, 0.9)
 att.OffsetAng			=	Angle(0, -90, 0)
 

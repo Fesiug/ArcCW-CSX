@@ -13,7 +13,7 @@ att.SortOrder			=	12
 
 att.Model				=	"models/weapons/ma85_mwr/atts/silencer_556.mdl"
 att.ModelScale			=	Vector(1.2, 1.2, 1.2)--Vector(0.8, 0.9, 0.9)
-att.ModelOffset			=	Vector(0, -1.8, 0)
+att.ModelOffset			=	Vector(0, -2.2, 0)
 att.OffsetAng			=	Angle(0, -90, 0)
 
 att.Silencer			=	true

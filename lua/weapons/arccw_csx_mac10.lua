@@ -41,7 +41,7 @@ SWEP.AnimShoot			= ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 
 SWEP.AccuracyMOA		=	16
 SWEP.SightTime			=	0.2
-SWEP.Primary.ClipSize	=	20
+SWEP.Primary.ClipSize	=	30
 SWEP.ChamberSize		=	1
 SWEP.MuzzleEffect		=	"muzzleflash_smg"
 SWEP.NoFlash			=	ArcCW.CSX.NoFlash
@@ -90,7 +90,7 @@ SWEP.AttachmentElements = {
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-2.2, 0, 0.7),
+    Pos = Vector(-3.2, 0, 1.2),
     Ang = Angle(0.25, 0, 0),
 	Magnification = 65/50,
 	CrosshairInSights = false,
@@ -144,30 +144,30 @@ SWEP.Animations = {
 		Source = "reg_reload",
 		MinProgress = 1.4,
 		SoundTable = {
-			{ s = "CSX.Cloth.S", t = 1/30 },
-			{ s = "weapons/scout/scout_clipout.wav", t = 6/30 },
-			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 32/30 },
-			{ s = "weapons/scout/scout_clipin.wav", t = 39/30 },
+			{ s = "CSX.Cloth.S", t = 0 },
+			{ s = "weapons/scout/scout_clipout.wav",	t = 0.2 },
+			{ s = "arccw_csx/fance/ak47_clipout.wav",	t = 1.7 },
+			{ s = "weapons/scout/scout_clipin.wav",		t = 1.9 },
 		},
 		LHIK = true,
 		LHIKIn = 0.4,
-		LHIKOut = 0.5,
+		LHIKOut = 0.3,
 		LHIKEaseIn = 0.3,
-		LHIKEaseOut = 0.3,
+		LHIKEaseOut = 0.2,
 	},
 	["reload_empty"] = {
 		Source = "reg_reload_empty",
 		MinProgress = 1.4,
 		SoundTable = {
 			{ s = "CSX.Cloth.S", t = 1/30 },
-			{ s = "weapons/scout/scout_clipout.wav", t = 6/30 },
-			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 32/30 },
-			{ s = "weapons/scout/scout_clipin.wav", t = 39/30 },
-			{ s = "weapons/ak47/ak47_boltpull.wav", t = 59/30 },
+			{ s = "weapons/ak47/ak47_boltpull.wav",		t = 0.4 },
+			{ s = "weapons/scout/scout_clipout.wav",	t = 0.2 + 0.9 },
+			{ s = "arccw_csx/fance/ak47_clipout.wav",	t = 1.7 + 0.9 },
+			{ s = "weapons/scout/scout_clipin.wav",		t = 1.9 + 0.9 },
 		},
 		LHIK = true,
 		LHIKIn = 0.4,
-		LHIKOut = 0.55,
+		LHIKOut = 0.3,
 		LHIKEaseIn = 0.3,
 		LHIKEaseOut = 0.25,
 	},
@@ -182,7 +182,7 @@ SWEP.Attachments = {
 		Bone = "tag_weapon",
 		InstalledEles = {"rail_optic"},
 		Offset = {
-			vpos = Vector(1, 0, 3.75),
+			vpos = Vector(-2, 0, 3.75),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -194,6 +194,17 @@ SWEP.Attachments = {
 		Bone = "tag_weapon",
 		Offset = {
 			vpos = Vector(7, 0, 2.4),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Underbarrel",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = { "csx_underbarrel_foregrip" },
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(5, 0, 1.3),
 			vang = Angle(0, 0, 0),
 		},
 	},

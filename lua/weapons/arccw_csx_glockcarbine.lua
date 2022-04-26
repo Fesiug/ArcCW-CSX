@@ -83,7 +83,11 @@ SWEP.CaseEffectAttachment	=	2
 SWEP.CamAttachment			=	nil
 
 SWEP.Attachments = {}
-SWEP.AttachmentElements = {}
+SWEP.AttachmentElements = {
+	["rail_optic"] = {
+		VMBodygroups = {{ind = 1, bg = 1}},
+	},
+}
 SWEP.Animations = {}
 
 SWEP.IronSightStruct = {
@@ -162,7 +166,12 @@ SWEP.Animations = {
 			{ s = "arccw_csx/fance/ak47_clipout.wav", t = 0.1 },
 			{ s = "weapons/glock/glock_clipout.wav", t = 0.5 },
 			{ s = "weapons/glock/glock_clipin.wav", t = 1.3 },
-		}
+		},
+		LHIK = true,
+		LHIKIn = 0.4,
+		LHIKOut = 0.4,
+		LHIKEaseIn = 0.3,
+		LHIKEaseOut = 0.3,
 	},
 	["reload_empty"] = {
 		Source = "reg_reload_empty",
@@ -174,19 +183,47 @@ SWEP.Animations = {
 			{ s = "weapons/glock/glock_clipout.wav", t = 0.5 },
 			{ s = "weapons/glock/glock_clipin.wav", t = 1.3 },
 			{ s = "weapons/usp/usp_sliderelease.wav", t = 2.5 },
-		}
+		},
+		LHIK = true,
+		LHIKIn = 0.4,
+		LHIKOut = 0.6,
+		LHIKEaseIn = 0.3,
+		LHIKEaseOut = 0.3,
 	},
 }
 
 SWEP.Attachments = {
 	{
+		PrintName = "Optic",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = "optic",
+		Bone = "tag_weapon",
+		InstalledEles = {"rail_optic"},
+		Offset = {
+			vpos = Vector(2, 0, 3.62),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
 		PrintName = "Muzzle",
 		DefaultAttName = ArcCW.CSX.Att_DefaultName,
 		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
-		Slot = { "csx_muzzle_device_pistol", "csx_muzzle_suppressor_pistol", "csx_muzzle_suppressor" },
+		Slot = { "csx_muzzle_device", "csx_muzzle_suppressor" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(6.3, 0, 2.8),
+			vpos = Vector(9.03, 0, 2.5),
+			vang = Angle(0, 0, 0),
+		},
+	},
+	{
+		PrintName = "Underbarrel",
+		DefaultAttName = ArcCW.CSX.Att_DefaultName,
+		DefaultAttIcon = ArcCW.CSX.Att_DefaultIcon,
+		Slot = { "csx_underbarrel_foregrip" },
+		Bone = "tag_weapon",
+		Offset = {
+			vpos = Vector(7, 0, 1.18),
 			vang = Angle(0, 0, 0),
 		},
 	},
@@ -197,8 +234,8 @@ SWEP.Attachments = {
 		Slot = { "csx_tactical" },
 		Bone = "tag_weapon",
 		Offset = {
-			vpos = Vector(5.3, 0, 2.1),
-			vang = Angle(0, 0, 0),
+			vpos = Vector(7, 0.95, 2.1),
+			vang = Angle(0, 0, -90),
 		},
 	},
 	{
